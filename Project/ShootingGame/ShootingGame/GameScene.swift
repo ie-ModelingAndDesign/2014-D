@@ -57,4 +57,10 @@ class GameScene: SKScene {
         akihikoRoot.update()
         daikiRoot.update()
     }
+    
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent){
+        akihikoRoot.touchesEnded(touches, withEvent: event)
+    }
+    
+    
 }

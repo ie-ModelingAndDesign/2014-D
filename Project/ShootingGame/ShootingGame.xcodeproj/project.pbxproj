@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */; };
 		6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */; };
 		6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2211A26FFBD0037B1BD /* AppDelegate.swift */; };
 		6EDAD2241A26FFBD0037B1BD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDAD2231A26FFBD0037B1BD /* GameScene.sks */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoAirframe.swift; sourceTree = "<group>"; };
 		6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiEnemy.swift; sourceTree = "<group>"; };
 		6EDAD21C1A26FFBC0037B1BD /* ShootingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDAD2201A26FFBD0037B1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */,
+				646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */,
 			);
 			name = Akihiko;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */,
 				6EDAD24E1A27027D0037B1BD /* MoriyukiRoot.swift in Sources */,
 				6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */,
 				6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */,

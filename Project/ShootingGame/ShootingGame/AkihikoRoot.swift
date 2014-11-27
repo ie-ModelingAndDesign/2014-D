@@ -1,33 +1,29 @@
-//
-//  AkihikoRoot.swift
-//  ShootingGame
-//
-//  Created by Daiki Oyakawa on 2014/11/27.
-//  Copyright (c) 2014年 GroupD. All rights reserved.
-//
-import SpriteKit
 import Foundation
+import SpriteKit
 
 class AkihikoRoot{
+    
+    var myairobj : AkihikoAirframe!
+    
     init(obj : SKScene){
         /* Setup */
-        
+        myairobj = AkihikoAirframe(obj:obj)
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        /* Called when a touch begins */
-        
+        myairobj.touchesBegan(touches, withEvent: event)
     }
     
     func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-        /* Called when a touch moves */
-        
+        myairobj.touchesMoved(touches, withEvent: event)
     }
     
-    func update(){
-        /* Called every time */
-        
+    func update() {
+        myairobj.update()
     }
     
+    func touchesEnded(touches: NSSet, withEvent event: UIEvent){
+        myairobj.touchesEnded(touches, withEvent: event)
+    }
     
 }
