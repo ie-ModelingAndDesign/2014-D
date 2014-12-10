@@ -9,7 +9,7 @@ class AkihikoMyBullet {
     var bulArr: [SKSpriteNode!] = []
     var section: Int = 0
     var LaserWidth: CGFloat = 30
-    var LaserHight: CGFloat = 10
+    var LaserHeight: CGFloat = 10
     var bwidth: CGFloat = 0
     
     
@@ -64,7 +64,7 @@ class AkihikoMyBullet {
     func laser(){
         bullet = SKSpriteNode(
             color: UIColor.yellowColor(),
-            size: CGSizeMake(LaserWidth, LaserHight)
+            size: CGSizeMake(LaserWidth, LaserHeight)
         )
         
         bullet.position = CGPoint(x: bulletPos.x, y: bulletPos.y)
@@ -95,9 +95,9 @@ class AkihikoMyBullet {
             
         case 3:                     // Laser
             if(LaserWidth > 0){
-                bullet.size = CGSizeMake(LaserWidth,LaserHight)
-                bullet.position = CGPoint(x: squarePos.x, y: squarePos.y+(LaserHight/2))
-                LaserHight += 10
+                bullet.size = CGSizeMake(LaserWidth,LaserHeight)
+                bullet.position = CGPoint(x: squarePos.x, y: squarePos.y+(LaserHeight/2))
+                LaserHeight += 20
                 LaserWidth -= 0.3
             }
             else{
