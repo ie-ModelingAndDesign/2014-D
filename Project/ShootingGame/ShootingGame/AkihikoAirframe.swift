@@ -4,7 +4,7 @@ import SpriteKit
 class AkihikoAirframe {
     
     var bframe: Int = 1         // 前回タップ時
-    var lframe: Int = 0         // 今回タップ時
+    var nframe: Int = 0         // 今回タップ時
     var square: SKSpriteNode!   // 機体
     var startPos: CGPoint!      // 初期位置
     var beganPos: CGPoint!      // タップした位置
@@ -23,8 +23,10 @@ class AkihikoAirframe {
     
     init(obj: SKScene) {
         
-        bobj = [ AkihikoMyBullet ] ( count : numObjects ,
-                                     repeatedValue : AkihikoMyBullet(obj:obj) )
+        bobj = [ AkihikoMyBullet ] (
+            count : numObjects,
+            repeatedValue : AkihikoMyBullet(obj:obj)
+        )
         
         for (var i=0;i<numObjects;i++) {
             bobj[i] = AkihikoMyBullet(obj:obj)
@@ -60,13 +62,12 @@ class AkihikoAirframe {
         beganPos = touch.locationInNode(sceneobj)
         
         /* ダブルタップしたときの処理 */
-        if(bframe - lframe < 15){
+        if(bframe - nframe < 15){
             weapon = 3
             bobj[bnum].CreateBullet(square.position,weapon: weapon,Laser: Laser)
             bnum++
-            bframe = 0
         }
-        lframe = bframe
+        nframe = bframe
         
     }
     
@@ -111,19 +112,22 @@ class AkihikoAirframe {
     
     func update() {
         
-        
         /* weapon = 3　は レーザー */
         if(weapon == 3){
             for(var i=0;i<bnum;i++){
                 bobj[i].update(square.position)
             }
             Laser -= 0.3
+            if(Laser <= 5){
+                weapon = 2
+                Laser = 30
+            }
         }
             
             
             /* 通常 の 攻撃 */
         else{
-            if(bframe%15 == 0){
+            if(bframe%20 == 0){
                 bobj[bnum].CreateBullet(square.position,weapon: weapon,Laser: Laser)
                 bnum++
             }
@@ -135,13 +139,6 @@ class AkihikoAirframe {
         
         lastPos = square.position
         bframe += 1
-        
-        
-        /* レーザーの幅が小さくなったらレーザー終了 */
-        if(Laser <= 5){
-            weapon = 2
-            Laser = 30
-        }
         
     }
 }
