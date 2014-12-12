@@ -9,9 +9,15 @@ import SpriteKit
 import Foundation
 
 class KoukiRoot{
+    
+    var enemy : KokiEnemy!
+    //var enemy2 : KokiEnemy2!
+    
     init(obj : SKScene){
         /* Setup */
-        
+        enemy = KokiEnemy(obj:obj)
+       // enemy2 = KokiEnemy2(obj:obj)
+
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -25,8 +31,8 @@ class KoukiRoot{
     }
     
     func update(){
-        /* Called every time */
-        
+        enemy.update()
+        //enemy2.update()
     }
     
     

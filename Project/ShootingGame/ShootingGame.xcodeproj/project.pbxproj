@@ -20,7 +20,8 @@
 		6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */; };
 		6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */; };
 		6EDAD24E1A27027D0037B1BD /* MoriyukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */; };
-		6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */; };
+		6EDAD2501A27029E0037B1BD /* KokiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24F1A27029E0037B1BD /* KokiRoot.swift */; };
+		FCEFCFE91A30012000F26A7C /* KokiEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFCFE81A30012000F26A7C /* KokiEnemy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,8 @@
 		6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiRoot.swift; sourceTree = "<group>"; };
 		6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoRoot.swift; sourceTree = "<group>"; };
 		6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriyukiRoot.swift; sourceTree = "<group>"; };
-		6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoukiRoot.swift; sourceTree = "<group>"; };
+		6EDAD24F1A27029E0037B1BD /* KokiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KokiRoot.swift; sourceTree = "<group>"; };
+		FCEFCFE81A30012000F26A7C /* KokiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KokiEnemy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +165,8 @@
 		6EDAD2481A2700CE0037B1BD /* Kouki */ = {
 			isa = PBXGroup;
 			children = (
-				6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */,
+				6EDAD24F1A27029E0037B1BD /* KokiRoot.swift */,
+				FCEFCFE81A30012000F26A7C /* KokiEnemy.swift */,
 			);
 			name = Kouki;
 			sourceTree = "<group>";
@@ -274,7 +277,8 @@
 				6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */,
 				6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */,
 				6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */,
-				6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */,
+				6EDAD2501A27029E0037B1BD /* KokiRoot.swift in Sources */,
+				FCEFCFE91A30012000F26A7C /* KokiEnemy.swift in Sources */,
 				6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */,
 				6EDAD2281A26FFBD0037B1BD /* GameViewController.swift in Sources */,
 				6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */,
