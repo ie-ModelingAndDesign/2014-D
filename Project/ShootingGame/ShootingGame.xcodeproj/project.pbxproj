@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */; };
 		646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */; };
 		6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */; };
+		6E542F741A386F24008D4D45 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E542F731A386F24008D4D45 /* Bullet.swift */; };
+		6E542F761A388660008D4D45 /* DaikiTestBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E542F751A388660008D4D45 /* DaikiTestBullet.swift */; };
+		6EB7C3011A35F14B00C6EB29 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7C3001A35F14B00C6EB29 /* Singleton.swift */; };
+		6ED2D01E1A31A36400867B49 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2D01D1A31A36300867B49 /* Enemy.swift */; };
 		6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2211A26FFBD0037B1BD /* AppDelegate.swift */; };
 		6EDAD2241A26FFBD0037B1BD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDAD2231A26FFBD0037B1BD /* GameScene.sks */; };
 		6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2251A26FFBD0037B1BD /* GameScene.swift */; };
@@ -20,7 +25,13 @@
 		6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */; };
 		6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */; };
 		6EDAD24E1A27027D0037B1BD /* MoriyukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */; };
+<<<<<<< HEAD
 		6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */; };
+		6EF5097F1A31A67000D21A18 /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5097E1A31A67000D21A18 /* ObjectManager.swift */; };
+=======
+		6EDAD2501A27029E0037B1BD /* KokiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24F1A27029E0037B1BD /* KokiRoot.swift */; };
+		FCEFCFE91A30012000F26A7C /* KokiEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFCFE81A30012000F26A7C /* KokiEnemy.swift */; };
+>>>>>>> FETCH_HEAD
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoMyBullet.swift; sourceTree = "<group>"; };
 		646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoAirframe.swift; sourceTree = "<group>"; };
 		6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiEnemy.swift; sourceTree = "<group>"; };
+		6E542F731A386F24008D4D45 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
+		6E542F751A388660008D4D45 /* DaikiTestBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiTestBullet.swift; sourceTree = "<group>"; };
+		6EB7C3001A35F14B00C6EB29 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		6ED2D01D1A31A36300867B49 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		6EDAD21C1A26FFBC0037B1BD /* ShootingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDAD2201A26FFBD0037B1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EDAD2211A26FFBD0037B1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +67,13 @@
 		6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiRoot.swift; sourceTree = "<group>"; };
 		6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoRoot.swift; sourceTree = "<group>"; };
 		6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriyukiRoot.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoukiRoot.swift; sourceTree = "<group>"; };
+		6EF5097E1A31A67000D21A18 /* ObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
+=======
+		6EDAD24F1A27029E0037B1BD /* KokiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KokiRoot.swift; sourceTree = "<group>"; };
+		FCEFCFE81A30012000F26A7C /* KokiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KokiEnemy.swift; sourceTree = "<group>"; };
+>>>>>>> FETCH_HEAD
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */,
+				6EF5097E1A31A67000D21A18 /* ObjectManager.swift */,
+				6E542F731A386F24008D4D45 /* Bullet.swift */,
+				6EB7C3001A35F14B00C6EB29 /* Singleton.swift */,
+				6E542F751A388660008D4D45 /* DaikiTestBullet.swift */,
+				6ED2D01D1A31A36300867B49 /* Enemy.swift */,
 				6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */,
 			);
 			name = Daiki;
@@ -148,6 +175,7 @@
 			children = (
 				6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */,
 				646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */,
+				6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */,
 			);
 			name = Akihiko;
 			sourceTree = "<group>";
@@ -163,7 +191,8 @@
 		6EDAD2481A2700CE0037B1BD /* Kouki */ = {
 			isa = PBXGroup;
 			children = (
-				6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */,
+				6EDAD24F1A27029E0037B1BD /* KokiRoot.swift */,
+				FCEFCFE81A30012000F26A7C /* KokiEnemy.swift */,
 			);
 			name = Kouki;
 			sourceTree = "<group>";
@@ -270,13 +299,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */,
+				6EB7C3011A35F14B00C6EB29 /* Singleton.swift in Sources */,
+				6E542F741A386F24008D4D45 /* Bullet.swift in Sources */,
 				6EDAD24E1A27027D0037B1BD /* MoriyukiRoot.swift in Sources */,
 				6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */,
 				6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */,
+				6EF5097F1A31A67000D21A18 /* ObjectManager.swift in Sources */,
 				6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */,
+<<<<<<< HEAD
 				6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */,
+				6ED2D01E1A31A36400867B49 /* Enemy.swift in Sources */,
 				6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */,
 				6EDAD2281A26FFBD0037B1BD /* GameViewController.swift in Sources */,
+				6E542F761A388660008D4D45 /* DaikiTestBullet.swift in Sources */,
+=======
+				6EDAD2501A27029E0037B1BD /* KokiRoot.swift in Sources */,
+				FCEFCFE91A30012000F26A7C /* KokiEnemy.swift in Sources */,
+				6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */,
+				6EDAD2281A26FFBD0037B1BD /* GameViewController.swift in Sources */,
+				6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */,
+>>>>>>> FETCH_HEAD
 				6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
