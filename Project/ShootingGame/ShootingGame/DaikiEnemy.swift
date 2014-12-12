@@ -8,32 +8,44 @@
 import SpriteKit
 import Foundation
 
-class DaikiEnemy{
+class DaikiEnemy : Enemy{
     var square: SKSpriteNode!
     var centerPos: CGPoint!
     var moveTime = 0.0
     var waveSpeed = 0.01
     var waveDistance = 200.0
     var moveSpeed: CGPoint = CGPoint(x:0.0,y:-1.0)
+    var scene : SKScene!
     
-    init(obj : SKScene){
+    override init(obj : SKScene){
+        super.init(obj: obj)
+        scene = obj
+        position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMaxY(obj.frame))
+        
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 40))
-        square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMaxY(obj.frame))
+        square.position = position
         
         obj.addChild(square)
         
         centerPos = CGPointMake(
-            square.position.x,
-            square.position.y
+            position.x,
+            position.y
         )
     }
     
     // called every time
-    func update(){
+    override func update(){
+        super.update()
         moveTime += waveSpeed
         centerPos = CGPointMake(centerPos.x+moveSpeed.x, centerPos.y+moveSpeed.y)
-        var pos = CGPointMake(centerPos.x+CGFloat(cos(M_PI*moveTime)*waveDistance), centerPos.y)
-        square.position = pos;
+        position = CGPointMake(centerPos.x+CGFloat(cos(M_PI*moveTime)*waveDistance), centerPos.y)
+        square.position = position
+    }
+    
+    override func OnCollision(bullet: Bullet) {
+        super.OnCollision(bullet)
+        scene.removeChildrenInArray([square])
+        ObjectManager.getInstance().removeEnemy(self)
     }
     
     
