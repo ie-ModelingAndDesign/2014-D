@@ -9,14 +9,13 @@ class AkihikoMyBullet {
     var section: Int = 0                // 武器番号
     var speed: CGFloat = 10             // 弾の早さ
     var LaserWidth: CGFloat = 30        // laserの幅
-    var LaserHight: CGFloat = 10        // laserの高さ
+    var LaserHeight: CGFloat = 10        // laserの高さ
     var bwidth: CGFloat = 0             // 弾同士の間隔
     
     
     init (obj: SKScene){
         bobj = obj
     }
-    
     
     
     func CreateBullet(Pos: CGPoint, weapon: Int, Laser: CGFloat) {
@@ -43,8 +42,6 @@ class AkihikoMyBullet {
             BulletArr()
         case 3:                 // laser
             laser()
-        case 4:
-            BulletRef()         // Reflect
         default:
             BulletArr()         // bulletnum = 1
         }
@@ -67,18 +64,13 @@ class AkihikoMyBullet {
     
     /* Laser攻撃 */
     func laser(){
-        
+        bullet[2] = SKSpriteNode(color: UIColor.yellowColor(),
+            size: CGSizeMake(LaserWidth, LaserHeight)
+        )
         bullet[2].position = CGPoint(x: bulletPos.x, y: bulletPos.y)
         bobj.addChild(bullet[2])
         
     }
-    
-    
-    /* Riflect攻撃 */
-    func BulletRef(){
-        
-    }
-    
     
     
     /* update */
@@ -96,13 +88,13 @@ class AkihikoMyBullet {
             
         case 3:                     // Laser
             if(LaserWidth > 0){
-                bullet[2].size = CGSizeMake(LaserWidth,LaserHight)
+                bullet[2].size = CGSizeMake(LaserWidth,LaserHeight)
                 bullet[2].position = CGPoint(
                     x: squarePos.x,
-                    y: squarePos.y+(LaserHight/2)
+                    y: squarePos.y+(LaserHeight/2)
                 )
-                LaserHight += 20
-                LaserWidth -= 0.3
+                LaserHeight += 20
+                LaserWidth -= 0.5
             }
             else{
                 bullet[2].size = CGSizeMake(0,0)
@@ -111,6 +103,8 @@ class AkihikoMyBullet {
         default:
             println()
         }
+        
+        
     }
     
 }

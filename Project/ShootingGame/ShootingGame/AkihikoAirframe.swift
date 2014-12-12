@@ -15,21 +15,22 @@ class AkihikoAirframe {
     var bobj : [AkihikoMyBullet!] = []   // 空の配列
     var numObjects: Int = 5000    // 作る弾の個数
     var bnum: Int = 0             // 現在作成された弾の個数
-    
-    
     var weapon: Int = 0           // 現在の武器の値(これで武器チェンジ)
-    var Laser: CGFloat = 30       // Laser攻撃のときの弾の幅
+    var befweapon: Int = 0
     
+    var Laser: CGFloat = 30       // Laser攻撃のときの弾の幅
+    var Ref: Int = 0
+    var brobj: [AkihikoRefBullet!] = []
+    var brnum: Int = 0
     
     init(obj: SKScene) {
         
-        bobj = [ AkihikoMyBullet ] (
-            count : numObjects,
-            repeatedValue : AkihikoMyBullet(obj:obj)
-        )
+        bobj = [ AkihikoMyBullet ] ( count : numObjects , repeatedValue : AkihikoMyBullet(obj:obj) )
+        brobj = [ AkihikoRefBullet ] ( count : numObjects , repeatedValue : AkihikoRefBullet(obj:obj) )
         
         for (var i=0;i<numObjects;i++) {
             bobj[i] = AkihikoMyBullet(obj:obj)
+            brobj[i] = AkihikoRefBullet(obj:obj)
         }
         
         sceneobj = obj
@@ -63,9 +64,11 @@ class AkihikoAirframe {
         
         /* ダブルタップしたときの処理 */
         if(bframe - nframe < 15){
+            befweapon = weapon
             weapon = 3
             bobj[bnum].CreateBullet(square.position,weapon: weapon,Laser: Laser)
             bnum++
+            Ref = 1
         }
         nframe = bframe
         
@@ -134,6 +137,16 @@ class AkihikoAirframe {
             for(var i=0;i<bnum;i++){
                 bobj[i].update(square.position)
             }
+        }
+        
+        
+        /* Reflect攻撃 */
+        if(Ref == 1 && bframe%120 == 0){
+            brobj[brnum].CreateRefBullet(square.position,Ref: Ref)
+            brnum++
+        }
+        for(var i=0; i<brnum;i++){
+            brobj[i].update()
         }
         
         

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */; };
 		646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */; };
+		648EF7061A3AF332000DE1A8 /* AkihikoRefBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */; };
 		6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */; };
 		6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2211A26FFBD0037B1BD /* AppDelegate.swift */; };
 		6EDAD2241A26FFBD0037B1BD /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6EDAD2231A26FFBD0037B1BD /* GameScene.sks */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoMyBullet.swift; sourceTree = "<group>"; };
 		646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoAirframe.swift; sourceTree = "<group>"; };
+		648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoRefBullet.swift; sourceTree = "<group>"; };
 		6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiEnemy.swift; sourceTree = "<group>"; };
 		6EDAD21C1A26FFBC0037B1BD /* ShootingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShootingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDAD2201A26FFBD0037B1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */,
 				646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */,
 				6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */,
+				648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */,
 			);
 			name = Akihiko;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */,
 				6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */,
 				6EDAD2281A26FFBD0037B1BD /* GameViewController.swift in Sources */,
+				648EF7061A3AF332000DE1A8 /* AkihikoRefBullet.swift in Sources */,
 				6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */,
 				6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */,
 			);
