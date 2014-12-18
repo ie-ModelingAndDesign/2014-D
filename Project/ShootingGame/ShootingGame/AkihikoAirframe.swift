@@ -2,7 +2,7 @@ import Foundation
 import SpriteKit
 
 
-//hogehoge
+//hogehogehoge
 
 class AkihikoAirframe {
     
