@@ -2,6 +2,8 @@ import Foundation
 import SpriteKit
 
 
+//hoge
+
 class AkihikoAirframe {
     
     var bframe: Int = 1         // 前回タップ時
