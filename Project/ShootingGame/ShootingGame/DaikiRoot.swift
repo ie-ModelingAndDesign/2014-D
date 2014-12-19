@@ -14,8 +14,6 @@ class DaikiRoot{
         /* Setup */
         var enemy = DaikiEnemy(obj:obj)
         enemy.colliderRadius = 20
-        var bullet : DaikiTestBullet = DaikiTestBullet(obj: obj)
-        bullet.colliderRadius = 20
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

@@ -53,7 +53,7 @@ class AkihikoMyBullet : Bullet {
                 y: bullet.position.y+speed
             )
             position = bullet.position
-            
+            println(position)
         case 3:
             
             if(LaserWidth > 0){

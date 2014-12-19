@@ -82,13 +82,14 @@ class ObjectManager{
     func checkCollision(){
         for(var i = 0; i<enemyArray.count;i++){
             for(var j = 0; j<bulletArray.count;j++){
-                var subx = enemyArray[i].position.x - bulletArray[i].position.x
-                var suby = enemyArray[i].position.y-bulletArray[i].position.y
+                var subx = enemyArray[i].position.x - bulletArray[j].position.x
+                var suby = enemyArray[i].position.y - bulletArray[j].position.y
                 var dist : CGFloat = sqrt(subx*subx+suby*suby)
                 if(dist < enemyArray[i].colliderRadius + bulletArray[j].colliderRadius){
                     // collision
                     enemyArray[i].OnCollision(bulletArray[j])
                     bulletArray[j].OnCollision(enemyArray[i])
+                    println("hit");
                 }
             }
         }
