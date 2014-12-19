@@ -1,7 +1,6 @@
 import Foundation
 import SpriteKit
 
-
 class AkihikoAirframe {
     
     var bframe: Int = 1         // 前回タップ時
@@ -20,19 +19,9 @@ class AkihikoAirframe {
     var befweapon: Int = 0
     
     var Laser: CGFloat = 30       // Laser攻撃のときの弾の幅
-    var Ref: Int = 0
-    var brobj: [AkihikoRefBullet!] = []
-    var brnum: Int = 0
     
     init(obj: SKScene) {
         
-        bobj = [ AkihikoMyBullet ] ( count : numObjects , repeatedValue : AkihikoMyBullet(obj:obj) )
-        brobj = [ AkihikoRefBullet ] ( count : numObjects , repeatedValue : AkihikoRefBullet(obj:obj) )
-        
-        for (var i=0;i<numObjects;i++) {
-            bobj[i] = AkihikoMyBullet(obj:obj)
-            brobj[i] = AkihikoRefBullet(obj:obj)
-        }
         
         sceneobj = obj
         
@@ -40,6 +29,7 @@ class AkihikoAirframe {
         square = SKSpriteNode(imageNamed:"Spaceship.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
         obj.addChild(square)
+        println(square.position)
         
         /* 初期位置を記録 */
         startPos = CGPointMake(
@@ -52,6 +42,10 @@ class AkihikoAirframe {
         /* 最終位置を初期化 */
         lastPos = square.position
         
+        
+        bobj = [ AkihikoMyBullet ] ( count : numObjects , repeatedValue :
+            AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser) )
+
     }
     
     
@@ -67,15 +61,12 @@ class AkihikoAirframe {
         if(bframe - nframe < 15){
             befweapon = weapon
             weapon = 3
-            bobj[bnum].CreateBullet(square.position,weapon: weapon,Laser: Laser)
+            bobj[bnum] = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
             bnum++
-            Ref = 1
         }
         nframe = bframe
         
     }
-    
-    
     
     func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
         
@@ -123,7 +114,7 @@ class AkihikoAirframe {
             }
             Laser -= 0.3
             if(Laser <= 5){
-                weapon = 2
+                weapon = 0
                 Laser = 30
             }
         }
@@ -132,24 +123,13 @@ class AkihikoAirframe {
             /* 通常 の 攻撃 */
         else{
             if(bframe%20 == 0){
-                bobj[bnum].CreateBullet(square.position,weapon: weapon,Laser: Laser)
+                bobj[bnum] = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
                 bnum++
             }
             for(var i=0;i<bnum;i++){
                 bobj[i].update(square.position)
             }
         }
-        
-        
-        /* Reflect攻撃 */
-        if(Ref == 1 && bframe%120 == 0){
-            brobj[brnum].CreateRefBullet(square.position,Ref: Ref)
-            brnum++
-        }
-        for(var i=0; i<brnum;i++){
-            brobj[i].update()
-        }
-        
         
         lastPos = square.position
         bframe += 1
