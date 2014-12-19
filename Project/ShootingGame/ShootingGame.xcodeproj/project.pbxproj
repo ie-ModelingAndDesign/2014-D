@@ -42,6 +42,8 @@
 		6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoMyBullet.swift; sourceTree = "<group>"; };
 		646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoAirframe.swift; sourceTree = "<group>"; };
 		648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoRefBullet.swift; sourceTree = "<group>"; };
+		6DF287CE1A441EA800970563 /* enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = enemy.swift; path = ../../../../../info1_obj2_start/stg/stg/enemy.swift; sourceTree = "<group>"; };
+		6DF287D01A441ECA00970563 /* enemy2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = enemy2.swift; path = ../../../../../info1_obj2_start/stg/stg/enemy2.swift; sourceTree = "<group>"; };
 		6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiEnemy.swift; sourceTree = "<group>"; };
 		6ECDD9181A4273F2007CF517 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		6ECDD91A1A4273FB007CF517 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
@@ -170,6 +172,8 @@
 		6EDAD2471A2700C50037B1BD /* Moriyuki */ = {
 			isa = PBXGroup;
 			children = (
+				6DF287D01A441ECA00970563 /* enemy2.swift */,
+				6DF287CE1A441EA800970563 /* enemy.swift */,
 				6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */,
 			);
 			name = Moriyuki;
