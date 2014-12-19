@@ -11,7 +11,7 @@ import Foundation
 
 class MoriyukiRoot{
     init(obj : SKScene){
-        /* Setup */
+        /* Setuppppppppppppppppppppp */
         
     }
     
