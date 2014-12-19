@@ -4,7 +4,7 @@
 //
 //  Created by Daiki Oyakawa on 2014/12/05.
 //  Copyright (c) 2014年 GroupD. All rights reserved.
-//
+// hogegehogehoge
 
 import Foundation
 import SpriteKit
