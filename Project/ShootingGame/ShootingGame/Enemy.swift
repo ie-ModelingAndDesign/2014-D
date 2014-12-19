@@ -11,9 +11,12 @@ import SpriteKit
 class Enemy{
     internal var position:CGPoint = CGPointMake(0,0)
     internal var colliderRadius:CGFloat = 0
-    internal var HP:Float = 100
+    internal var HP:Float = 100.0
+    internal var AttackPower:Float = 10.0
+    internal var myscene : SKScene!
     init(obj : SKScene){
         ObjectManager.getInstance().setEnemy(self)
+        myscene = obj
     }
     
     func update(){
@@ -22,5 +25,9 @@ class Enemy{
     
     func OnCollision(bullet : Bullet){
         
+    }
+    
+    func Destroy(){
+        ObjectManager.getInstance().removeEnemy(self)
     }
 }

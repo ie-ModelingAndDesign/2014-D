@@ -15,6 +15,7 @@ class ObjectManager{
     private var enemyArray : [Enemy] = []
     private var bulletArray : [Bullet] = []
     private var removeEnemyArray : [Enemy] = []
+    private var removeBulletArray : [Bullet] = []
     
     private init(){
         
@@ -31,8 +32,13 @@ class ObjectManager{
     }
     
     func updateObjects(){
+        // update enemy
         for(var i = 0; i<enemyArray.count;i++){
             enemyArray[i].update()
+        }
+        // update bullet
+        for(var i = 0; i<bulletArray.count;i++){
+            bulletArray[i].update()
         }
     }
     func setEnemy(enemy : Enemy){
@@ -45,6 +51,9 @@ class ObjectManager{
     func removeEnemy(enemy : Enemy){
         removeEnemyArray.append(enemy)
     }
+    func removeBullet(bullet : Bullet){
+        removeBulletArray.append(bullet)
+    }
     
     private func checkRemoveEnemy(){
         for(var i = 0; i<removeEnemyArray.count; i++){
@@ -56,6 +65,18 @@ class ObjectManager{
             }
         }
         removeEnemyArray.removeAll()
+    }
+    
+    private func checkRemoveBullet(){
+        for(var i = 0; i<removeBulletArray.count; i++){
+            for(var j = 0; j<bulletArray.count; j++){
+                if(bulletArray[j] === removeBulletArray[i]){
+                    bulletArray.removeAtIndex(j)
+                    break;
+                }
+            }
+        }
+        removeBulletArray.removeAll()
     }
     
     func checkCollision(){
