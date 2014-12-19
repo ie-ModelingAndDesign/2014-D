@@ -5,6 +5,8 @@
 //  Created by Daiki Oyakawa on 2014/11/27.
 //  Copyright (c) 2014年 GroupD. All rights reserved.
 //
+
+// hoge
 import SpriteKit
 import Foundation
 
