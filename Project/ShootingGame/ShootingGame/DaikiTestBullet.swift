@@ -1,28 +1,27 @@
 //
-//  DaikiEnemy.swift
+//  DaikiTestBullet.swift
 //  ShootingGame
 //
-//  Created by Daiki Oyakawa on 2014/11/27.
+//  Created by Daiki Oyakawa on 2014/12/10.
 //  Copyright (c) 2014年 GroupD. All rights reserved.
 //
 import SpriteKit
 import Foundation
 
-class DaikiEnemy : Enemy{
+class DaikiTestBullet : Bullet{
     var square: SKSpriteNode!
     var centerPos: CGPoint!
     var moveTime = 0.0
     var waveSpeed = 0.01
-    var waveDistance = 200.0
-    var moveSpeed: CGPoint = CGPoint(x:0.0,y:-1.0)
-    var scene : SKScene!
+    var waveDistance = 0.0
+    var moveSpeed: CGPoint = CGPoint(x:0.0,y:0.0)
     
     override init(obj : SKScene){
         super.init(obj: obj)
-        scene = obj
-        position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMaxY(obj.frame))
         
-        square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 40))
+        position = CGPoint(x: CGRectGetMidX(obj.frame), y: 400)
+        
+        square = SKSpriteNode(color: UIColor.greenColor(), size: CGSizeMake(40, 40))
         square.position = position
         
         obj.addChild(square)
@@ -34,19 +33,15 @@ class DaikiEnemy : Enemy{
     }
     
     // called every time
-    override func update(){
-        super.update()
+    func update(){
         moveTime += waveSpeed
         centerPos = CGPointMake(centerPos.x+moveSpeed.x, centerPos.y+moveSpeed.y)
         position = CGPointMake(centerPos.x+CGFloat(cos(M_PI*moveTime)*waveDistance), centerPos.y)
         square.position = position
     }
     
-    override func OnCollision(bullet: Bullet) {
-        super.OnCollision(bullet)
-        scene.removeChildrenInArray([square])
-        ObjectManager.getInstance().removeEnemy(self)
+    // called collision time
+    override func OnCollision(enemy : Enemy) {
+        super.OnCollision(enemy)
     }
-    
-    
 }
