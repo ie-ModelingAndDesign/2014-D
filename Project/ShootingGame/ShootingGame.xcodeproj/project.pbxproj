@@ -24,7 +24,6 @@
 		6EDAD23C1A26FFBD0037B1BD /* ShootingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD23B1A26FFBD0037B1BD /* ShootingGameTests.swift */; };
 		6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */; };
 		6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */; };
-		6EDAD24E1A27027D0037B1BD /* MoriyukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */; };
 		6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */; };
 /* End PBXBuildFile section */
 
@@ -289,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */,
-				6EDAD24E1A27027D0037B1BD /* MoriyukiRoot.swift in Sources */,
 				6ECDD91B1A4273FB007CF517 /* Bullet.swift in Sources */,
 				6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */,
 				6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */,
