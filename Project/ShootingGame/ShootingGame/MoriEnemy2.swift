@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class enemy2{
+class MoriEnemy2{
     var square: SKSpriteNode!
     var startPos: CGPoint!
     var beganPos: CGPoint!
