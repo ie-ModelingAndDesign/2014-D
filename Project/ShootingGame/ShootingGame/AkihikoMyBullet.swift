@@ -1,7 +1,7 @@
 import Foundation
 import SpriteKit
 
-class AkihikoMyBullet {
+class AkihikoMyBullet : Bullet {
     
     var bobj: SKScene!
     var bulletPos: CGPoint!             // 弾発射位置
@@ -14,9 +14,11 @@ class AkihikoMyBullet {
     
     
     init (obj: SKScene,Pos: CGPoint, weapon: Int, Laser: CGFloat){
+        super.init(obj: obj)
         section = weapon
         bobj = obj
         LaserWidth = Laser
+        bulletPos = Pos
         
         switch section {
         case 0:
@@ -40,7 +42,7 @@ class AkihikoMyBullet {
     
     
     /* update */
-    func update(squarePos: CGPoint) {
+    override func update() {
         
         switch section {
             
@@ -50,14 +52,15 @@ class AkihikoMyBullet {
                 x: bullet.position.x,
                 y: bullet.position.y+speed
             )
+            position = bullet.position
             
         case 3:
             
             if(LaserWidth > 0){
                 bullet.size = CGSizeMake(LaserWidth,LaserHeight)
                 bullet.position = CGPoint(
-                    x: squarePos.x,
-                    y: squarePos.y+(LaserHeight/2)
+                    x: bulletPos.x,
+                    y: bulletPos.y+(LaserHeight/2)
                 )
                 LaserHeight += 20
                 LaserWidth -= 0.5

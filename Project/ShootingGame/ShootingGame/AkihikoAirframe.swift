@@ -29,7 +29,7 @@ class AkihikoAirframe {
         square = SKSpriteNode(imageNamed:"Spaceship.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
         obj.addChild(square)
-        println(square.position)
+
         
         /* 初期位置を記録 */
         startPos = CGPointMake(
@@ -43,8 +43,8 @@ class AkihikoAirframe {
         lastPos = square.position
         
         
-        bobj = [ AkihikoMyBullet ] ( count : numObjects , repeatedValue :
-            AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser) )
+        //bobj = [ AkihikoMyBullet ] ( count : numObjects , repeatedValue :
+            //AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser) )
 
     }
     
@@ -110,7 +110,7 @@ class AkihikoAirframe {
         /* weapon = 3　は レーザー */
         if(weapon == 3){
             for(var i=0;i<bnum;i++){
-                bobj[i].update(square.position)
+                //bobj[i].update()
             }
             Laser -= 0.3
             if(Laser <= 5){
@@ -123,11 +123,12 @@ class AkihikoAirframe {
             /* 通常 の 攻撃 */
         else{
             if(bframe%20 == 0){
-                bobj[bnum] = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
+                //bobj[bnum] = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
+                var bullet : Bullet = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
                 bnum++
             }
             for(var i=0;i<bnum;i++){
-                bobj[i].update(square.position)
+                //bobj[i].update(square.position)
             }
         }
         
