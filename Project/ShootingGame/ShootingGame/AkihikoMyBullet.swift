@@ -10,24 +10,30 @@ class AkihikoMyBullet : Bullet {
     var speed: CGFloat = 10             // 弾の早さ
     var LaserWidth: CGFloat = 30        // laserの幅
     var LaserHeight: CGFloat = 10       // laserの高さ
-    var bwidth: CGFloat = 0             // 弾同士の間隔
+    var bwidth: CGFloat!             // 弾同士の間隔
     
     
-    init (obj: SKScene,Pos: CGPoint, weapon: Int, Laser: CGFloat){
+    init (obj: SKScene,Pos: CGPoint, weapon: Int, Laser: CGFloat, width: CGFloat){
+        
         super.init(obj: obj)
         section = weapon
         bobj = obj
         LaserWidth = Laser
         bulletPos = Pos
+        bwidth = width
         
         switch section {
-        case 0:
-            bullet = SKSpriteNode(color: UIColor.yellowColor(),size: CGSizeMake(4, 10))
+        case 1,3,5:
+            bullet = SKSpriteNode(
+                color: UIColor.yellowColor(),
+                size: CGSizeMake(4, 10)
+            )
             bullet.position = CGPoint(x: Pos.x+bwidth, y: Pos.y)
             bobj.addChild(bullet)
 
-        case 3:
-            bullet = SKSpriteNode(color: UIColor.yellowColor(),
+        case 2:
+            bullet = SKSpriteNode(
+                color: UIColor.yellowColor(),
                 size: CGSizeMake(Laser, LaserHeight)
             )
             bullet.position = CGPoint(x: Pos.x, y: Pos.y)
@@ -38,24 +44,20 @@ class AkihikoMyBullet : Bullet {
         
     }
     
-
-    
     
     /* update */
     override func update() {
         
         switch section {
             
-        case 0:
-            
+        case 1,3,5:
             bullet.position = CGPoint(
                 x: bullet.position.x,
                 y: bullet.position.y+speed
             )
             position = bullet.position
 
-        case 3:
-            
+        case 2:
             if(LaserWidth > 0){
                 bullet.size = CGSizeMake(LaserWidth,LaserHeight)
                 bullet.position = CGPoint(
@@ -72,7 +74,6 @@ class AkihikoMyBullet : Bullet {
         default:
             println()
         }
-        
         
     }
     

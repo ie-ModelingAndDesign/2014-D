@@ -3,6 +3,7 @@ import SpriteKit
 
 class AkihikoAirframe {
     
+    var sceneobj: SKScene!
     var bframe: Int = 1         // 前回タップ時
     var nframe: Int = 0         // 今回タップ時
     var square: SKSpriteNode!   // 機体
@@ -11,17 +12,21 @@ class AkihikoAirframe {
     var diffPos: CGPoint!       // 移動距離
     var lastPos: CGPoint!       // タップしたときの機体の位置
     
-    var sceneobj: SKScene!
-    var bobj : [AkihikoMyBullet!] = []   // 空の配列
-    var numObjects: Int = 5000    // 作る弾の個数
-    var bnum: Int = 0             // 現在作成された弾の個数
-    var weapon: Int = 0           // 現在の武器の値(これで武器チェンジ)
-    var befweapon: Int = 0
+    var bobj : [AkihikoMyBullet!] = []
+    var numObjects: Int = 5000   // 作る弾の個数
+    var bnum: Int = 0            // 現在作成された弾の個数
+    var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
+    var BeforeWeapon: Int!       // Laser攻撃する前の武器を保存
+    var width: CGFloat = 0       // 複数発射時の弾同士の間隔
+    var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
     
-    var Laser: CGFloat = 30       // Laser攻撃のときの弾の幅
+    var brobj: [AkihikoRefBullet!] = []
+    var brnum: Int = 0           // Reflect弾の個数
+    var RefOn: Int = 0           // Reflect攻撃をON/OFF
+    
+    
     
     init(obj: SKScene) {
-        
         
         sceneobj = obj
         
@@ -42,10 +47,6 @@ class AkihikoAirframe {
         /* 最終位置を初期化 */
         lastPos = square.position
         
-        
-        //bobj = [ AkihikoMyBullet ] ( count : numObjects , repeatedValue :
-            //AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser) )
-
     }
     
     
@@ -59,14 +60,18 @@ class AkihikoAirframe {
         
         /* ダブルタップしたときの処理 */
         if(bframe - nframe < 15){
-            befweapon = weapon
-            weapon = 3
-            bobj[bnum] = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
+            BeforeWeapon = weapon
+            weapon = 2
+            var bullet : Bullet = AkihikoMyBullet(
+                    obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser,width: width
+                )
             bnum++
+            RefOn = 1
         }
         nframe = bframe
         
     }
+    
     
     func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
         
@@ -107,35 +112,55 @@ class AkihikoAirframe {
     
     func update() {
         
-        /* weapon = 3　は レーザー */
-        if(weapon == 3){
-            for(var i=0;i<bnum;i++){
-                //bobj[i].update()
-            }
+        /* laser */
+        if(weapon == 2){
             Laser -= 0.3
             if(Laser <= 5){
-                weapon = 0
+                weapon = 5
                 Laser = 30
             }
         }
             
-            
-            /* 通常 の 攻撃 */
+        /* 通常 の 攻撃 */
         else{
             if(bframe%20 == 0){
-                //bobj[bnum] = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
-                var bullet : Bullet = AkihikoMyBullet(obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser)
-                bnum++
+                if(weapon == 1){
+                    width = 0
+                }else if(weapon == 3){
+                    width = -10
+                }else if(weapon == 5){
+                    width = -20
+                }
+                
+                for(var i=0;i<weapon;i++){
+                    var bullet : Bullet = AkihikoMyBullet(obj:sceneobj,
+                            Pos:square.position,weapon: weapon,Laser: Laser,width:width
+                        )
+                    width += 10
+                    bnum++
+                }
             }
-            for(var i=0;i<bnum;i++){
-                //bobj[i].update(square.position)
-            }
+            
         }
         
+        
+        /* reflect */
+        if(RefOn == 1 && bframe%120 == 0){
+            var bullet1 : Bullet = AkihikoRefBullet(
+                    obj:sceneobj, Pos:square.position, number: 0
+                )
+            brnum++
+            var bullet2 : Bullet = AkihikoRefBullet(
+                    obj:sceneobj, Pos:square.position, number: 1
+                )
+            brnum++
+        }
+
         lastPos = square.position
         bframe += 1
         
     }
+    
 }
 
 
