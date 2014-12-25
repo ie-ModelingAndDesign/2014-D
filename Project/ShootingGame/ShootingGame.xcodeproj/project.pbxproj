@@ -14,6 +14,7 @@
 		6DF287DD1A442DD900970563 /* MoriyukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */; };
 		6E050C431A442F67008AE8D9 /* DaikiTestBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */; };
 		6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */; };
+		6E5916401A4BB0C5006DE56B /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59163F1A4BB0C5006DE56B /* Ship.swift */; };
 		6ECDD9191A4273F2007CF517 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD9181A4273F2007CF517 /* Enemy.swift */; };
 		6ECDD91B1A4273FB007CF517 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD91A1A4273FB007CF517 /* Bullet.swift */; };
 		6ECDD91D1A427412007CF517 /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD91C1A427412007CF517 /* ObjectManager.swift */; };
@@ -48,6 +49,7 @@
 		6DF287D71A442C1100970563 /* MoriEnemy2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy2.swift; sourceTree = "<group>"; };
 		6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiTestBullet.swift; sourceTree = "<group>"; };
 		6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiEnemy.swift; sourceTree = "<group>"; };
+		6E59163F1A4BB0C5006DE56B /* Ship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		6ECDD9181A4273F2007CF517 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		6ECDD91A1A4273FB007CF517 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
 		6ECDD91C1A427412007CF517 /* ObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */,
 				6ECDD91A1A4273FB007CF517 /* Bullet.swift */,
 				6ECDD91C1A427412007CF517 /* ObjectManager.swift */,
+				6E59163F1A4BB0C5006DE56B /* Ship.swift */,
 				6ECDD9181A4273F2007CF517 /* Enemy.swift */,
 				6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */,
 				6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */,
@@ -306,6 +309,7 @@
 				648EF7061A3AF332000DE1A8 /* AkihikoRefBullet.swift in Sources */,
 				6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */,
 				6DF287DB1A442C4400970563 /* MoriEnemy2.swift in Sources */,
+				6E5916401A4BB0C5006DE56B /* Ship.swift in Sources */,
 				6ECDD91D1A427412007CF517 /* ObjectManager.swift in Sources */,
 				6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */,
 			);
