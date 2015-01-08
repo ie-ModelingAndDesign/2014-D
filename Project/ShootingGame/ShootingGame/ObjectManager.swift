@@ -11,7 +11,7 @@ import SpriteKit
 
 private let singleton = ObjectManager()
 class ObjectManager{
-    
+    private var playerShip : Ship!
     private var enemyArray : [Enemy] = []
     private var bulletArray : [Bullet] = []
     private var removeEnemyArray : [Enemy] = []
@@ -40,6 +40,9 @@ class ObjectManager{
         for(var i = 0; i<bulletArray.count;i++){
             bulletArray[i].update()
         }
+    }
+    func setPlayerShip(ship : Ship){
+        playerShip = ship
     }
     func setEnemy(enemy : Enemy){
         enemyArray.append(enemy)
