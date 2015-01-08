@@ -3,16 +3,15 @@ import SpriteKit
 
 class AkihikoRefBullet : Bullet {
     
-    var brobj: SKScene!
-    var bullet: SKSpriteNode!
-    var bulletPos: [SKSpriteNode!] = []
-    var num: Int!
-    var refn: [Int] = [0,1]
-    var refspeed: [CGFloat] = [5,-5]
-    var action1 = SKAction.rotateByAngle(CGFloat(-45),duration:0.01)
-    var action2 = SKAction.rotateByAngle(CGFloat(45),duration:0.01)
-    var action3 = SKAction.rotateByAngle(CGFloat(-90),duration:0.01)
-    var action4 = SKAction.rotateByAngle(CGFloat(90),duration:0.01)
+    private var brobj: SKScene!
+    private var bullet: SKSpriteNode!
+    private var num: Int!
+    private var refn: [Int] = [0,1]
+    private var refspeed: [CGFloat] = [5,-5]
+    private var action1 = SKAction.rotateByAngle(CGFloat(-45),duration:0.01)
+    private var action2 = SKAction.rotateByAngle(CGFloat(45),duration:0.01)
+    private var action3 = SKAction.rotateByAngle(CGFloat(-90),duration:0.01)
+    private var action4 = SKAction.rotateByAngle(CGFloat(90),duration:0.01)
     
     
     init (obj: SKScene, Pos: CGPoint,number: Int){
@@ -43,11 +42,11 @@ class AkihikoRefBullet : Bullet {
             y: bullet.position.y+5
         )
         
-        if(bullet.position.x > 600 && refn[num] == 0){
+        if(bullet.position.x > 720 && refn[num] == 0){
             bullet.runAction(action4)
             num = 1
         }
-        if(bullet.position.x <= 400 && refn[num] == 1){
+        if(bullet.position.x <= 300 && refn[num] == 1){
             bullet.runAction(action3)
             num = 0
         }

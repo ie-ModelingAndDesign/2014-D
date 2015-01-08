@@ -3,14 +3,14 @@ import SpriteKit
 
 class AkihikoMyBullet : Bullet {
     
-    var bobj: SKScene!
-    var bulletPos: CGPoint!             // 弾発射位置
-    var bullet: SKSpriteNode!           // 弾の作成
-    var section: Int = 0                // 武器番号
-    var speed: CGFloat = 10             // 弾の早さ
-    var LaserWidth: CGFloat = 30        // laserの幅
-    var LaserHeight: CGFloat = 10       // laserの高さ
-    var bwidth: CGFloat!             // 弾同士の間隔
+    private var bobj: SKScene!
+    private var bulletPos: CGPoint!             // 弾発射位置
+    private var bullet: SKSpriteNode!           // 弾の作成
+    private var section: Int = 0                // 武器番号
+    private var speed: CGFloat = 10             // 弾の早さ
+    private var LaserWidth: CGFloat = 30        // laserの幅
+    private var LaserHeight: CGFloat = 10       // laserの高さ
+    private var bwidth: CGFloat!             // 弾同士の間隔
     
     
     init (obj: SKScene,Pos: CGPoint, weapon: Int, Laser: CGFloat, width: CGFloat){
@@ -43,6 +43,9 @@ class AkihikoMyBullet : Bullet {
         }
         
     }
+    
+    
+
     
     
     /* update */

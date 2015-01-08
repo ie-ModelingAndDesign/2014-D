@@ -3,33 +3,28 @@ import SpriteKit
 
 class AkihikoAirframe {
     
-    var sceneobj: SKScene!
-    var bframe: Int = 1         // 前回タップ時
-    var nframe: Int = 0         // 今回タップ時
-    var square: SKSpriteNode!   // 機体
-    var startPos: CGPoint!      // 初期位置
-    var beganPos: CGPoint!      // タップした位置
-    var diffPos: CGPoint!       // 移動距離
-    var lastPos: CGPoint!       // タップしたときの機体の位置
+    private var sceneobj: SKScene!
+    private var bframe: Int = 1         // 前回タップ時
+    private var nframe: Int = 0         // 今回タップ時
+    private var square: SKSpriteNode!   // 機体
+    private var startPos: CGPoint!      // 初期位置
+    private var beganPos: CGPoint!      // タップした位置
+    private var diffPos: CGPoint!       // 移動距離
+    private var lastPos: CGPoint!       // タップしたときの機体の位置
     
-    var bobj : [AkihikoMyBullet!] = []
-    var numObjects: Int = 5000   // 作る弾の個数
-    var bnum: Int = 0            // 現在作成された弾の個数
-    var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
-    var BeforeWeapon: Int!       // Laser攻撃する前の武器を保存
-    var width: CGFloat = 0       // 複数発射時の弾同士の間隔
-    var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
+    private var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
+    private var BeforeWeapon: Int!       // Laser攻撃する前の武器を保存
+    private var width: CGFloat = 0       // 複数発射時の弾同士の間隔
+    private var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
+    private var RefOn: Int = 0           // Reflect攻撃をON/OFF
     
-    var brobj: [AkihikoRefBullet!] = []
-    var brnum: Int = 0           // Reflect弾の個数
-    var RefOn: Int = 0           // Reflect攻撃をON/OFF
-    
-    
+    var laserbullet: Bullet!
+    var bullet: Bullet!
     
     init(obj: SKScene) {
         
         sceneobj = obj
-        
+
         /* 機体の作成 */
         square = SKSpriteNode(imageNamed:"Spaceship.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
@@ -46,7 +41,7 @@ class AkihikoAirframe {
         diffPos = CGPointMake(0,0)
         /* 最終位置を初期化 */
         lastPos = square.position
-        
+
     }
     
     
@@ -62,12 +57,13 @@ class AkihikoAirframe {
         if(bframe - nframe < 15){
             BeforeWeapon = weapon
             weapon = 2
-            var bullet : Bullet = AkihikoMyBullet(
+            laserbullet = AkihikoMyBullet(
                     obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser,width: width
                 )
-            bnum++
             RefOn = 1
+
         }
+        
         nframe = bframe
         
     }
@@ -78,7 +74,7 @@ class AkihikoAirframe {
         /* 指の位置を取っておく */
         var touch: AnyObject! = touches.anyObject()
         var movedPos:CGPoint = touch.locationInNode(sceneobj)
-        
+       
         
         /* タップした位置が機体の近くなら機体を動かす */
         if(lastPos.x>=(beganPos.x+diffPos.x-50)
@@ -116,7 +112,7 @@ class AkihikoAirframe {
         if(weapon == 2){
             Laser -= 0.3
             if(Laser <= 5){
-                weapon = 5
+                weapon = 1
                 Laser = 30
             }
         }
@@ -133,27 +129,24 @@ class AkihikoAirframe {
                 }
                 
                 for(var i=0;i<weapon;i++){
-                    var bullet : Bullet = AkihikoMyBullet(obj:sceneobj,
+                    bullet = AkihikoMyBullet(obj:sceneobj,
                             Pos:square.position,weapon: weapon,Laser: Laser,width:width
                         )
                     width += 10
-                    bnum++
                 }
             }
             
         }
-        
+
         
         /* reflect */
         if(RefOn == 1 && bframe%120 == 0){
-            var bullet1 : Bullet = AkihikoRefBullet(
+            bullet = AkihikoRefBullet(
                     obj:sceneobj, Pos:square.position, number: 0
                 )
-            brnum++
-            var bullet2 : Bullet = AkihikoRefBullet(
+                       bullet = AkihikoRefBullet(
                     obj:sceneobj, Pos:square.position, number: 1
                 )
-            brnum++
         }
 
         lastPos = square.position
