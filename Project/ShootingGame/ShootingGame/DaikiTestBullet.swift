@@ -8,7 +8,7 @@
 import SpriteKit
 import Foundation
 
-class DaikiTestBullet : Bullet{
+class DaikiTestBullet : EnemyBullet{
     var square: SKSpriteNode!
     var centerPos: CGPoint!
     var moveTime = 0.0
@@ -40,10 +40,11 @@ class DaikiTestBullet : Bullet{
     }
     
     // called collision time
-    override func OnCollision(enemy : Enemy) {
+    /*override func OnCollision(enemy : Enemy) {
         super.OnCollision(enemy)
         
         myscene.removeChildrenInArray([square])
         Destroy()
     }
+    */
 }

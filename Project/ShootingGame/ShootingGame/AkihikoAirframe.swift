@@ -1,7 +1,7 @@
 import Foundation
 import SpriteKit
 
-class AkihikoAirframe {
+class AkihikoAirframe : Ship {
     
     private var sceneobj: SKScene!
     private var bframe: Int = 1         // 前回タップ時
@@ -21,8 +21,8 @@ class AkihikoAirframe {
     var laserbullet: Bullet!
     var bullet: Bullet!
     
-    init(obj: SKScene) {
-        
+    override init(obj: SKScene) {
+        super.init(obj: obj)
         sceneobj = obj
 
         /* 機体の作成 */
@@ -106,8 +106,8 @@ class AkihikoAirframe {
     
     
     
-    func update() {
-        
+    override func update() {
+        super.update()
         /* laser */
         if(weapon == 2){
             Laser -= 0.3
@@ -150,6 +150,7 @@ class AkihikoAirframe {
         }
 
         lastPos = square.position
+        position = square.position
         bframe += 1
         
     }
