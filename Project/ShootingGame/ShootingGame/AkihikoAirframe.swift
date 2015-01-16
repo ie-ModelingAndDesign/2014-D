@@ -13,10 +13,11 @@ class AkihikoAirframe : Ship {
     private var lastPos: CGPoint!       // タップしたときの機体の位置
     
     private var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
-    private var BeforeWeapon: Int!       // Laser攻撃する前の武器を保存
+    private var BeforeWeapon: Int = 1       // Laser攻撃する前の武器を保存
     private var width: CGFloat = 0       // 複数発射時の弾同士の間隔
     private var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
     private var RefOn: Int = 0           // Reflect攻撃をON/OFF
+    private var beam: Int = 0;
     
     var laserbullet: Bullet!
     var bullet: Bullet!
@@ -54,14 +55,12 @@ class AkihikoAirframe : Ship {
         beganPos = touch.locationInNode(sceneobj)
         
         /* ダブルタップしたときの処理 */
-        if(bframe - nframe < 15){
+        if(bframe - nframe < 15 && weapon != 2 && beam > 0 ){
             BeforeWeapon = weapon
             weapon = 2
             laserbullet = AkihikoMyBullet(
                     obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser,width: width
                 )
-            RefOn = 1
-
         }
         
         nframe = bframe
@@ -103,8 +102,7 @@ class AkihikoAirframe : Ship {
         /* タップし終えたら移動距離を初期化 */
         diffPos = CGPointMake(0,0)
     }
-    
-    
+
     
     override func update() {
         super.update()
@@ -112,7 +110,8 @@ class AkihikoAirframe : Ship {
         if(weapon == 2){
             Laser -= 0.3
             if(Laser <= 5){
-                weapon = 1
+                weapon = BeforeWeapon
+                beam -= 1
                 Laser = 30
             }
         }
@@ -154,6 +153,33 @@ class AkihikoAirframe : Ship {
         bframe += 1
         
     }
+ 
+    
+    func levelup(){
+        if(weapon < 5){
+            
+            if(weapon == 2){
+                weapon = BeforeWeapon
+                if(BeforeWeapon < 5){
+                    weapon += 2
+                }
+            }else{
+                weapon += 2
+            }
+            
+        }
+    }
+    
+    
+    func Reflect(){
+        RefOn = 1
+    }
+    
+    
+    func LaserBeam(){
+        beam += 1
+    }
+    
     
 }
 
