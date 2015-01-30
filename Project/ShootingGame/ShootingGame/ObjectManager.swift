@@ -14,10 +14,12 @@ class ObjectManager{
     private var playerShip : Ship!
     private var enemyArray : [Enemy] = []
     private var bulletArray : [Bullet] = []
+    private var beamArray : [Beam] = []
     private var enemybulletArray : [EnemyBullet] = []
     private var removeEnemyArray : [Enemy] = []
     private var removeBulletArray : [Bullet] = []
     private var removeEnemyBulletArray : [EnemyBullet] = []
+    private var removeBeamArray : [Beam] = []
     
     private init(){
         
@@ -28,9 +30,11 @@ class ObjectManager{
         checkCollision_Enemy_Burret()
         checkCollision_Ship_Enemy()
         checkCollision_Ship_EnemyBullet()
+        checkCollision_Enemy_Beam()
         checkRemoveEnemy()
         checkRemoveBullet()
         checkRemoveEnemyBullet()
+        checkRemoveBeam()
     }
     
     class func getInstance() -> ObjectManager{
@@ -62,6 +66,9 @@ class ObjectManager{
     func setEnemyBullet(bullet : EnemyBullet){
         enemybulletArray.append(bullet)
     }
+    func setBeam(beam : Beam){
+        beamArray.append(beam)
+    }
     
     func removeEnemy(enemy : Enemy){
         removeEnemyArray.append(enemy)
@@ -71,6 +78,9 @@ class ObjectManager{
     }
     func removeEnemyBullet(bullet : EnemyBullet){
         removeEnemyBulletArray.append(bullet)
+    }
+    func removeBeam (beam : Beam){
+        removeBeamArray.append(beam)
     }
     
     private func checkRemoveEnemy(){
@@ -106,6 +116,17 @@ class ObjectManager{
             }
         }
         removeEnemyBulletArray.removeAll()
+    }
+    private func checkRemoveBeam(){
+        for(var i = 0; i<removeBeamArray.count; i++){
+            for(var j = 0; j<beamArray.count; j++){
+                if(beamArray[j] === removeBeamArray[i]){
+                    beamArray.removeAtIndex(j)
+                    break;
+                }
+            }
+        }
+        removeBeamArray.removeAll()
     }
     
     func checkCollision_Enemy_Burret(){
@@ -145,6 +166,21 @@ class ObjectManager{
                 if(dist < enemyArray[i].colliderRadius + playerShip.colliderRadius){
                     // collision
                     println("player damage!by enemy");
+                }
+            }
+        }
+    }
+    func checkCollision_Enemy_Beam(){
+        for(var i = 0; i<enemyArray.count;i++){
+            for(var j = 0; j<beamArray.count;j++){
+                var subx = enemyArray[i].position.x - beamArray[j].position.x
+                var suby = enemyArray[i].position.y - beamArray[j].position.y
+                var distw : CGFloat = abs(subx)
+                var disth : CGFloat = abs(suby)
+                if(distw < beamArray[j].colliderWidth && disth < beamArray[j].colliderHeight){
+                    // collision
+                    enemyArray[i].OnCollision(beamArray[j])
+                    println("hit by beam");
                 }
             }
         }

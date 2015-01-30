@@ -17,7 +17,7 @@ class AkihikoAirframe : Ship {
     private var width: CGFloat = 0       // 複数発射時の弾同士の間隔
     private var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
     private var RefOn: Int = 0           // Reflect攻撃をON/OFF
-    private var beam: Int = 0;
+    private var beam: Int = 10;
     
     var laserbullet: Bullet!
     var bullet: Bullet!

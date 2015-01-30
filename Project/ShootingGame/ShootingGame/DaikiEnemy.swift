@@ -43,7 +43,11 @@ class DaikiEnemy : Enemy{
     override func OnCollision(bullet: Bullet) {
         super.OnCollision(bullet)
         myscene.removeChildrenInArray([square])
-        ObjectManager.getInstance().removeEnemy(self)
+    }
+    
+    override func OnCollision(beam: Beam) {
+        super.OnCollision(beam)
+        myscene.removeChildrenInArray([square])
     }
     
     

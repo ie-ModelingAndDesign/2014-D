@@ -24,7 +24,10 @@ class Enemy{
     }
     
     func OnCollision(bullet : Bullet){
-        
+        Destroy()
+    }
+    func OnCollision(beam : Beam){
+        Destroy()
     }
     
     func Destroy(){

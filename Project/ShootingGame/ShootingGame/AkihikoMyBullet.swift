@@ -12,7 +12,7 @@ class AkihikoMyBullet : Bullet {
     private var LaserHeight: CGFloat = 10       // laserの高さ
     private var bwidth: CGFloat!             // 弾同士の間隔
     
-    
+    var lasercollider : Beam!
     init (obj: SKScene,Pos: CGPoint, weapon: Int, Laser: CGFloat, width: CGFloat){
         
         super.init(obj: obj)
@@ -38,6 +38,7 @@ class AkihikoMyBullet : Bullet {
             )
             bullet.position = CGPoint(x: Pos.x, y: Pos.y)
             bobj.addChild(bullet)
+            lasercollider = Beam(obj:obj)  // 当たり判定を作成
         default:
             println()
         }
@@ -69,9 +70,13 @@ class AkihikoMyBullet : Bullet {
                 )
                 LaserHeight += 20
                 LaserWidth -= 0.5
+                lasercollider.position = bullet.position
+                lasercollider.colliderWidth = LaserWidth
+                lasercollider.colliderHeight = LaserHeight
             }
             else{
                 bullet.size = CGSizeMake(0,0)
+                lasercollider.Destroy()
             }
 
         default:
