@@ -12,6 +12,10 @@
 		6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */; };
 		646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */; };
 		648EF7061A3AF332000DE1A8 /* AkihikoRefBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */; };
+		64C4ED7E1A7B98E90062432B /* SceneEscapeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */; };
+		64C4ED801A7B98FA0062432B /* StartGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */; };
+		64C4ED821A7B991E0062432B /* ScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED811A7B991E0062432B /* ScoreScene.swift */; };
+		64C4ED841A7B99420062432B /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED831A7B99420062432B /* TitleScene.swift */; };
 		6DF287DB1A442C4400970563 /* MoriEnemy2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF287D71A442C1100970563 /* MoriEnemy2.swift */; };
 		6DF287DD1A442DD900970563 /* MoriyukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */; };
 		6E050C431A442F67008AE8D9 /* DaikiTestBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */; };
@@ -50,6 +54,10 @@
 		6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoMyBullet.swift; sourceTree = "<group>"; };
 		646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoAirframe.swift; sourceTree = "<group>"; };
 		648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoRefBullet.swift; sourceTree = "<group>"; };
+		64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneEscapeProtocol.swift; sourceTree = "<group>"; };
+		64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameProtocol.swift; sourceTree = "<group>"; };
+		64C4ED811A7B991E0062432B /* ScoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreScene.swift; sourceTree = "<group>"; };
+		64C4ED831A7B99420062432B /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
 		6DF287CE1A441EA800970563 /* MoriEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoriEnemy.swift; path = ../../../../../info1_obj2_start/stg/stg/MoriEnemy.swift; sourceTree = "<group>"; };
 		6DF287D71A442C1100970563 /* MoriEnemy2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy2.swift; sourceTree = "<group>"; };
 		6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiTestBullet.swift; sourceTree = "<group>"; };
@@ -130,6 +138,10 @@
 				6EDAD22C1A26FFBD0037B1BD /* Images.xcassets */,
 				6EDAD22E1A26FFBD0037B1BD /* LaunchScreen.xib */,
 				6EDAD21F1A26FFBD0037B1BD /* Supporting Files */,
+				64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */,
+				64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */,
+				64C4ED811A7B991E0062432B /* ScoreScene.swift */,
+				64C4ED831A7B99420062432B /* TitleScene.swift */,
 			);
 			path = ShootingGame;
 			sourceTree = "<group>";
@@ -310,13 +322,16 @@
 			files = (
 				646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */,
 				6ECDD91B1A4273FB007CF517 /* Bullet.swift in Sources */,
+				64C4ED821A7B991E0062432B /* ScoreScene.swift in Sources */,
 				6EDAD24A1A2700F30037B1BD /* DaikiRoot.swift in Sources */,
 				6DF287DD1A442DD900970563 /* MoriyukiRoot.swift in Sources */,
 				6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */,
 				6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */,
 				6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */,
 				6E5916421A4BB23E006DE56B /* ScreenManager.swift in Sources */,
+				64C4ED801A7B98FA0062432B /* StartGameProtocol.swift in Sources */,
 				6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */,
+				64C4ED841A7B99420062432B /* TitleScene.swift in Sources */,
 				6EDAD2281A26FFBD0037B1BD /* GameViewController.swift in Sources */,
 				6ECDD9191A4273F2007CF517 /* Enemy.swift in Sources */,
 				6E050C431A442F67008AE8D9 /* DaikiTestBullet.swift in Sources */,
@@ -324,6 +339,7 @@
 				6418455F1A4FE6370026DD91 /* AkihikoEnemyBullet1.swift in Sources */,
 				6E83C4691A674CB600EE8CD2 /* EnemyBullet.swift in Sources */,
 				6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */,
+				64C4ED7E1A7B98E90062432B /* SceneEscapeProtocol.swift in Sources */,
 				6DF287DB1A442C4400970563 /* MoriEnemy2.swift in Sources */,
 				6E5916401A4BB0C5006DE56B /* Ship.swift in Sources */,
 				6ECDD91D1A427412007CF517 /* ObjectManager.swift in Sources */,

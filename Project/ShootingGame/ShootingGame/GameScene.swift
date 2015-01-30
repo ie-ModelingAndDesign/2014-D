@@ -9,6 +9,10 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var delegate_game: StartGameProtocol?
+    var delegate_escape: SceneEscapeProtocol?
+    
     var koukiRoot : KoukiRoot!
     var moriyukiRoot : MoriyukiRoot!
     var akihikoRoot : AkihikoRoot!
