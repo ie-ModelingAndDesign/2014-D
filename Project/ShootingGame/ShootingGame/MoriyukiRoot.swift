@@ -31,6 +31,7 @@ class MoriyukiRoot{
     
     func update(){
         /* Called every time */
+        //
         enemy.update()
         
     }

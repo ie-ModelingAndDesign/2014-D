@@ -8,17 +8,16 @@
 import SpriteKit
 import Foundation
 
-class DaikiTestBullet : Bullet{
+class DaikiTestBullet : EnemyBullet{
     var square: SKSpriteNode!
     var centerPos: CGPoint!
     var moveTime = 0.0
     var waveSpeed = 0.01
-    var waveDistance = 0.0
+    var waveDistance = 10.0
     var moveSpeed: CGPoint = CGPoint(x:0.0,y:0.0)
     
     override init(obj : SKScene){
         super.init(obj: obj)
-        
         position = CGPoint(x: CGRectGetMidX(obj.frame), y: 400)
         
         square = SKSpriteNode(color: UIColor.greenColor(), size: CGSizeMake(40, 40))
@@ -33,7 +32,7 @@ class DaikiTestBullet : Bullet{
     }
     
     // called every time
-    func update(){
+    override func update(){
         moveTime += waveSpeed
         centerPos = CGPointMake(centerPos.x+moveSpeed.x, centerPos.y+moveSpeed.y)
         position = CGPointMake(centerPos.x+CGFloat(cos(M_PI*moveTime)*waveDistance), centerPos.y)
@@ -41,7 +40,11 @@ class DaikiTestBullet : Bullet{
     }
     
     // called collision time
-    override func OnCollision(enemy : Enemy) {
+    /*override func OnCollision(enemy : Enemy) {
         super.OnCollision(enemy)
+        
+        myscene.removeChildrenInArray([square])
+        Destroy()
     }
+    */
 }

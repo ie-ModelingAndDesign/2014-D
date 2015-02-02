@@ -1,109 +1,87 @@
 import Foundation
 import SpriteKit
 
-class AkihikoMyBullet {
+class AkihikoMyBullet : Bullet {
     
-    var bobj: SKScene!
-    var bulletPos: CGPoint!             // 弾発射位置
-    var bullet: [SKSpriteNode!] = []    // 弾の作成
-    var section: Int = 0                // 武器番号
-    var speed: CGFloat = 10             // 弾の早さ
-    var LaserWidth: CGFloat = 30        // laserの幅
-    var LaserHeight: CGFloat = 10        // laserの高さ
-    var bwidth: CGFloat = 0             // 弾同士の間隔
+    private var bobj: SKScene!
+    private var bulletPos: CGPoint!             // 弾発射位置
+    private var bullet: SKSpriteNode!           // 弾の作成
+    private var section: Int = 0                // 武器番号
+    private var speed: CGFloat = 10             // 弾の早さ
+    private var LaserWidth: CGFloat = 30        // laserの幅
+    private var LaserHeight: CGFloat = 10       // laserの高さ
+    private var bwidth: CGFloat!             // 弾同士の間隔
     
-    
-    init (obj: SKScene){
-        bobj = obj
-    }
-    
-    
-    func CreateBullet(Pos: CGPoint, weapon: Int, Laser: CGFloat) {
+    var lasercollider : Beam!
+    init (obj: SKScene,Pos: CGPoint, weapon: Int, Laser: CGFloat, width: CGFloat){
         
-        bulletPos = Pos
-        LaserWidth = Laser
+        super.init(obj: obj)
         section = weapon
-        
-        /* 弾の作成 */
-        bullet = [SKSpriteNode] (
-            count : 5 ,
-            repeatedValue :SKSpriteNode(color: UIColor.yellowColor(),size: CGSizeMake(4, 10))
-        )
-        
+        bobj = obj
+        LaserWidth = Laser
+        bulletPos = Pos
+        bwidth = width
         
         switch section {
-        case 0:                 // bulletnum = 1
-            BulletArr()
-        case 1:                 // bulletnum = 3
-            bwidth = -10
-            BulletArr()
-        case 2:                 // bulletnum = 5
-            bwidth = -20
-            BulletArr()
-        case 3:                 // laser
-            laser()
-        default:
-            BulletArr()         // bulletnum = 1
-        }
-        
-    }
-    
-    
-    
-    /* 通常攻撃 */
-    func BulletArr(){
-        
-        for(var i=2-section;i<=2+section;i++){
-            bullet[i] = SKSpriteNode(color: UIColor.yellowColor(),size: CGSizeMake(4, 10))
-            bullet[i].position = CGPoint(x: bulletPos.x+bwidth, y: bulletPos.y)
-            bobj.addChild(bullet[i])
-            bwidth += 10
-        }
-    }
-    
-    
-    /* Laser攻撃 */
-    func laser(){
-        bullet[2] = SKSpriteNode(color: UIColor.yellowColor(),
-            size: CGSizeMake(LaserWidth, LaserHeight)
-        )
-        bullet[2].position = CGPoint(x: bulletPos.x, y: bulletPos.y)
-        bobj.addChild(bullet[2])
-        
-    }
-    
-    
-    /* update */
-    func update(squarePos: CGPoint) {
-        
-        switch section {
-            
-        case 0,1,2:                 // 通常攻撃
-            for(var i=2-section;i<=2+section;i++){
-                bullet[i].position = CGPoint(
-                    x: bullet[i].position.x,
-                    y: bullet[i].position.y+speed
-                )
-            }
-            
-        case 3:                     // Laser
-            if(LaserWidth > 0){
-                bullet[2].size = CGSizeMake(LaserWidth,LaserHeight)
-                bullet[2].position = CGPoint(
-                    x: squarePos.x,
-                    y: squarePos.y+(LaserHeight/2)
-                )
-                LaserHeight += 20
-                LaserWidth -= 0.5
-            }
-            else{
-                bullet[2].size = CGSizeMake(0,0)
-            }
-            
+        case 1,3,5:
+            bullet = SKSpriteNode(
+                color: UIColor.yellowColor(),
+                size: CGSizeMake(4, 10)
+            )
+            bullet.position = CGPoint(x: Pos.x+bwidth, y: Pos.y)
+            bobj.addChild(bullet)
+
+        case 2:
+            bullet = SKSpriteNode(
+                color: UIColor.yellowColor(),
+                size: CGSizeMake(Laser, LaserHeight)
+            )
+            bullet.position = CGPoint(x: Pos.x, y: Pos.y)
+            bobj.addChild(bullet)
+            lasercollider = Beam(obj:obj)  // 当たり判定を作成
         default:
             println()
         }
         
+    }
+    
+    
+
+    
+    
+    /* update */
+    override func update() {
+        
+        switch section {
+            
+        case 1,3,5:
+            bullet.position = CGPoint(
+                x: bullet.position.x,
+                y: bullet.position.y+speed
+            )
+            position = bullet.position
+
+        case 2:
+            if(LaserWidth > 0){
+                bullet.size = CGSizeMake(LaserWidth,LaserHeight)
+                bullet.position = CGPoint(
+                    x: bulletPos.x,
+                    y: bulletPos.y+(LaserHeight/2)
+                )
+                LaserHeight += 20
+                LaserWidth -= 0.5
+                lasercollider.position = bullet.position
+                lasercollider.colliderWidth = LaserWidth
+                lasercollider.colliderHeight = LaserHeight
+            }
+            else{
+                bullet.size = CGSizeMake(0,0)
+                lasercollider.Destroy()
+            }
+
+        default:
+            println()
+        }
         
     }
     

@@ -9,15 +9,11 @@ import SpriteKit
 import Foundation
 
 class DaikiRoot{
-
-    var bullet : DaikiTestBullet!
     
     init(obj : SKScene){
         /* Setup */
         var enemy = DaikiEnemy(obj:obj)
         enemy.colliderRadius = 20
-        bullet = DaikiTestBullet(obj: obj)
-        bullet.colliderRadius = 20
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -32,7 +28,6 @@ class DaikiRoot{
     
     func update(){
         /* Called every time */
-        bullet.update()
         ObjectManager.getInstance().update()
     }
     

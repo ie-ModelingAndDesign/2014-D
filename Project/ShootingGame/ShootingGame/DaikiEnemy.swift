@@ -15,11 +15,9 @@ class DaikiEnemy : Enemy{
     var waveSpeed = 0.01
     var waveDistance = 200.0
     var moveSpeed: CGPoint = CGPoint(x:0.0,y:-1.0)
-    var scene : SKScene!
     
     override init(obj : SKScene){
         super.init(obj: obj)
-        scene = obj
         position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMaxY(obj.frame))
         
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 40))
@@ -44,8 +42,12 @@ class DaikiEnemy : Enemy{
     
     override func OnCollision(bullet: Bullet) {
         super.OnCollision(bullet)
-        scene.removeChildrenInArray([square])
-        ObjectManager.getInstance().removeEnemy(self)
+        myscene.removeChildrenInArray([square])
+    }
+    
+    override func OnCollision(beam: Beam) {
+        super.OnCollision(beam)
+        myscene.removeChildrenInArray([square])
     }
     
     

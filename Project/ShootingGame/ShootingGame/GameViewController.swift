@@ -25,31 +25,66 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
-
+class GameViewController: UIViewController, SceneEscapeProtocol, StartGameProtocol {
+    
+    var skView: SKView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
-            // Configure the view.
-            let skView = self.view as SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
-            
-            skView.presentScene(scene)
+        
+        // skViewを設定します。
+        self.skView = self.view as? SKView
+        skView!.showsFPS = true
+        skView!.showsNodeCount = true
+        skView!.ignoresSiblingOrder = true
+        
+        goTitle()
+    }
+    
+    func goGame() {
+        let gameScene = GameScene(size: CGSizeMake(1024, 768))
+        gameScene.delegate_game = self
+        gameScene.scaleMode = SKSceneScaleMode.AspectFill
+        self.skView!.presentScene(gameScene)
+    }
+    
+    func goTitle() {
+        let titleScene = TitleScene(size: CGSizeMake(1024, 768))
+        titleScene.delegate_game = self
+        titleScene.delegate_escape = self
+        titleScene.scaleMode = SKSceneScaleMode.AspectFill
+        self.skView!.presentScene(titleScene)
+    }
+    
+    func goScore() {
+        let scoreScene = ScoreScene(size: CGSizeMake(1024, 768))
+        scoreScene.delegate_escape = self
+        scoreScene.scaleMode = SKSceneScaleMode.AspectFill
+        self.skView!.presentScene(scoreScene)
+    }
+    
+    // デリゲートメソッドの記述。
+    func sceneEscape(scene: SKScene) {
+        
+        if scene.isKindOfClass(TitleScene) {
+            goScore()
+        }else if scene.isKindOfClass(ScoreScene) {
+            goTitle()
         }
     }
-
+    
+    func startGame(scene: SKScene) {
+        if scene.isKindOfClass(TitleScene) {
+            goGame()
+        }
+    }
+    
+    
+    
     override func shouldAutorotate() -> Bool {
         return true
     }
-
+    
     override func supportedInterfaceOrientations() -> Int {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
             return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
@@ -57,12 +92,12 @@ class GameViewController: UIViewController {
             return Int(UIInterfaceOrientationMask.All.rawValue)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
