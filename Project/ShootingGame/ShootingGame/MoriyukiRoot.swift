@@ -10,12 +10,14 @@ import SpriteKit
 import Foundation
 
 class MoriyukiRoot{
-    var enemy : MoriEnemy2!
+    var enemy : MoriEnemy!
+    var enemy2 : MoriEnemy2!
     
     init(obj : SKScene){
         
         /* Setuppppppppppppppppppppp */
-                 enemy = MoriEnemy2(obj:obj)
+                 enemy = MoriEnemy(obj:obj)
+                 enemy2 = MoriEnemy2(obj:obj)
         
     }
     
@@ -33,6 +35,7 @@ class MoriyukiRoot{
         /* Called every time */
         //
         enemy.update()
+        enemy2.update()
         
     }
     
