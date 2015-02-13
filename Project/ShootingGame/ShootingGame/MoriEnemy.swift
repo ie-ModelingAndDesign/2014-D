@@ -9,14 +9,15 @@
 import Foundation
 import SpriteKit
 
-class MoriEnemy{
+class MoriEnemy : Enemy{
     var square: SKSpriteNode!
     var startPos: CGPoint!
     var beganPos: CGPoint!
     
-    
     var timer = NSTimer()
-    init (obj : SKScene) {
+    override init (obj : SKScene) {
+        super.init(obj: obj);
+        myscene = obj
         
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
         
@@ -42,7 +43,8 @@ class MoriEnemy{
     
     var i = 0
     
-    func update() {
+    override func update() {
+        super.update();
         /* Called before each frame is rendered */
         
        
@@ -74,9 +76,14 @@ class MoriEnemy{
                 i = 0
             }
         }
+        position = square.position
         
         
-        
+    }
+    override func Destroy(){
+        super.Destroy()
+        myscene.removeChildrenInArray([square])
+        square = nil
     }
 }
 

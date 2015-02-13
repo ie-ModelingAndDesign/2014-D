@@ -12,16 +12,22 @@ import SpriteKit
 class EnemySpawner{
     
     internal var myscene : SKScene!
-    var time = 0;
+    var timeA = 0;
+    var timeB = 0;
     init(obj:SKScene){
         myscene = obj;
     }
     
     func update(){
-        time++;
-        if(time >= 30){
-            time = 0;
+        timeA++;
+        if(timeA >= 20){
+            timeA = 0;
             spawnEnemy(0);
+        }
+        timeB++;
+        if(timeB >= 40){
+            timeB = 0;
+            spawnEnemy(1);
         }
     }
     
@@ -29,9 +35,12 @@ class EnemySpawner{
         var enemy:Enemy!
         switch(n){
         case 0:
-            enemy = DaikiEnemy(obj: myscene);
+            enemy = DaikiEnemy(obj: myscene)
             enemy.colliderRadius = 20
             break;
+        case 1:
+            enemy = MoriEnemy(obj:myscene)
+            enemy.colliderRadius = 30
         default :
             break;
         }

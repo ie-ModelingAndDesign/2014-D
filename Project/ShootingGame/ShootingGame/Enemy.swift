@@ -10,7 +10,7 @@ import SpriteKit
 
 class Enemy{
     internal var position:CGPoint = CGPointMake(0,0)
-    internal var colliderRadius:CGFloat = 100
+    internal var colliderRadius:CGFloat = 20
     internal var HP:Float = 100.0
     internal var AttackPower:Float = 10.0
     internal var myscene : SKScene!
