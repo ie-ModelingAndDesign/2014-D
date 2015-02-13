@@ -19,7 +19,13 @@ class Bullet{
     }
     
     func update(){
-        
+        checkOutDisplay();
+    }
+    
+    func checkOutDisplay(){
+        if(position.y > ScreenManager.getInstance().getTop()){
+            Destroy();
+        }
     }
     
     func OnCollision(enemy : Enemy){

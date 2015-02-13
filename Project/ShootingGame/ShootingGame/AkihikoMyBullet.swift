@@ -51,15 +51,17 @@ class AkihikoMyBullet : Bullet {
     
     /* update */
     override func update() {
-        
+        super.update();
         switch section {
             
         case 1,3,5:
+            if(bullet != nil){
             bullet.position = CGPoint(
                 x: bullet.position.x,
                 y: bullet.position.y+speed
             )
             position = bullet.position
+            }
 
         case 2:
             if(LaserWidth > 0){
@@ -83,6 +85,12 @@ class AkihikoMyBullet : Bullet {
             println()
         }
         
+    }
+    
+    override func Destroy(){
+        bobj.removeChildrenInArray([bullet])
+        bullet = nil
+        super.Destroy()
     }
     
 }
