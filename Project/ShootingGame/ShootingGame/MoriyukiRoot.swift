@@ -10,12 +10,16 @@ import SpriteKit
 import Foundation
 
 class MoriyukiRoot{
-    var enemy : MoriEnemy2!
+    var enemy : MoriEnemy!
+    var enemy2 : MoriEnemy2!
+    
     init(obj : SKScene){
         
         /* Setuppppppppppppppppppppp */
-                 enemy = MoriEnemy2(obj:obj)
-            }
+                 enemy = MoriEnemy(obj:obj)
+                 enemy2 = MoriEnemy2(obj:obj)
+        
+    }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
@@ -31,6 +35,8 @@ class MoriyukiRoot{
         /* Called every time */
         //
         enemy.update()
+        enemy2.update()
+        
     }
     
     
