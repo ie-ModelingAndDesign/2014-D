@@ -9,12 +9,14 @@ import SpriteKit
 import Foundation
 
 class DaikiRoot{
-    var enemy_spawner : EnemySpawner!;
+    var enemy_spawner : EnemySpawner!
+    var time : TimeView!
     init(obj : SKScene){
         /* Setup */
+        time = TimeView(obj:obj);
         var enemy = DaikiEnemy(obj:obj)
         enemy.colliderRadius = 20
-        enemy_spawner = EnemySpawner(obj: obj);
+        enemy_spawner = EnemySpawner(obj: obj)
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -29,6 +31,7 @@ class DaikiRoot{
     
     func update(){
         /* Called every time */
+        time.update();
         ObjectManager.getInstance().update()
         enemy_spawner.update();
     }
