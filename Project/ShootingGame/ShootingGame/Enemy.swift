@@ -13,6 +13,7 @@ class Enemy{
     internal var colliderRadius:CGFloat = 20
     internal var HP:Float = 100.0
     internal var AttackPower:Float = 10.0
+    internal var Point:Int = 100
     internal var myscene : SKScene!
     init(obj : SKScene){
         ObjectManager.getInstance().setEnemy(self)
@@ -31,6 +32,7 @@ class Enemy{
     }
     
     func Destroy(){
+        ScoreManager.getInstance().addScore(Point)
         ObjectManager.getInstance().removeEnemy(self)
     }
 }
