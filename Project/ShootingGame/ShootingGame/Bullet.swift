@@ -24,12 +24,12 @@ class Bullet{
     
     func checkOutDisplay(){
         if(position.y > ScreenManager.getInstance().getTop()){
-            Destroy();
+            Destroy()
         }
     }
     
     func OnCollision(enemy : Enemy){
-        
+        Destroy()
     }
     
     func Destroy(){

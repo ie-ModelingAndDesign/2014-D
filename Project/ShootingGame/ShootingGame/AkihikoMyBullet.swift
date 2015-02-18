@@ -88,7 +88,9 @@ class AkihikoMyBullet : Bullet {
     }
     
     override func Destroy(){
-        bobj.removeChildrenInArray([bullet])
+        if(bullet != nil){
+            bobj.removeChildrenInArray([bullet])
+        }
         bullet = nil
         super.Destroy()
     }
