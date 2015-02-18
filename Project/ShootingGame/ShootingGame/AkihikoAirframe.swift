@@ -12,6 +12,7 @@ class AkihikoAirframe : Ship {
     private var diffPos: CGPoint!       // 移動距離
     private var lastPos: CGPoint!       // タップしたときの機体の位置
     
+    private var shot_interval = 10       // 発射間隔
     private var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
     private var BeforeWeapon: Int = 1       // Laser攻撃する前の武器を保存
     private var width: CGFloat = 0       // 複数発射時の弾同士の間隔
@@ -118,7 +119,7 @@ class AkihikoAirframe : Ship {
             
         /* 通常 の 攻撃 */
         else{
-            if(bframe%20 == 0){
+            if(bframe%shot_interval == 0){
                 if(weapon == 1){
                     width = 0
                 }else if(weapon == 3){
