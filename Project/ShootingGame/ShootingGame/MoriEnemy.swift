@@ -81,9 +81,9 @@ class MoriEnemy : Enemy{
         
     }
     override func Destroy(){
-        super.Destroy()
         myscene.removeChildrenInArray([square])
         square = nil
+        super.Destroy()
     }
 }
 
