@@ -40,6 +40,8 @@
 		6EDAD24C1A27024E0037B1BD /* AkihikoRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24B1A27024E0037B1BD /* AkihikoRoot.swift */; };
 		6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */; };
 		6EE42E971A94720000FE3809 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE42E961A94720000FE3809 /* TimeView.swift */; };
+		6EE42E991A94D85000FE3809 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE42E981A94D85000FE3809 /* ScoreView.swift */; };
+		6EE42E9B1A94D87500FE3809 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE42E9A1A94D87500FE3809 /* ScoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriyukiRoot.swift; sourceTree = "<group>"; };
 		6EDAD24F1A27029E0037B1BD /* KoukiRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoukiRoot.swift; sourceTree = "<group>"; };
 		6EE42E961A94720000FE3809 /* TimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		6EE42E981A94D85000FE3809 /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		6EE42E9A1A94D87500FE3809 /* ScoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,8 @@
 				6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */,
 				6EE42E961A94720000FE3809 /* TimeView.swift */,
 				6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */,
+				6EE42E981A94D85000FE3809 /* ScoreView.swift */,
+				6EE42E9A1A94D87500FE3809 /* ScoreManager.swift */,
 				6E5916411A4BB23E006DE56B /* ScreenManager.swift */,
 			);
 			name = Daiki;
@@ -341,6 +347,8 @@
 				6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */,
 				6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */,
 				6E5916421A4BB23E006DE56B /* ScreenManager.swift in Sources */,
+				6EE42E991A94D85000FE3809 /* ScoreView.swift in Sources */,
+				6EE42E9B1A94D87500FE3809 /* ScoreManager.swift in Sources */,
 				64C4ED801A7B98FA0062432B /* StartGameProtocol.swift in Sources */,
 				6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */,
 				64C4ED841A7B99420062432B /* TitleScene.swift in Sources */,

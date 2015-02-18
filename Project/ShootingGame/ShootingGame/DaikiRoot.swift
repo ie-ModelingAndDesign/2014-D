@@ -11,9 +11,11 @@ import Foundation
 class DaikiRoot{
     var enemy_spawner : EnemySpawner!
     var time : TimeView!
+    var score : ScoreView!
     init(obj : SKScene){
         /* Setup */
-        time = TimeView(obj:obj);
+        time = TimeView(obj:obj)
+        score = ScoreView(obj:obj)
         var enemy = DaikiEnemy(obj:obj)
         enemy.colliderRadius = 20
         enemy_spawner = EnemySpawner(obj: obj)
@@ -32,6 +34,7 @@ class DaikiRoot{
     func update(){
         /* Called every time */
         time.update();
+        score.update();
         ObjectManager.getInstance().update()
         enemy_spawner.update();
     }
