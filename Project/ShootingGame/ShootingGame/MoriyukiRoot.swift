@@ -12,6 +12,7 @@ import Foundation
 class MoriyukiRoot{
     var enemy : MoriEnemy!
     var enemy2 : MoriEnemy2!
+    var enemy3 : MoriEnemy3!
     var enemy5 : MoriEnemy5!
     var enemy6 : MoriEnemy6!
     var enemy7 : MoriEnemy7!
@@ -21,6 +22,7 @@ class MoriyukiRoot{
     init(obj : SKScene){
         enemy = MoriEnemy(obj:obj)
         enemy2 = MoriEnemy2(obj:obj)
+        enemy3 = MoriEnemy3(obj:obj)
         enemy5 = MoriEnemy5(obj:obj)
         enemy6 = MoriEnemy6(obj:obj)
         enemy7 = MoriEnemy7(obj:obj)
@@ -42,6 +44,7 @@ class MoriyukiRoot{
         /* Called every time */
         enemy.update()
         enemy2.update()
+        enemy3.update()
         enemy5.update()
         enemy6.update()
         enemy7.update()
