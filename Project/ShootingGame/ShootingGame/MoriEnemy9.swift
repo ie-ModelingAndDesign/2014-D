@@ -11,7 +11,7 @@
 import Foundation
 import SpriteKit
 
-class MoriEnemy9{
+class MoriEnemy9 : Enemy{
     var square: SKSpriteNode!
     
     
@@ -20,8 +20,8 @@ class MoriEnemy9{
     
     
     var timer = NSTimer()
-    init (obj : SKScene) {
-        
+    override init (obj : SKScene) {
+        super.init(obj: obj);
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 40))
         
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMidY(obj.frame))
@@ -46,8 +46,8 @@ class MoriEnemy9{
     var rot = 0.0 //角度
     var i = 0  //時間
     
-    func update() {
-        
+    override func update() {
+        super.update()
         var angle = 0.9
         
         rot += angle;
@@ -58,35 +58,38 @@ class MoriEnemy9{
         var action1 = SKAction.moveTo(CGPoint(x: 512 + 5*cos(rad)*50,y: 384 + 5*sin(rad)*90), duration: 1)
         var action2 = SKAction.moveTo(CGPoint(x: 512 + 5*sin(rad)*50,y: 384 + 5*cos(rad)*90), duration: 1)
         
-        if (i >= 0 || i < 60){
+        if(square != nil){
+            position = square.position
+            if (i >= 0 || i < 60){
             
             
           
-            square.runAction(action1)
-            i++;
+                square.runAction(action1)
+                i++;
             
-        }
+            }
         
-        if (i >= 60 ){
+            if (i >= 60 ){
             
-            
-            square.runAction(action2)
+                square.runAction(action2)
                         
-            if (i == 120){
+                if (i == 120){
                 
-                i = 0
+                    i = 0
 
             
+                }
+            }
         }
-        
-       
-            
-        }
-        
-        
-        
     }
     
+    override func Destroy(){
+        if(square != nil){
+            myscene.removeChildrenInArray([square])
+        }
+        square = nil
+        super.Destroy()
+    }
     
+
 }
-        

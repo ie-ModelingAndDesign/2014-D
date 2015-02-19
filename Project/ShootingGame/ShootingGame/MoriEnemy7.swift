@@ -12,7 +12,7 @@
 import Foundation
 import SpriteKit
 
-class MoriEnemy7{
+class MoriEnemy7 : Enemy{
     var square: SKSpriteNode!
     
     
@@ -21,8 +21,8 @@ class MoriEnemy7{
     
     
     var timer = NSTimer()
-    init (obj : SKScene) {
-        
+    override init (obj : SKScene) {
+        super.init(obj: obj);
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
         
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMidY(obj.frame))
@@ -47,8 +47,8 @@ class MoriEnemy7{
     var rot = 0.0 //角度
     
     
-    func update() {
-        
+    override func update() {
+        super.update()
         var angle = 0.9
         
         
@@ -57,11 +57,22 @@ class MoriEnemy7{
         //角度
         let rad =  rot * M_PI / 50
         
+        if(square != nil){
+            position = square.position
         //だ円運動の計算
-        square.position.x = square.position.x + CGFloat(5*cos(rad)) * 2
-        square.position.y = square.position.y + CGFloat(5*sin(rad)) * 1
-        
+            square.position.x = square.position.x + CGFloat(5*cos(rad)) * 2
+            square.position.y = square.position.y + CGFloat(5*sin(rad)) * 1
+        }
     }
+    
+    override func Destroy(){
+        if(square != nil){
+            myscene.removeChildrenInArray([square])
+        }
+        square = nil
+        super.Destroy()
+    }
+
     
     
 }

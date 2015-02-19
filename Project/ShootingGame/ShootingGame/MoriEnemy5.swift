@@ -11,40 +11,47 @@
 import Foundation
 import SpriteKit
 
-class MoriEnemy5{
+class MoriEnemy5 : Enemy{
     var square: SKSpriteNode!
     var startPos: CGPoint!
     var beganPos: CGPoint!
     
        var timer = NSTimer()
-    init (obj : SKScene) {
-        
+    override init (obj : SKScene) {
+        super.init(obj: obj);
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
         
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMaxY(obj.frame))
         
         
-        
-               
         obj.addChild(square)
         
         startPos = CGPointMake(
             square.position.x,
             square.position.y
-            
-            
-            
         )
         println(startPos)
         
-        
     }
     
     
-    func update() {
+    override func update() {
+        super.update()
         /* Called before each frame is rendered */
-        
+        if(square != nil){
+            position = square.position
         var action1 = SKAction.moveTo(CGPoint(x: 530,y: -100), duration: 1)
         square.runAction(action1)
+        }
     }
+    
+    override func Destroy(){
+        if(square != nil){
+            myscene.removeChildrenInArray([square])
+        }
+        square = nil
+        super.Destroy()
+    }
+    
+
 }
