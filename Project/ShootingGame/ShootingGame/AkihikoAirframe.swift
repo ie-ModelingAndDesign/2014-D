@@ -19,6 +19,8 @@ class AkihikoAirframe : Ship {
     private var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
     private var RefOn: Int = 0           // Reflect攻撃をON/OFF
     private var beam: Int = 10;
+    private var texture_time = 0        // テクスチャの変更時間
+    private var texture_right = false   // 飛行機の方向
     
     var laserbullet: Bullet!
     var bullet: Bullet!
@@ -28,8 +30,10 @@ class AkihikoAirframe : Ship {
         sceneobj = obj
 
         /* 機体の作成 */
-        square = SKSpriteNode(imageNamed:"Spaceship.png")
+        square = SKSpriteNode(imageNamed:"airplane_center.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
+        square.xScale *= 0.1
+        square.yScale *= 0.1
         obj.addChild(square)
 
         
@@ -148,11 +152,23 @@ class AkihikoAirframe : Ship {
                     obj:sceneobj, Pos:square.position, number: 1
                 )
         }
-
+        
+        if(CGFloat.abs(lastPos.x-square.position.x) > 5){
+            texture_time = 15
+            if(lastPos.x < square.position.x){
+                square.texture = SKTexture(imageNamed:"airplane_right")
+            }else if(lastPos.x > square.position.x){
+                square.texture = SKTexture(imageNamed:"airplane_left")
+            }
+        }
+        texture_time -= 1
+        if(texture_time < 0){
+            texture_time = 0
+            square.texture = SKTexture(imageNamed:"airplane_center")
+        }
         lastPos = square.position
         position = square.position
         bframe += 1
-        
     }
  
     

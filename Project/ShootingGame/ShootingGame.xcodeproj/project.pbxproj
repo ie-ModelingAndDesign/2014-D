@@ -31,6 +31,31 @@
 		6E5916401A4BB0C5006DE56B /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59163F1A4BB0C5006DE56B /* Ship.swift */; };
 		6E5916421A4BB23E006DE56B /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5916411A4BB23E006DE56B /* ScreenManager.swift */; };
 		6E83C4691A674CB600EE8CD2 /* EnemyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */; };
+		6E9F48F21A95C38A005A8C8E /* airplane_center.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48EB1A95C38A005A8C8E /* airplane_center.png */; };
+		6E9F48F31A95C38A005A8C8E /* airplane_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48EC1A95C38A005A8C8E /* airplane_left.png */; };
+		6E9F48F41A95C38A005A8C8E /* airplane_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48ED1A95C38A005A8C8E /* airplane_right.png */; };
+		6E9F48F51A95C38A005A8C8E /* pen_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48EE1A95C38A005A8C8E /* pen_small.png */; };
+		6E9F48F61A95C38A005A8C8E /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48EF1A95C38A005A8C8E /* pen.png */; };
+		6E9F48F71A95C38A005A8C8E /* pen2_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48F01A95C38A005A8C8E /* pen2_small.png */; };
+		6E9F48F81A95C38A005A8C8E /* pen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48F11A95C38A005A8C8E /* pen2.png */; };
+		6E9F490B1A95C3EA005A8C8E /* akihiko1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48F91A95C3EA005A8C8E /* akihiko1.png */; };
+		6E9F490C1A95C3EA005A8C8E /* akihiko2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48FA1A95C3EA005A8C8E /* akihiko2.png */; };
+		6E9F490D1A95C3EA005A8C8E /* akihiko3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48FB1A95C3EA005A8C8E /* akihiko3.png */; };
+		6E9F490E1A95C3EA005A8C8E /* akihiko4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48FC1A95C3EA005A8C8E /* akihiko4.png */; };
+		6E9F490F1A95C3EA005A8C8E /* daiki1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48FD1A95C3EA005A8C8E /* daiki1.png */; };
+		6E9F49101A95C3EA005A8C8E /* daiki2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48FE1A95C3EA005A8C8E /* daiki2.png */; };
+		6E9F49111A95C3EA005A8C8E /* koki_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48FF1A95C3EA005A8C8E /* koki_1.png */; };
+		6E9F49121A95C3EA005A8C8E /* koki_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49001A95C3EA005A8C8E /* koki_2.png */; };
+		6E9F49131A95C3EA005A8C8E /* koki_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49011A95C3EA005A8C8E /* koki_3.png */; };
+		6E9F49141A95C3EA005A8C8E /* koki_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49021A95C3EA005A8C8E /* koki_4.png */; };
+		6E9F49151A95C3EA005A8C8E /* koki_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49031A95C3EA005A8C8E /* koki_5.png */; };
+		6E9F49161A95C3EA005A8C8E /* koki_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49041A95C3EA005A8C8E /* koki_6.png */; };
+		6E9F49171A95C3EA005A8C8E /* koki_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49051A95C3EA005A8C8E /* koki_7.png */; };
+		6E9F49181A95C3EA005A8C8E /* koki_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49061A95C3EA005A8C8E /* koki_8.png */; };
+		6E9F49191A95C3EA005A8C8E /* koki_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49071A95C3EA005A8C8E /* koki_9.png */; };
+		6E9F491A1A95C3EA005A8C8E /* koki_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49081A95C3EA005A8C8E /* koki_10.png */; };
+		6E9F491B1A95C3EA005A8C8E /* moriyuki1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49091A95C3EA005A8C8E /* moriyuki1.png */; };
+		6E9F491C1A95C3EA005A8C8E /* moriyuki2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F490A1A95C3EA005A8C8E /* moriyuki2.png */; };
 		6ECDD9191A4273F2007CF517 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD9181A4273F2007CF517 /* Enemy.swift */; };
 		6ECDD91B1A4273FB007CF517 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD91A1A4273FB007CF517 /* Bullet.swift */; };
 		6ECDD91D1A427412007CF517 /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD91C1A427412007CF517 /* ObjectManager.swift */; };
@@ -83,6 +108,31 @@
 		6E59163F1A4BB0C5006DE56B /* Ship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
 		6E5916411A4BB23E006DE56B /* ScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
 		6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyBullet.swift; sourceTree = "<group>"; };
+		6E9F48EB1A95C38A005A8C8E /* airplane_center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane_center.png; sourceTree = "<group>"; };
+		6E9F48EC1A95C38A005A8C8E /* airplane_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane_left.png; sourceTree = "<group>"; };
+		6E9F48ED1A95C38A005A8C8E /* airplane_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane_right.png; sourceTree = "<group>"; };
+		6E9F48EE1A95C38A005A8C8E /* pen_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen_small.png; sourceTree = "<group>"; };
+		6E9F48EF1A95C38A005A8C8E /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.png; sourceTree = "<group>"; };
+		6E9F48F01A95C38A005A8C8E /* pen2_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen2_small.png; sourceTree = "<group>"; };
+		6E9F48F11A95C38A005A8C8E /* pen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen2.png; sourceTree = "<group>"; };
+		6E9F48F91A95C3EA005A8C8E /* akihiko1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akihiko1.png; sourceTree = "<group>"; };
+		6E9F48FA1A95C3EA005A8C8E /* akihiko2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akihiko2.png; sourceTree = "<group>"; };
+		6E9F48FB1A95C3EA005A8C8E /* akihiko3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akihiko3.png; sourceTree = "<group>"; };
+		6E9F48FC1A95C3EA005A8C8E /* akihiko4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akihiko4.png; sourceTree = "<group>"; };
+		6E9F48FD1A95C3EA005A8C8E /* daiki1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daiki1.png; sourceTree = "<group>"; };
+		6E9F48FE1A95C3EA005A8C8E /* daiki2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daiki2.png; sourceTree = "<group>"; };
+		6E9F48FF1A95C3EA005A8C8E /* koki_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_1.png; sourceTree = "<group>"; };
+		6E9F49001A95C3EA005A8C8E /* koki_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_2.png; sourceTree = "<group>"; };
+		6E9F49011A95C3EA005A8C8E /* koki_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_3.png; sourceTree = "<group>"; };
+		6E9F49021A95C3EA005A8C8E /* koki_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_4.png; sourceTree = "<group>"; };
+		6E9F49031A95C3EA005A8C8E /* koki_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_5.png; sourceTree = "<group>"; };
+		6E9F49041A95C3EA005A8C8E /* koki_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_6.png; sourceTree = "<group>"; };
+		6E9F49051A95C3EA005A8C8E /* koki_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_7.png; sourceTree = "<group>"; };
+		6E9F49061A95C3EA005A8C8E /* koki_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_8.png; sourceTree = "<group>"; };
+		6E9F49071A95C3EA005A8C8E /* koki_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_9.png; sourceTree = "<group>"; };
+		6E9F49081A95C3EA005A8C8E /* koki_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = koki_10.png; sourceTree = "<group>"; };
+		6E9F49091A95C3EA005A8C8E /* moriyuki1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moriyuki1.png; sourceTree = "<group>"; };
+		6E9F490A1A95C3EA005A8C8E /* moriyuki2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moriyuki2.png; sourceTree = "<group>"; };
 		6ECDD9181A4273F2007CF517 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		6ECDD91A1A4273FB007CF517 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
 		6ECDD91C1A427412007CF517 /* ObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
@@ -125,6 +175,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E9F48EA1A95C361005A8C8E /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
+				6E9F48EC1A95C38A005A8C8E /* airplane_left.png */,
+				6E9F48ED1A95C38A005A8C8E /* airplane_right.png */,
+				6E9F48EE1A95C38A005A8C8E /* pen_small.png */,
+				6E9F48EF1A95C38A005A8C8E /* pen.png */,
+				6E9F48F01A95C38A005A8C8E /* pen2_small.png */,
+				6E9F48F11A95C38A005A8C8E /* pen2.png */,
+				6E9F48F91A95C3EA005A8C8E /* akihiko1.png */,
+				6E9F48FA1A95C3EA005A8C8E /* akihiko2.png */,
+				6E9F48FB1A95C3EA005A8C8E /* akihiko3.png */,
+				6E9F48FC1A95C3EA005A8C8E /* akihiko4.png */,
+				6E9F48FD1A95C3EA005A8C8E /* daiki1.png */,
+				6E9F48FE1A95C3EA005A8C8E /* daiki2.png */,
+				6E9F48FF1A95C3EA005A8C8E /* koki_1.png */,
+				6E9F49001A95C3EA005A8C8E /* koki_2.png */,
+				6E9F49011A95C3EA005A8C8E /* koki_3.png */,
+				6E9F49021A95C3EA005A8C8E /* koki_4.png */,
+				6E9F49031A95C3EA005A8C8E /* koki_5.png */,
+				6E9F49041A95C3EA005A8C8E /* koki_6.png */,
+				6E9F49051A95C3EA005A8C8E /* koki_7.png */,
+				6E9F49061A95C3EA005A8C8E /* koki_8.png */,
+				6E9F49071A95C3EA005A8C8E /* koki_9.png */,
+				6E9F49081A95C3EA005A8C8E /* koki_10.png */,
+				6E9F49091A95C3EA005A8C8E /* moriyuki1.png */,
+				6E9F490A1A95C3EA005A8C8E /* moriyuki2.png */,
+			);
+			name = Picture;
+			sourceTree = "<group>";
+		};
 		6EDAD2131A26FFBC0037B1BD = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +243,7 @@
 				6EDAD21F1A26FFBD0037B1BD /* Supporting Files */,
 				64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */,
 				64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */,
+				6E9F48EA1A95C361005A8C8E /* Picture */,
 				64C4ED811A7B991E0062432B /* ScoreScene.swift */,
 				64C4ED831A7B99420062432B /* TitleScene.swift */,
 			);
@@ -329,11 +412,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9F491A1A95C3EA005A8C8E /* koki_10.png in Resources */,
+				6E9F490F1A95C3EA005A8C8E /* daiki1.png in Resources */,
+				6E9F48F71A95C38A005A8C8E /* pen2_small.png in Resources */,
+				6E9F491C1A95C3EA005A8C8E /* moriyuki2.png in Resources */,
+				6E9F49151A95C3EA005A8C8E /* koki_5.png in Resources */,
+				6E9F49141A95C3EA005A8C8E /* koki_4.png in Resources */,
 				6EDAD2301A26FFBD0037B1BD /* LaunchScreen.xib in Resources */,
+				6E9F49191A95C3EA005A8C8E /* koki_9.png in Resources */,
+				6E9F490D1A95C3EA005A8C8E /* akihiko3.png in Resources */,
+				6E9F490E1A95C3EA005A8C8E /* akihiko4.png in Resources */,
+				6E9F48F61A95C38A005A8C8E /* pen.png in Resources */,
+				6E9F49161A95C3EA005A8C8E /* koki_6.png in Resources */,
 				641845611A4FE84F0026DD91 /* ball.png in Resources */,
+				6E9F49101A95C3EA005A8C8E /* daiki2.png in Resources */,
+				6E9F48F31A95C38A005A8C8E /* airplane_left.png in Resources */,
+				6E9F49171A95C3EA005A8C8E /* koki_7.png in Resources */,
+				6E9F49111A95C3EA005A8C8E /* koki_1.png in Resources */,
+				6E9F48F21A95C38A005A8C8E /* airplane_center.png in Resources */,
+				6E9F49131A95C3EA005A8C8E /* koki_3.png in Resources */,
 				6EDAD22D1A26FFBD0037B1BD /* Images.xcassets in Resources */,
+				6E9F49121A95C3EA005A8C8E /* koki_2.png in Resources */,
 				6EDAD2241A26FFBD0037B1BD /* GameScene.sks in Resources */,
+				6E9F48F81A95C38A005A8C8E /* pen2.png in Resources */,
+				6E9F490C1A95C3EA005A8C8E /* akihiko2.png in Resources */,
+				6E9F490B1A95C3EA005A8C8E /* akihiko1.png in Resources */,
+				6E9F48F41A95C38A005A8C8E /* airplane_right.png in Resources */,
+				6E9F491B1A95C3EA005A8C8E /* moriyuki1.png in Resources */,
 				6EDAD22B1A26FFBD0037B1BD /* Main.storyboard in Resources */,
+				6E9F49181A95C3EA005A8C8E /* koki_8.png in Resources */,
+				6E9F48F51A95C38A005A8C8E /* pen_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
