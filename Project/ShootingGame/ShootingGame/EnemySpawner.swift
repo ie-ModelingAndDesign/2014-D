@@ -36,11 +36,11 @@ class EnemySpawner{
         switch(n){
         case 0:
             enemy = DaikiEnemy(obj: myscene)
-            enemy.colliderRadius = 20
+            enemy.colliderRadius = 40
             break;
         case 1:
             enemy = MoriEnemy(obj:myscene)
-            enemy.colliderRadius = 30
+            enemy.colliderRadius = 60
         default :
             break;
         }
