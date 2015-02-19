@@ -34,6 +34,9 @@ class ScreenManager {
     func getRight() -> CGFloat{
         return screenRight
     }
+    func getMid() -> CGFloat{
+        return screenLeft+(screenRight-screenLeft)/2
+    }
     func getTop() -> CGFloat{
         return screenTop
     }

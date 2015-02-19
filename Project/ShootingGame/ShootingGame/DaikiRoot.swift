@@ -12,6 +12,7 @@ class DaikiRoot{
     var enemy_spawner : EnemySpawner!
     var time : TimeView!
     var score : ScoreView!
+    var tile : Tile!
     init(obj : SKScene){
         /* Setup */
         time = TimeView(obj:obj)
@@ -19,6 +20,8 @@ class DaikiRoot{
         var enemy = DaikiEnemy(obj:obj)
         enemy.colliderRadius = 20
         enemy_spawner = EnemySpawner(obj: obj)
+        
+        tile = Tile(obj:obj)
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -37,6 +40,7 @@ class DaikiRoot{
         score.update();
         ObjectManager.getInstance().update()
         enemy_spawner.update();
+        tile.update()
     }
     
     
