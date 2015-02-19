@@ -56,27 +56,26 @@ class MoriEnemy : Enemy{
         var actionX = SKAction.group([action1, action2])
         var actionY = SKAction.group([action1, action3])
         
-        
-        if (i>=0 || i<121){
-            
-        
-            square.runAction(actionX)
-            i = i+1
-            
-           
-        }
-        
-        
-        if (i >= 121){
-            
-            square.runAction(actionY)
-            i =  i+1
-            
-            if i == 240 {
-                i = 0
+        if(square != nil){
+            if (i>=0 || i<121){
+                
+                square.runAction(actionX)
+                i = i+1
+                
+                
             }
+            
+            
+            if (i >= 121){
+                square.runAction(actionY)
+                i =  i+1
+                
+                if i == 240 {
+                    i = 0
+                }
+            }
+            position = square.position
         }
-        position = square.position
         
         
     }
