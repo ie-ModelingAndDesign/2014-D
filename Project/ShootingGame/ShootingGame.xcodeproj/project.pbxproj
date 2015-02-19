@@ -186,6 +186,7 @@
 		6E9F48EA1A95C361005A8C8E /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				6E9F49261A95DE10005A8C8E /* tile2.png */,
 				6D95BC321A960742009BC0E4 /* bakuhatsu.gif */,
 				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
 				6E9F48EC1A95C38A005A8C8E /* airplane_left.png */,
