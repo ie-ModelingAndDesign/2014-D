@@ -21,6 +21,7 @@
 		6D95BC081A95B0DE009BC0E4 /* MoriEnemy7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BC011A95AEB4009BC0E4 /* MoriEnemy7.swift */; };
 		6D95BC0A1A95B9EC009BC0E4 /* MoriEnemy5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BC091A95B9EC009BC0E4 /* MoriEnemy5.swift */; };
 		6D95BC0C1A95BC9D009BC0E4 /* MoriEnemy3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BC0B1A95BC9D009BC0E4 /* MoriEnemy3.swift */; };
+		6D95BC331A960742009BC0E4 /* bakuhatsu.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D95BC321A960742009BC0E4 /* bakuhatsu.gif */; };
 		6DF287DD1A442DD900970563 /* MoriyukiRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD24D1A27027D0037B1BD /* MoriyukiRoot.swift */; };
 		6E050C431A442F67008AE8D9 /* DaikiTestBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */; };
 		6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */; };
@@ -100,6 +101,7 @@
 		6D95BC041A95AF02009BC0E4 /* MoriEnemy9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy9.swift; sourceTree = "<group>"; };
 		6D95BC091A95B9EC009BC0E4 /* MoriEnemy5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy5.swift; sourceTree = "<group>"; };
 		6D95BC0B1A95BC9D009BC0E4 /* MoriEnemy3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy3.swift; sourceTree = "<group>"; };
+		6D95BC321A960742009BC0E4 /* bakuhatsu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bakuhatsu.gif; sourceTree = "<group>"; };
 		6DF287D71A442C1100970563 /* MoriEnemy2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy2.swift; sourceTree = "<group>"; };
 		6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiTestBullet.swift; sourceTree = "<group>"; };
 		6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaikiEnemy.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		6E9F48EA1A95C361005A8C8E /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				6D95BC321A960742009BC0E4 /* bakuhatsu.gif */,
 				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
 				6E9F48EC1A95C38A005A8C8E /* airplane_left.png */,
 				6E9F48ED1A95C38A005A8C8E /* airplane_right.png */,
@@ -423,6 +426,7 @@
 				6E9F490D1A95C3EA005A8C8E /* akihiko3.png in Resources */,
 				6E9F490E1A95C3EA005A8C8E /* akihiko4.png in Resources */,
 				6E9F48F61A95C38A005A8C8E /* pen.png in Resources */,
+				6D95BC331A960742009BC0E4 /* bakuhatsu.gif in Resources */,
 				6E9F49161A95C3EA005A8C8E /* koki_6.png in Resources */,
 				641845611A4FE84F0026DD91 /* ball.png in Resources */,
 				6E9F49101A95C3EA005A8C8E /* daiki2.png in Resources */,
