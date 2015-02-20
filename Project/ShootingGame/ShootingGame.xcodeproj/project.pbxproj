@@ -260,11 +260,7 @@
 				6EDAD22C1A26FFBD0037B1BD /* Images.xcassets */,
 				6EDAD22E1A26FFBD0037B1BD /* LaunchScreen.xib */,
 				6EDAD21F1A26FFBD0037B1BD /* Supporting Files */,
-				64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */,
-				64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */,
 				6E9F48EA1A95C361005A8C8E /* Picture */,
-				64C4ED811A7B991E0062432B /* ScoreScene.swift */,
-				64C4ED831A7B99420062432B /* TitleScene.swift */,
 			);
 			path = ShootingGame;
 			sourceTree = "<group>";
@@ -323,6 +319,10 @@
 				646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */,
 				6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */,
 				648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */,
+				64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */,
+				64C4ED811A7B991E0062432B /* ScoreScene.swift */,
+				64C4ED831A7B99420062432B /* TitleScene.swift */,
+				64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */,
 				6418455E1A4FE6370026DD91 /* AkihikoEnemyBullet1.swift */,
 			);
 			name = Akihiko;

@@ -37,6 +37,34 @@ class TitleScene: SKScene {
         button2.position = CGPoint(x: CGRectGetMidX(self.frame), y: 210)
         self.addChild(button2)
         
+        
+        var score: [Int] = []
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        //defaults.removeObjectForKey("NAME")
+        if((defaults.objectForKey("NAME")) != nil){
+            
+            let objects = defaults.objectForKey("NAME") as? NSArray
+            var scoreInt:Int
+            for scoreInt in objects!{
+                score.append(scoreInt as Int)
+            }
+        }
+
+        if(score.isEmpty){
+            println("hoge")
+            var zero:[Int] = Array(count: 10, repeatedValue: 0)
+            defaults.setObject(zero, forKey:"NAME")
+            defaults.synchronize()
+        }
+        
+        score.append(1874)
+        score.append(174)
+        score.append(8704)
+        score.append(18434)
+        defaults.setObject(score, forKey:"NAME")
+        defaults.synchronize()
+
     }
     
     
