@@ -60,7 +60,7 @@ class AkihikoAirframe : Ship {
         beganPos = touch.locationInNode(sceneobj)
         
         /* ダブルタップしたときの処理 */
-        if(bframe - nframe < 15 && weapon != 2 && beam > 0 ){
+        if(bframe - nframe < 15 && weapon != 2 && beam > 0 && HP > 0){
             BeforeWeapon = weapon
             weapon = 2
             laserbullet = AkihikoMyBullet(
@@ -123,7 +123,7 @@ class AkihikoAirframe : Ship {
             
         /* 通常 の 攻撃 */
         else{
-            if(bframe%shot_interval == 0){
+            if(bframe%shot_interval == 0 && HP > 0){
                 if(weapon == 1){
                     width = 0
                 }else if(weapon == 3){
@@ -145,7 +145,7 @@ class AkihikoAirframe : Ship {
 
         
         /* reflect */
-        if(RefOn == 1 && bframe%120 == 0){
+        if(RefOn == 1 && bframe%120 == 0 && HP > 0){
             bullet = AkihikoRefBullet(
                     obj:sceneobj, Pos:square.position, number: 0
                 )
