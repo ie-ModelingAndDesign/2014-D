@@ -4,10 +4,11 @@ import SpriteKit
 class AkihikoRoot{
     
     var myairobj : AkihikoAirframe!
-    
+    var life : LifeView!
     init(obj : SKScene){
         /* Setup */
         myairobj = AkihikoAirframe(obj:obj)
+        life = LifeView(obj: obj, ship: myairobj)
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -20,6 +21,7 @@ class AkihikoRoot{
     
     func update() {
         myairobj.update()
+        life.update()
     }
     
     func touchesEnded(touches: NSSet, withEvent event: UIEvent){

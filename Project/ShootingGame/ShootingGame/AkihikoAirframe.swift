@@ -12,7 +12,7 @@ class AkihikoAirframe : Ship {
     private var diffPos: CGPoint!       // 移動距離
     private var lastPos: CGPoint!       // タップしたときの機体の位置
     
-    private var shot_interval = 10       // 発射間隔
+    private var shot_interval = 5       // 発射間隔
     private var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
     private var BeforeWeapon: Int = 1       // Laser攻撃する前の武器を保存
     private var width: CGFloat = 0       // 複数発射時の弾同士の間隔
@@ -21,6 +21,7 @@ class AkihikoAirframe : Ship {
     private var beam: Int = 10;
     private var texture_time = 0        // テクスチャの変更時間
     private var texture_right = false   // 飛行機の方向
+    private var texture_scale = 0.2
     
     var laserbullet: Bullet!
     var bullet: Bullet!
@@ -32,8 +33,8 @@ class AkihikoAirframe : Ship {
         /* 機体の作成 */
         square = SKSpriteNode(imageNamed:"airplane_center.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
-        square.xScale *= 0.1
-        square.yScale *= 0.1
+        square.xScale *= CGFloat(texture_scale)
+        square.yScale *= CGFloat(texture_scale)
         obj.addChild(square)
 
         
@@ -60,7 +61,7 @@ class AkihikoAirframe : Ship {
         beganPos = touch.locationInNode(sceneobj)
         
         /* ダブルタップしたときの処理 */
-        if(bframe - nframe < 15 && weapon != 2 && beam > 0 ){
+        if(bframe - nframe < 15 && weapon != 2 && beam > 0 && HP > 0){
             BeforeWeapon = weapon
             weapon = 2
             laserbullet = AkihikoMyBullet(
@@ -123,7 +124,7 @@ class AkihikoAirframe : Ship {
             
         /* 通常 の 攻撃 */
         else{
-            if(bframe%shot_interval == 0){
+            if(bframe%shot_interval == 0 && HP > 0){
                 if(weapon == 1){
                     width = 0
                 }else if(weapon == 3){
@@ -136,6 +137,7 @@ class AkihikoAirframe : Ship {
                     bullet = AkihikoMyBullet(obj:sceneobj,
                             Pos:square.position,weapon: weapon,Laser: Laser,width:width
                         )
+                    bullet.setTexture("pen_small")
                     width += 10
                 }
             }
@@ -144,7 +146,7 @@ class AkihikoAirframe : Ship {
 
         
         /* reflect */
-        if(RefOn == 1 && bframe%120 == 0){
+        if(RefOn == 1 && bframe%120 == 0 && HP > 0){
             bullet = AkihikoRefBullet(
                     obj:sceneobj, Pos:square.position, number: 0
                 )
@@ -169,6 +171,22 @@ class AkihikoAirframe : Ship {
         lastPos = square.position
         position = square.position
         bframe += 1
+        
+        // 点滅
+        if(HP > 0){
+            if(isdamage){
+                if(bframe % 4 < 4/2){
+                    square.xScale = 0.0
+                    square.yScale = 0.0
+                }else{
+                    square.xScale = CGFloat(texture_scale)
+                    square.yScale = CGFloat(texture_scale)
+                }
+            }else{
+                square.xScale = CGFloat(texture_scale)
+                square.yScale = CGFloat(texture_scale)
+            }
+        }
     }
  
     
@@ -197,7 +215,11 @@ class AkihikoAirframe : Ship {
         beam += 1
     }
     
-    
+    override func Destroy() {
+        square.xScale = 0.0
+        square.yScale = 0.0
+        super.Destroy()
+    }
 }
 
 

@@ -22,6 +22,7 @@ class TimeView : NSObject{
         mylabel.text = String(time);
         mylabel.fontSize = 48;
         mylabel.position = CGPoint(x:CGRectGetMidX(myscene.frame), y:ScreenManager.getInstance().getTop() - 100);
+        mylabel.zPosition = 50.0
         myscene.addChild(mylabel);
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("onUpdateSec"), userInfo: nil, repeats: true)
     }

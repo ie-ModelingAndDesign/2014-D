@@ -19,8 +19,7 @@ class MoriEnemy : Enemy{
         super.init(obj: obj);
         myscene = obj
         
-        square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
-        
+        square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(10, 80))        
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: ScreenManager.getInstance().getTop()+50)
         
         
@@ -49,14 +48,15 @@ class MoriEnemy : Enemy{
         
        
         
-        var action1 = SKAction.rotateByAngle(CGFloat(90 * M_PI / 1000), duration: 2 )
+        //var action1 = SKAction.rotateByAngle(CGFloat(90 * M_PI / 1000), duration: 2 )
         var action2 = SKAction.moveTo(CGPoint(x: 700,y: 700), duration: 2)
         var action3 = SKAction.moveTo(CGPoint(x: 150,y: 700), duration: 2)
         
-        var actionX = SKAction.group([action1, action2])
-        var actionY = SKAction.group([action1, action3])
+        var actionX = SKAction.group([action2])
+        var actionY = SKAction.group([action3])
         
         if(square != nil){
+            angle += 20     // 回転
             if (i>=0 || i<121){
                 
                 square.runAction(actionX)
