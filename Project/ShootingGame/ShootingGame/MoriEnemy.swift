@@ -48,14 +48,15 @@ class MoriEnemy : Enemy{
         
        
         
-        var action1 = SKAction.rotateByAngle(CGFloat(90 * M_PI / 1000), duration: 2 )
+        //var action1 = SKAction.rotateByAngle(CGFloat(90 * M_PI / 1000), duration: 2 )
         var action2 = SKAction.moveTo(CGPoint(x: 700,y: 700), duration: 2)
         var action3 = SKAction.moveTo(CGPoint(x: 150,y: 700), duration: 2)
         
-        var actionX = SKAction.group([action1, action2])
-        var actionY = SKAction.group([action1, action3])
+        var actionX = SKAction.group([action2])
+        var actionY = SKAction.group([action3])
         
         if(square != nil){
+            angle += 20     // 回転
             if (i>=0 || i<121){
                 
                 square.runAction(actionX)

@@ -12,6 +12,7 @@ class Enemy{
     var HP:Double = 3
     var attack_power:Double = 10.0
     internal var position:CGPoint = CGPointMake(0,0)
+    internal var angle : CGFloat = 0.0
     internal var colliderRadius:CGFloat = 20
     internal var Point:Int = 100
     internal var texture_name = ""
@@ -37,6 +38,7 @@ class Enemy{
     func update(){
         if(sprite != nil){
             sprite.position = position
+            sprite.zRotation = CGFloat(M_PI)*(angle/180.0)
         }
         hp_bar.position = position
         hp_bar.position.y += CGFloat(hp_bar_y)
