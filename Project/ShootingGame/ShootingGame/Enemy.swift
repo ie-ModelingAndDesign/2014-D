@@ -17,15 +17,29 @@ class Enemy{
     internal var texture_name = ""
     internal var myscene : SKScene!
     private var sprite: SKSpriteNode!
+    private var HP_max : Double!
+    private var hp_bar : SKSpriteNode!
+    private var hp_bar_y = 50.0
+    private var hp_bar_height = 5.0
+    private var hp_bar_width = 10.0
     init(obj : SKScene){
         ObjectManager.getInstance().setEnemy(self)
         myscene = obj
+        HP_max = HP
+        
+        // hp bar
+        hp_bar = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(0, 0))
+        hp_bar.zPosition = 50
+        //hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
+        myscene.addChild(hp_bar)
     }
     
     func update(){
         if(sprite != nil){
             sprite.position = position
         }
+        hp_bar.position = position
+        hp_bar.position.y += CGFloat(hp_bar_y)
     }
     
     func setTexture(name:String){
@@ -49,6 +63,7 @@ class Enemy{
     
     func Damage(value:Double){
         HP -= value
+        hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
         if(HP <= 0){
             Destroy()
         }
@@ -58,6 +73,7 @@ class Enemy{
         if(sprite != nil){
             myscene.removeChildrenInArray([sprite])
         }
+        myscene.removeChildrenInArray([hp_bar])
         ScoreManager.getInstance().addScore(Point)
         ObjectManager.getInstance().removeEnemy(self)
     }

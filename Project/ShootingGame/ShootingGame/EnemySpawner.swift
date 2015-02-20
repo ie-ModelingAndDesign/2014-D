@@ -26,7 +26,7 @@ class EnemySpawner{
             spawnEnemy(0);
         }
         timeB++;
-        if(timeB >= 60){
+        if(timeB >= 120){
             timeB = 0;
             spawnEnemy(1);
         }
@@ -49,6 +49,7 @@ class EnemySpawner{
             enemy = MoriEnemy(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("moriyuki1")
+            enemy.HP = 10.0
         case 2:
             enemy = MoriEnemy3(obj:myscene)
             enemy.colliderRadius = 60
