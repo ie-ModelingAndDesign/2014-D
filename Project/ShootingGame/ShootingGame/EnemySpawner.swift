@@ -42,6 +42,7 @@ class EnemySpawner{
         case 1:
             enemy = MoriEnemy(obj:myscene)
             enemy.colliderRadius = 60
+            enemy.setTexture("moriyuki1")
         default :
             break;
         }
