@@ -14,7 +14,7 @@ class DaikiEnemy : Enemy{
     var moveTime = 0.0
     var waveSpeed = 0.01
     var waveDistance = 200.0
-    var moveSpeed: CGPoint = CGPoint(x:0.0,y:-1.0)
+    var moveSpeed: CGPoint = CGPoint(x:0.0,y:-2.0)
     
     override init(obj : SKScene){
         super.init(obj: obj)
@@ -29,6 +29,8 @@ class DaikiEnemy : Enemy{
             position.x,
             position.y
         )
+        moveTime = Double(arc4random()%2000)/1000.0
+        update()
     }
     
     // called every time
@@ -36,7 +38,7 @@ class DaikiEnemy : Enemy{
         super.update()
         moveTime += waveSpeed
         centerPos = CGPointMake(centerPos.x+moveSpeed.x, centerPos.y+moveSpeed.y)
-        position = CGPointMake(centerPos.x+CGFloat(cos(M_PI*moveTime)*waveDistance), centerPos.y)
+        position = CGPointMake(centerPos.x+CGFloat(sin(M_PI*moveTime)*waveDistance), centerPos.y)
         square.position = position
     }
     
