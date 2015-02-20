@@ -12,7 +12,7 @@ class AkihikoAirframe : Ship {
     private var diffPos: CGPoint!       // 移動距離
     private var lastPos: CGPoint!       // タップしたときの機体の位置
     
-    private var shot_interval = 10       // 発射間隔
+    private var shot_interval = 5       // 発射間隔
     private var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
     private var BeforeWeapon: Int = 1       // Laser攻撃する前の武器を保存
     private var width: CGFloat = 0       // 複数発射時の弾同士の間隔
@@ -32,8 +32,8 @@ class AkihikoAirframe : Ship {
         /* 機体の作成 */
         square = SKSpriteNode(imageNamed:"airplane_center.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
-        square.xScale *= 0.1
-        square.yScale *= 0.1
+        square.xScale *= 0.2
+        square.yScale *= 0.2
         obj.addChild(square)
 
         
@@ -136,6 +136,7 @@ class AkihikoAirframe : Ship {
                     bullet = AkihikoMyBullet(obj:sceneobj,
                             Pos:square.position,weapon: weapon,Laser: Laser,width:width
                         )
+                    bullet.setTexture("pen_small")
                     width += 10
                 }
             }

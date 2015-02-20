@@ -10,10 +10,10 @@ import Foundation
 import SpriteKit
 
 class Beam{
+    var attack_power = 5.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var colliderWidth:CGFloat = 0
     internal var colliderHeight:CGFloat = 0
-    internal var attackPower:Float = 10
     internal var myscene : SKScene!
     init(obj : SKScene){
         ObjectManager.getInstance().setBeam(self)
