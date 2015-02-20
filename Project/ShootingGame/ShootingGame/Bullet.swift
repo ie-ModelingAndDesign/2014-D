@@ -12,6 +12,7 @@ import SpriteKit
 class Bullet{
     var attack_power = 1.0
     internal var position:CGPoint = CGPointMake(0,0)
+    internal var angle : CGFloat = 0.0
     internal var colliderRadius:CGFloat = 0
     internal var myscene : SKScene!
     private var texture_name = ""
@@ -24,6 +25,9 @@ class Bullet{
     func update(){
         if(sprite != nil){
             sprite.position = position
+            sprite.zRotation = CGFloat(M_PI)*(angle/180.0)
+        }else{
+            setTexture("pen_small")
         }
         checkOutDisplay();
     }

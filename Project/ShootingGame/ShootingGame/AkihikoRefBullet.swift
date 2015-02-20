@@ -50,7 +50,17 @@ class AkihikoRefBullet : Bullet {
             bullet.runAction(action3)
             num = 0
         }
-        
+        position = bullet.position
+        angle = bullet.zRotation/CGFloat(M_PI)*180
+        super.update()
+    }
+    
+    override func Destroy(){
+        if(bullet != nil){
+            myscene.removeChildrenInArray([bullet])
+        }
+        bullet = nil
+        super.Destroy()
     }
     
     
