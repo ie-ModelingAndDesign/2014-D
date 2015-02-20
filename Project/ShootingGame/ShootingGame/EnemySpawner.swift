@@ -12,8 +12,9 @@ import SpriteKit
 class EnemySpawner{
     
     internal var myscene : SKScene!
-    var timeA = 0;
-    var timeB = 0;
+    var timeA = 0
+    var timeB = 0
+    var timeC = 0
     init(obj:SKScene){
         myscene = obj;
     }
@@ -29,6 +30,11 @@ class EnemySpawner{
             timeB = 0;
             spawnEnemy(1);
         }
+        timeC++;
+        if(timeC >= 40){
+            timeC = 0;
+            spawnEnemy(2);
+        }
     }
     
     func spawnEnemy(n:Int){
@@ -43,6 +49,10 @@ class EnemySpawner{
             enemy = MoriEnemy(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("moriyuki1")
+        case 2:
+            enemy = MoriEnemy3(obj:myscene)
+            enemy.colliderRadius = 60
+            enemy.setTexture("daiki1")
         default :
             break;
         }
