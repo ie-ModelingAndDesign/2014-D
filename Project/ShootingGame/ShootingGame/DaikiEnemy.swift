@@ -9,7 +9,6 @@ import SpriteKit
 import Foundation
 
 class DaikiEnemy : Enemy{
-    var square: SKSpriteNode!
     var centerPos: CGPoint!
     var moveTime = 0.0
     var waveSpeed = 0.01
@@ -19,12 +18,6 @@ class DaikiEnemy : Enemy{
     override init(obj : SKScene){
         super.init(obj: obj)
         position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMaxY(obj.frame))
-        
-        square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 40))
-        square.position = position
-        
-        obj.addChild(square)
-        
         centerPos = CGPointMake(
             position.x,
             position.y
@@ -39,17 +32,14 @@ class DaikiEnemy : Enemy{
         moveTime += waveSpeed
         centerPos = CGPointMake(centerPos.x+moveSpeed.x, centerPos.y+moveSpeed.y)
         position = CGPointMake(centerPos.x+CGFloat(sin(M_PI*moveTime)*waveDistance), centerPos.y)
-        square.position = position
     }
     
     override func OnCollision(bullet: Bullet) {
         super.OnCollision(bullet)
-        myscene.removeChildrenInArray([square])
     }
     
     override func OnCollision(beam: Beam) {
         super.OnCollision(beam)
-        myscene.removeChildrenInArray([square])
     }
     
     

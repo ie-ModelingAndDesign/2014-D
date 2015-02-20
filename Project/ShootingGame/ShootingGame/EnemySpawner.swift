@@ -37,7 +37,7 @@ class EnemySpawner{
         case 0:
             enemy = DaikiEnemy(obj: myscene)
             enemy.colliderRadius = 40
-            enemy.setTexture("daiki1")
+            enemy.setTexture("daiki2")
             break;
         case 1:
             enemy = MoriEnemy(obj:myscene)

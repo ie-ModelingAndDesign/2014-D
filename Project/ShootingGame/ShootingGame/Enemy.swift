@@ -35,6 +35,8 @@ class Enemy{
         sprite = SKSpriteNode(texture: texture)
         sprite.position = position
         sprite.zPosition = 1
+        sprite.xScale *= 0.2
+        sprite.yScale *= 0.2
         myscene.addChild(sprite)
     }
     
