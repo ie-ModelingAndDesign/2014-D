@@ -19,8 +19,7 @@ class MoriEnemy : Enemy{
         super.init(obj: obj);
         myscene = obj
         
-        square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
-        
+        square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(10, 80))        
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: ScreenManager.getInstance().getTop()+50)
         
         
