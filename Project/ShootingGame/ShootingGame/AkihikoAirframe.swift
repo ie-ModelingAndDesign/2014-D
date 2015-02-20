@@ -136,6 +136,7 @@ class AkihikoAirframe : Ship {
                     bullet = AkihikoMyBullet(obj:sceneobj,
                             Pos:square.position,weapon: weapon,Laser: Laser,width:width
                         )
+                    bullet.setTexture("pen_small")
                     width += 10
                 }
             }
