@@ -21,6 +21,7 @@ class AkihikoAirframe : Ship {
     private var beam: Int = 10;
     private var texture_time = 0        // テクスチャの変更時間
     private var texture_right = false   // 飛行機の方向
+    private var texture_scale = 0.2
     
     var laserbullet: Bullet!
     var bullet: Bullet!
@@ -32,8 +33,8 @@ class AkihikoAirframe : Ship {
         /* 機体の作成 */
         square = SKSpriteNode(imageNamed:"airplane_center.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
-        square.xScale *= 0.2
-        square.yScale *= 0.2
+        square.xScale *= CGFloat(texture_scale)
+        square.yScale *= CGFloat(texture_scale)
         obj.addChild(square)
 
         
@@ -170,6 +171,22 @@ class AkihikoAirframe : Ship {
         lastPos = square.position
         position = square.position
         bframe += 1
+        
+        // 点滅
+        if(HP > 0){
+            if(isdamage){
+                if(bframe % 4 < 4/2){
+                    square.xScale = 0.0
+                    square.yScale = 0.0
+                }else{
+                    square.xScale = CGFloat(texture_scale)
+                    square.yScale = CGFloat(texture_scale)
+                }
+            }else{
+                square.xScale = CGFloat(texture_scale)
+                square.yScale = CGFloat(texture_scale)
+            }
+        }
     }
  
     
