@@ -32,8 +32,8 @@ class AkihikoAirframe : Ship {
         /* 機体の作成 */
         square = SKSpriteNode(imageNamed:"airplane_center.png")
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMinY(obj.frame)+50)
-        square.xScale *= 0.1
-        square.yScale *= 0.1
+        square.xScale *= 0.2
+        square.yScale *= 0.2
         obj.addChild(square)
 
         
