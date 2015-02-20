@@ -17,14 +17,15 @@ class MoriEnemy3 : Enemy{
     var beganPos: CGPoint!
     
     var timer = NSTimer()
+    var randomY : CGFloat!
     override init (obj : SKScene) {
         super.init(obj: obj);
         myscene = obj
 
         square =  SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
 
-        
-        square.position = CGPoint(x: CGRectGetMaxX(obj.frame), y: CGRectGetMidY(obj.frame))
+        randomY = ScreenManager.getInstance().getRandomY()
+        square.position = CGPoint(x: CGRectGetMaxX(obj.frame), y: randomY)
         
         
         
@@ -49,10 +50,8 @@ class MoriEnemy3 : Enemy{
         /* Called before each frame is rendered */
         if(square != nil){
             
-            position = square.position
-            
-            var action0 = SKAction.moveTo(CGPoint(x: 650,y: 400),duration: 2)
-            var action1 = SKAction.moveTo(CGPoint(x: -200,y: 400),duration: 1)
+            var action0 = SKAction.moveTo(CGPoint(x: 650,y: randomY),duration: 2)
+            var action1 = SKAction.moveTo(CGPoint(x: -200,y: randomY),duration: 1)
             
             if (i>=0 || i<121){
                 
@@ -71,6 +70,7 @@ class MoriEnemy3 : Enemy{
             
                 }
             }
+            position = square.position
             if(position.x < ScreenManager.getInstance().getLeft()){
                 Destroy()
             }
