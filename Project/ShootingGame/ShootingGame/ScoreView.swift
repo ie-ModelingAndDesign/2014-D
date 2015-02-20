@@ -18,6 +18,7 @@ class ScoreView{
         mylabel.text = String(0);
         mylabel.fontSize = 48;
         mylabel.position = CGPoint(x:CGRectGetMidX(myscene.frame), y:ScreenManager.getInstance().getTop() - 150);
+        mylabel.zPosition = 50.0
         myscene.addChild(mylabel);
     }
     
