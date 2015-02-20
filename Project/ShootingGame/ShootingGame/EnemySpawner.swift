@@ -51,9 +51,29 @@ class EnemySpawner{
             enemy.setTexture("moriyuki1")
             enemy.HP = 10.0
         case 2:
+            enemy = MoriEnemy2(obj:myscene)
+            enemy.colliderRadius = 60
+            enemy.setTexture("daiki1")
+        case 3:
             enemy = MoriEnemy3(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("daiki1")
+        case 4:
+            enemy = MoriEnemy5(obj:myscene)
+            enemy.colliderRadius = 60
+            enemy.setTexture("akihiko1")
+        case 5:
+            enemy = MoriEnemy6(obj:myscene)
+            enemy.colliderRadius = 60
+            enemy.setTexture("akihiko2")
+        case 6:
+            enemy = MoriEnemy7(obj:myscene)
+            enemy.colliderRadius = 60
+            enemy.setTexture("akihiko3")
+        case 7:
+            enemy = MoriEnemy9(obj:myscene)
+            enemy.colliderRadius = 60
+            enemy.setTexture("akihiko4")
         default :
             break;
         }
