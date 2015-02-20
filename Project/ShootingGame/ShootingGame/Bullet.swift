@@ -10,6 +10,7 @@ import Foundation
 import SpriteKit
 
 class Bullet{
+    var attack_power = 1.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var colliderRadius:CGFloat = 0
     internal var myscene : SKScene!

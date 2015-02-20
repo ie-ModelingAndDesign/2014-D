@@ -21,17 +21,17 @@ class EnemySpawner{
     
     func update(){
         timeA++;
-        if(timeA >= 20){
+        if(timeA >= 60){
             timeA = 0;
             spawnEnemy(0);
         }
         timeB++;
-        if(timeB >= 40){
+        if(timeB >= 60){
             timeB = 0;
             spawnEnemy(1);
         }
         timeC++;
-        if(timeC >= 40){
+        if(timeC >= 60){
             timeC = 0;
             spawnEnemy(2);
         }

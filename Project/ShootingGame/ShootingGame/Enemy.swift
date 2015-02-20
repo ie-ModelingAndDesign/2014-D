@@ -9,10 +9,10 @@ import Foundation
 import SpriteKit
 
 class Enemy{
+    var HP:Double = 3
+    var attack_power:Double = 10.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var colliderRadius:CGFloat = 20
-    internal var HP:Float = 100.0
-    internal var AttackPower:Float = 10.0
     internal var Point:Int = 100
     internal var texture_name = ""
     internal var myscene : SKScene!
@@ -41,10 +41,17 @@ class Enemy{
     }
     
     func OnCollision(bullet : Bullet){
-        Destroy()
+        Damage(bullet.attack_power)
     }
     func OnCollision(beam : Beam){
-        Destroy()
+        Damage(beam.attack_power)
+    }
+    
+    func Damage(value:Double){
+        HP -= value
+        if(HP <= 0){
+            Destroy()
+        }
     }
     
     func Destroy(){
