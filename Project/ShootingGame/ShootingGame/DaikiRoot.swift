@@ -17,8 +17,6 @@ class DaikiRoot{
         /* Setup */
         time = TimeView(obj:obj)
         score = ScoreView(obj:obj)
-        var enemy = DaikiEnemy(obj:obj)
-        enemy.colliderRadius = 20
         enemy_spawner = EnemySpawner(obj: obj)
         
         tile = Tile(obj:obj)
