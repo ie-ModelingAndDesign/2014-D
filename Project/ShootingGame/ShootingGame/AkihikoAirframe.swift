@@ -198,7 +198,12 @@ class AkihikoAirframe : Ship {
         beam += 1
     }
     
-    
+    override func Destroy() {
+        square.xScale = 0.0
+        square.yScale = 0.0
+        print("Destroy!!!\n")
+        super.Destroy()
+    }
 }
 
 
