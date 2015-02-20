@@ -43,14 +43,40 @@ class MoriEnemy3 : Enemy{
         
     }
     
-    
+    var i = 0
     override func update() {
         super.update()
         /* Called before each frame is rendered */
         if(square != nil){
+            
             position = square.position
-            var action1 = SKAction.moveTo(CGPoint(x: 150,y: 400), duration: 1)
-            square.runAction(action1)
+            
+            var action0 = SKAction.moveTo(CGPoint(x: 650,y: 400),duration: 2)
+            var action1 = SKAction.moveTo(CGPoint(x: -200,y: 400),duration: 1)
+            
+            if (i>=0 || i<121){
+                
+                square.runAction(action0)
+                i = i+1
+            }
+            
+            if (i >= 121 ){
+                
+                square.runAction(action1)
+                i =  i+1
+                
+                if (i >= 240){
+
+                        i = 0
+            
+                }
+            }
+            if(position.x < ScreenManager.getInstance().getLeft()){
+                Destroy()
+            }
+
+            
+            
         }
     }
     
