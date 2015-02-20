@@ -60,6 +60,9 @@ class Enemy{
     func OnCollision(beam : Beam){
         Damage(beam.attack_power)
     }
+    func OnCollision(player : Ship){
+        Destroy()
+    }
     
     func Damage(value:Double){
         HP -= value

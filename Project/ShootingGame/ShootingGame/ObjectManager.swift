@@ -70,6 +70,9 @@ class ObjectManager{
         beamArray.append(beam)
     }
     
+    func removePlayerShip(){
+        playerShip = nil
+    }
     func removeEnemy(enemy : Enemy){
         removeEnemyArray.append(enemy)
     }
@@ -166,6 +169,8 @@ class ObjectManager{
                 if(dist < enemyArray[i].colliderRadius + playerShip.colliderRadius){
                     // collision
                     println("player damage!by enemy");
+                    enemyArray[i].OnCollision(playerShip)
+                    playerShip.OnCollision()
                 }
             }
         }

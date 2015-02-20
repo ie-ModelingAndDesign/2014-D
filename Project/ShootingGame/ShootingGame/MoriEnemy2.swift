@@ -73,7 +73,7 @@ class MoriEnemy2 : Enemy{
         position = square.position
         
         }
-        
+        super.update()
     }
     
     override func Destroy(){

@@ -10,27 +10,43 @@ import Foundation
 import SpriteKit
 
 class Ship{
+    var HP:Int = 3
+    var damage_time_max = 30
     internal var position:CGPoint = CGPointMake(0,0)
     internal var colliderRadius:CGFloat = 0
-    internal var HP:Float = 0.0
     internal var myscene : SKScene!
+    internal var isdamage = false
+    private var damage_time = 0
     init(obj : SKScene){
         ObjectManager.getInstance().setPlayerShip(self)
         myscene = obj
     }
     
     func update(){
-        
+        if(isdamage){
+            damage_time++
+            if(damage_time > damage_time_max){
+                isdamage = false
+                damage_time = 0
+            }
+        }
     }
     
-    func OnCollision(enemy : Enemy){
-        
+    func OnCollision(){
+        if(isdamage == false){
+            isdamage = true
+            damage_time = 0
+            HP -= 1
+            if(HP == 0){
+                Destroy()
+            }
+        }
     }
     func OnCollision(bullet : EnemyBullet){
-        HP -= bullet.AttackPower;
+        
     }
     
     func Destroy(){
-        //ObjectManager.getInstance().removeBullet(self)
+        ObjectManager.getInstance().removePlayerShip()
     }
 }
