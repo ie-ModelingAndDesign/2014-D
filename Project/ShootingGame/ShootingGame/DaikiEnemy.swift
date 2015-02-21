@@ -32,6 +32,9 @@ class DaikiEnemy : Enemy{
         moveTime += waveSpeed
         centerPos = CGPointMake(centerPos.x+moveSpeed.x, centerPos.y+moveSpeed.y)
         position = CGPointMake(centerPos.x+CGFloat(sin(M_PI*moveTime)*waveDistance), centerPos.y)
+        if(position.y < ScreenManager.getInstance().getBottom()-60){
+            Destroy()
+        }
     }
     
     override func OnCollision(bullet: Bullet) {
