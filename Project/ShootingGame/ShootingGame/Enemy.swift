@@ -10,7 +10,7 @@ import SpriteKit
 
 class Enemy{
     var HP:Double = 3
-    var HP_mult = 1.0   // 難易度調整
+    var HP_mult = 1.2   // 難易度調整
     var attack_power:Double = 10.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var angle : CGFloat = 0.0

@@ -10,7 +10,7 @@ import Foundation
 
 private let singleton = ItemManager()
 class ItemManager{
-    private var bullet_rand : [Int] = [0,95,5]
+    private var bullet_rand : [Int] = [0,85,15]
     private var bullet_attack_add = 0.1
     private var bullet_attack_mult = 1.0
     class func getInstance() -> ItemManager{

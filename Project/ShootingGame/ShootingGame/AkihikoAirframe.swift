@@ -12,10 +12,10 @@ class AkihikoAirframe : Ship {
     private var diffPos: CGPoint!       // 移動距離
     private var lastPos: CGPoint!       // タップしたときの機体の位置
     
-    private var shot_interval = 5       // 発射間隔
+    private var shot_interval = 10       // 発射間隔
     private var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
     private var BeforeWeapon: Int = 1       // Laser攻撃する前の武器を保存
-    private var width: CGFloat = 0       // 複数発射時の弾同士の間隔
+    private var width: CGFloat = 20       // 複数発射時の弾同士の間隔
     private var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
     private var RefOn: Int = 0           // Reflect攻撃をON/OFF
     private var beam: Int = 10;
@@ -128,9 +128,9 @@ class AkihikoAirframe : Ship {
                 if(weapon == 1){
                     width = 0
                 }else if(weapon == 3){
-                    width = -10
-                }else if(weapon == 5){
                     width = -20
+                }else if(weapon == 5){
+                    width = -40
                 }
                 
                 for(var i=0;i<weapon;i++){
@@ -138,7 +138,7 @@ class AkihikoAirframe : Ship {
                             Pos:square.position,weapon: weapon,Laser: Laser,width:width
                         )
                     bullet.setTexture("pen_small")
-                    width += 10
+                    width += 20
                 }
             }
             
@@ -190,7 +190,8 @@ class AkihikoAirframe : Ship {
     }
  
     
-    func levelup(){
+    override func levelup(){
+        /*
         if(weapon < 5){
             
             if(weapon == 2){
@@ -202,6 +203,10 @@ class AkihikoAirframe : Ship {
                 weapon += 2
             }
             
+        }
+        */
+        if(shot_interval > 4){
+            shot_interval-=1
         }
     }
     

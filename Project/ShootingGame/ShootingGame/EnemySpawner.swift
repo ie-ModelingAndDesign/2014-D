@@ -63,38 +63,38 @@ class EnemySpawner{
             enemy = DaikiEnemy(obj: myscene)
             enemy.colliderRadius = 40
             enemy.setTexture("daiki2")
-            enemy.setHP(3.0)
+            enemy.setHP(1.5)
             break;
         case 1:
             // 左右に往復
             enemy = MoriEnemy(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("moriyuki1")
-            enemy.setHP(6.0)
+            enemy.setHP(3.0)
         case 2:
             // ランダム移動
             enemy = MoriEnemy2(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("koki_1")
-            enemy.setHP(3.0)
+            enemy.setHP(1.5)
         case 3:
             // 横から飛び出る
             enemy = MoriEnemy3(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("daiki1")
-            enemy.HP = 1.0
+            enemy.HP = 0.5
         case 4:
             // 上から落ちてくる
             enemy = MoriEnemy5(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("akihiko1")
-            enemy.setHP(2.0)
+            enemy.setHP(1.0)
         case 5:
             // 回る
             enemy = MoriEnemy6(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("akihiko3")
-            enemy.setHP(3.0)
+            enemy.setHP(1.5)
         /*case 6:
             // 楕円
             enemy = MoriEnemy7(obj:myscene)
@@ -105,7 +105,7 @@ class EnemySpawner{
             enemy = MoriEnemy9(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("akihiko4")
-            enemy.setHP(5.0)
+            enemy.setHP(2.0)
         default :
             break;
         }

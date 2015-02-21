@@ -14,7 +14,7 @@ class BulletItem : Item{
         setTexture("item_plus")
     }
     override func OnCollision(ship : Ship){
-        
+        ship.levelup()
         super.OnCollision(ship)
     }
 }
