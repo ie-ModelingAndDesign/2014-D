@@ -26,15 +26,21 @@ class TimeView : NSObject{
         mylabel.alpha = 0.3
         myscene.addChild(mylabel);
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("onUpdateSec"), userInfo: nil, repeats: true)
+        Reset()
     }
     
     func update(){
         
     }
     
+    func Reset(){
+        time = 60
+        timeup = false
+    }
+    
     func onUpdateSec(){
         time--
-        if(time <= 0){
+        if(time <= 0 && !timeup){
             time = 0
             timeup = true
         }
@@ -43,5 +49,8 @@ class TimeView : NSObject{
     
     func isTimeup()->Bool{
         return timeup
+    }
+    func getTime() -> Int{
+        return time
     }
 }
