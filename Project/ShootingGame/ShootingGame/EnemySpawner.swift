@@ -23,7 +23,7 @@ class EnemySpawner{
         timeA++;
         if(timeA >= 30){
             timeA = 0;
-            spawnEnemy(4);
+            spawnEnemy(5);
         }
         timeB++;
         if(timeB >= 120){
