@@ -70,8 +70,8 @@ class AkihikoMyBullet : Bullet {
                     x: bulletPos.x,
                     y: bulletPos.y+(LaserHeight/2)
                 )
-                LaserHeight += 20
-                LaserWidth -= 0.5
+                LaserHeight += 40
+                LaserWidth -= 3
                 lasercollider.position = bullet.position
                 lasercollider.colliderWidth = LaserWidth
                 lasercollider.colliderHeight = LaserHeight
