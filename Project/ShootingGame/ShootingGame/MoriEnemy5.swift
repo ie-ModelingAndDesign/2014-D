@@ -16,12 +16,14 @@ class MoriEnemy5 : Enemy{
     var startPos: CGPoint!
     var beganPos: CGPoint!
     
-       var timer = NSTimer()
+    var action1 : SKAction!
+    var timer = NSTimer()
     override init (obj : SKScene) {
         super.init(obj: obj);
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
         
-        square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMaxY(obj.frame))
+        var spawnx = ScreenManager.getInstance().getRandomX()
+        square.position = CGPoint(x: spawnx, y: CGRectGetMaxY(obj.frame))
         square.alpha = 0    // 非表示
         
         obj.addChild(square)
@@ -30,8 +32,8 @@ class MoriEnemy5 : Enemy{
             square.position.x,
             square.position.y
         )
-        println(startPos)
-        
+        action1 = SKAction.moveTo(CGPoint(x: spawnx,y: -100), duration: 3)
+        square.runAction(action1)
     }
     
     
@@ -40,8 +42,9 @@ class MoriEnemy5 : Enemy{
         /* Called before each frame is rendered */
         if(square != nil){
             position = square.position
-        var action1 = SKAction.moveTo(CGPoint(x: 530,y: -100), duration: 1)
-        square.runAction(action1)
+            if(position.y < ScreenManager.getInstance().getBottom()-60){
+                Destroy()
+            }
         }
     }
     
