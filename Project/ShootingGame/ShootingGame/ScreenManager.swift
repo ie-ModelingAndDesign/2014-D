@@ -44,10 +44,10 @@ class ScreenManager {
         return screenBottom
     }
     func getRandomX() -> CGFloat{
-        return CGFloat(random()%1000)/1000*(screenRight-screenLeft)+screenLeft
+        return CGFloat(arc4random()%1000)/1000*(screenRight-screenLeft)+screenLeft
     }
     func getRandomY() -> CGFloat{
-        return CGFloat(random()%1000)/1000*(screenTop-screenBottom)+screenBottom
+        return CGFloat(arc4random()%1000)/1000*(screenTop-screenBottom)+screenBottom
     }
 
 }
