@@ -6,36 +6,32 @@ class TitleScene: SKScene {
     var delegate_game: StartGameProtocol?
     private var beganPos: CGPoint!
     
+    let start = UIButton()
+    let scoreB = UIButton()
+    
     override func didMoveToView(view: SKView) {
         
-        let myLabel = SKLabelNode(fontNamed:"Copperplate")
-        myLabel.text = "Score";
-        myLabel.fontColor = UIColor.blackColor()
-        myLabel.fontSize = 36;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y: 200);
-        self.addChild(myLabel)
+        let StartImage = UIImage(named: "start.png") as UIImage!
+        start.frame = CGRectMake(0,0,250,50)
+        start.layer.masksToBounds = true
+        start.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        start.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
+        start.layer.cornerRadius = 20.0
+        start.layer.position = CGPoint(x: self.view!.frame.width/2, y:250)
+        start.setImage(StartImage, forState: .Normal)
+        start.addTarget(self, action: "ClickStart:", forControlEvents: .TouchUpInside)
+        self.view!.addSubview(start);
         
-        let startLabel = SKLabelNode(fontNamed: "Copperplate")
-        startLabel.text = "Start"
-        startLabel.fontColor = UIColor.blackColor()
-        startLabel.fontSize = 40
-        startLabel.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
-        self.addChild(startLabel)
-        
-        
-        var button1 = SKSpriteNode(
-            color: UIColor.whiteColor(),
-            size: CGSizeMake(200, 40)
-        )
-        button1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)+10)
-        self.addChild(button1)
-        
-        var button2 = SKSpriteNode(
-            color: UIColor.whiteColor(),
-            size: CGSizeMake(200, 40)
-        )
-        button2.position = CGPoint(x: CGRectGetMidX(self.frame), y: 210)
-        self.addChild(button2)
+        let ScoreImage = UIImage(named: "score.png") as UIImage!
+        scoreB.frame = CGRectMake(0,0,250,50)
+        scoreB.layer.masksToBounds = true
+        scoreB.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        scoreB.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
+        scoreB.layer.cornerRadius = 20.0
+        scoreB.layer.position = CGPoint(x: self.view!.frame.width/2, y:400)
+        scoreB.setImage(ScoreImage, forState: .Normal)
+        scoreB.addTarget(self, action: "ClickScore:", forControlEvents: .TouchUpInside)
+        self.view!.addSubview(scoreB);
         
         
         var score: [Int] = []
@@ -58,36 +54,25 @@ class TitleScene: SKScene {
             defaults.synchronize()
         }
         
-        score.append(1874)
-        score.append(174)
-        score.append(8704)
-        score.append(18434)
-        defaults.setObject(score, forKey:"NAME")
-        defaults.synchronize()
+
 
     }
     
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        
-        let touch: AnyObject! = touches.anyObject()
-        beganPos = touch.locationInNode(self)
-        
-        if(
-            beganPos.x < CGRectGetMidX(self.frame)+100
-                && beganPos.x > CGRectGetMidX(self.frame)-100
-                && beganPos.y < 230
-                && beganPos.y > 190
-            ){
-                delegate_escape!.sceneEscape(self)
-        }else if(
-            beganPos.x < CGRectGetMidX(self.frame)+100
-                && beganPos.x > CGRectGetMidX(self.frame)-100
-                && beganPos.y < CGRectGetMidY(self.frame)+30
-                && beganPos.y > CGRectGetMidY(self.frame)-10
-            ){
-                delegate_game!.startGame(self)
-        }
+    func ClickStart(sender : UIButton){
+
+        scoreB.hidden = !scoreB.hidden
+        start.hidden = !start.hidden
+        delegate_game!.startGame(self)
         
     }
+    
+    func ClickScore(sender : UIButton){
+        
+        scoreB.hidden = !scoreB.hidden
+        start.hidden = !start.hidden
+        delegate_escape!.sceneEscape(self)
+        
+    }
+    
 }

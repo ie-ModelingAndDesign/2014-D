@@ -33,7 +33,7 @@ class ScoreScene: SKScene {
                     score[k] = 0
                 }
             }
-            println(rank[i])
+
         }
         
         var pos:CGFloat = 0;
