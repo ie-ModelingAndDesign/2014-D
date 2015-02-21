@@ -18,11 +18,12 @@ class TimeView : NSObject{
         super.init()
         
         myscene = obj
-        mylabel = SKLabelNode(fontNamed:"Chalkduster")
+        mylabel = SKLabelNode(fontNamed:"AvenirNextCondensed-Heavy")
         mylabel.text = String(time);
-        mylabel.fontSize = 48;
-        mylabel.position = CGPoint(x:CGRectGetMidX(myscene.frame), y:ScreenManager.getInstance().getTop() - 100);
-        mylabel.zPosition = 50.0
+        mylabel.fontSize = 256;
+        mylabel.position = CGPoint(x:CGRectGetMidX(myscene.frame), y:CGRectGetMidY(myscene.frame));
+        mylabel.zPosition = -50.0
+        mylabel.alpha = 0.3
         myscene.addChild(mylabel);
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("onUpdateSec"), userInfo: nil, repeats: true)
     }

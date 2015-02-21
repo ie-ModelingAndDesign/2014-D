@@ -64,6 +64,17 @@
 		6E9F491E1A95CB01005A8C8E /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9F491D1A95CB01005A8C8E /* Tile.swift */; };
 		6E9F49231A95D3BB005A8C8E /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49221A95D3BB005A8C8E /* tile.png */; };
 		6E9F49271A95DE10005A8C8E /* tile2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F49261A95DE10005A8C8E /* tile2.png */; };
+		6EACB1931A98BD39008AC2BD /* BulletItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EACB1921A98BD39008AC2BD /* BulletItem.swift */; };
+		6EB8F2AD1A98436F00023189 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8F2AC1A98436F00023189 /* ItemManager.swift */; };
+		6EB8F2AF1A9846A500023189 /* DifficultyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8F2AE1A9846A500023189 /* DifficultyItem.swift */; };
+		6EB8F2B11A9847DD00023189 /* DifItemSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8F2B01A9847DD00023189 /* DifItemSpawner.swift */; };
+		6EB8F2BD1A98661900023189 /* Item_attack.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB8F2BC1A98661900023189 /* Item_attack.png */; };
+		6EB8F2BF1A98676500023189 /* Item_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB8F2BE1A98676500023189 /* Item_plus.png */; };
+		6EB8F2C31A986E5300023189 /* item_level.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB8F2C21A986E5300023189 /* item_level.png */; };
+		6EBAA6AC1A9814EE00AE1DA2 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAA6AB1A9814EE00AE1DA2 /* LevelManager.swift */; };
+		6EBAA6B01A981D2F00AE1DA2 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAA6AF1A981D2F00AE1DA2 /* DifficultyView.swift */; };
+		6EBAA6B21A983D3500AE1DA2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAA6B11A983D3500AE1DA2 /* Item.swift */; };
+		6EBAA6B41A98403700AE1DA2 /* AttackUpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAA6B31A98403700AE1DA2 /* AttackUpItem.swift */; };
 		6ECDD9191A4273F2007CF517 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD9181A4273F2007CF517 /* Enemy.swift */; };
 		6ECDD91B1A4273FB007CF517 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD91A1A4273FB007CF517 /* Bullet.swift */; };
 		6ECDD91D1A427412007CF517 /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDD91C1A427412007CF517 /* ObjectManager.swift */; };
@@ -149,6 +160,17 @@
 		6E9F491D1A95CB01005A8C8E /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		6E9F49221A95D3BB005A8C8E /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile.png; sourceTree = "<group>"; };
 		6E9F49261A95DE10005A8C8E /* tile2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile2.png; sourceTree = "<group>"; };
+		6EACB1921A98BD39008AC2BD /* BulletItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletItem.swift; sourceTree = "<group>"; };
+		6EB8F2AC1A98436F00023189 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		6EB8F2AE1A9846A500023189 /* DifficultyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyItem.swift; sourceTree = "<group>"; };
+		6EB8F2B01A9847DD00023189 /* DifItemSpawner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifItemSpawner.swift; sourceTree = "<group>"; };
+		6EB8F2BC1A98661900023189 /* Item_attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Item_attack.png; sourceTree = "<group>"; };
+		6EB8F2BE1A98676500023189 /* Item_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Item_plus.png; sourceTree = "<group>"; };
+		6EB8F2C21A986E5300023189 /* item_level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_level.png; sourceTree = "<group>"; };
+		6EBAA6AB1A9814EE00AE1DA2 /* LevelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
+		6EBAA6AF1A981D2F00AE1DA2 /* DifficultyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = "<group>"; };
+		6EBAA6B11A983D3500AE1DA2 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		6EBAA6B31A98403700AE1DA2 /* AttackUpItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttackUpItem.swift; sourceTree = "<group>"; };
 		6ECDD9181A4273F2007CF517 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		6ECDD91A1A4273FB007CF517 /* Bullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
 		6ECDD91C1A427412007CF517 /* ObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
@@ -194,6 +216,9 @@
 		6E9F48EA1A95C361005A8C8E /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				6EB8F2C21A986E5300023189 /* item_level.png */,
+				6EB8F2BE1A98676500023189 /* Item_plus.png */,
+				6EB8F2BC1A98661900023189 /* Item_attack.png */,
 				6E9F49261A95DE10005A8C8E /* tile2.png */,
 				6D95BC321A960742009BC0E4 /* bakuhatsu.gif */,
 				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
@@ -303,19 +328,27 @@
 			isa = PBXGroup;
 			children = (
 				6EDAD2491A2700F30037B1BD /* DaikiRoot.swift */,
+				6E59163F1A4BB0C5006DE56B /* Ship.swift */,
 				6ECDD91A1A4273FB007CF517 /* Bullet.swift */,
 				6E42BE821A68B0160010E8B7 /* Beam.swift */,
 				6ECDD9181A4273F2007CF517 /* Enemy.swift */,
+				6EBAA6B11A983D3500AE1DA2 /* Item.swift */,
+				6EBAA6B31A98403700AE1DA2 /* AttackUpItem.swift */,
+				6EACB1921A98BD39008AC2BD /* BulletItem.swift */,
+				6EB8F2AE1A9846A500023189 /* DifficultyItem.swift */,
+				6EB8F2B01A9847DD00023189 /* DifItemSpawner.swift */,
 				6E5402E81A8E147800E17F25 /* EnemySpawner.swift */,
 				6E9F491F1A95CB0C005A8C8E /* BackGround */,
 				6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */,
-				6ECDD91C1A427412007CF517 /* ObjectManager.swift */,
-				6E6F9DA81A975C2C00E0076E /* LifeView.swift */,
-				6E59163F1A4BB0C5006DE56B /* Ship.swift */,
+				6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */,
 				6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */,
 				6EE42E961A94720000FE3809 /* TimeView.swift */,
-				6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */,
+				6E6F9DA81A975C2C00E0076E /* LifeView.swift */,
 				6EE42E981A94D85000FE3809 /* ScoreView.swift */,
+				6EBAA6AF1A981D2F00AE1DA2 /* DifficultyView.swift */,
+				6ECDD91C1A427412007CF517 /* ObjectManager.swift */,
+				6EBAA6AB1A9814EE00AE1DA2 /* LevelManager.swift */,
+				6EB8F2AC1A98436F00023189 /* ItemManager.swift */,
 				6EE42E9A1A94D87500FE3809 /* ScoreManager.swift */,
 				6E5916411A4BB23E006DE56B /* ScreenManager.swift */,
 			);
@@ -445,11 +478,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E9F491A1A95C3EA005A8C8E /* koki_10.png in Resources */,
+				6EB8F2C31A986E5300023189 /* item_level.png in Resources */,
 				6E9F490F1A95C3EA005A8C8E /* daiki1.png in Resources */,
 				6E9F48F71A95C38A005A8C8E /* pen2_small.png in Resources */,
 				6E9F491C1A95C3EA005A8C8E /* moriyuki2.png in Resources */,
 				6E9F49231A95D3BB005A8C8E /* tile.png in Resources */,
 				6E9F49151A95C3EA005A8C8E /* koki_5.png in Resources */,
+				6EB8F2BF1A98676500023189 /* Item_plus.png in Resources */,
 				6E9F49141A95C3EA005A8C8E /* koki_4.png in Resources */,
 				6EDAD2301A26FFBD0037B1BD /* LaunchScreen.xib in Resources */,
 				6E9F49191A95C3EA005A8C8E /* koki_9.png in Resources */,
@@ -474,6 +509,7 @@
 				6E9F490B1A95C3EA005A8C8E /* akihiko1.png in Resources */,
 				6E9F48F41A95C38A005A8C8E /* airplane_right.png in Resources */,
 				6E6F9DA71A97576800E0076E /* ship_icon.png in Resources */,
+				6EB8F2BD1A98661900023189 /* Item_attack.png in Resources */,
 				6E9F491B1A95C3EA005A8C8E /* moriyuki1.png in Resources */,
 				6E9F49271A95DE10005A8C8E /* tile2.png in Resources */,
 				6EDAD22B1A26FFBD0037B1BD /* Main.storyboard in Resources */,
@@ -513,17 +549,22 @@
 				6E5916421A4BB23E006DE56B /* ScreenManager.swift in Sources */,
 				6E6F9DA91A975C2C00E0076E /* LifeView.swift in Sources */,
 				6EE42E991A94D85000FE3809 /* ScoreView.swift in Sources */,
+				6EB8F2AD1A98436F00023189 /* ItemManager.swift in Sources */,
 				6E9F491E1A95CB01005A8C8E /* Tile.swift in Sources */,
 				6EE42E9B1A94D87500FE3809 /* ScoreManager.swift in Sources */,
 				64C4ED801A7B98FA0062432B /* StartGameProtocol.swift in Sources */,
 				6EDAD2261A26FFBD0037B1BD /* GameScene.swift in Sources */,
+				6EB8F2AF1A9846A500023189 /* DifficultyItem.swift in Sources */,
+				6EBAA6B21A983D3500AE1DA2 /* Item.swift in Sources */,
 				6D95BC061A95B0D7009BC0E4 /* MoriEnemy6.swift in Sources */,
 				64C4ED841A7B99420062432B /* TitleScene.swift in Sources */,
+				6EB8F2B11A9847DD00023189 /* DifItemSpawner.swift in Sources */,
 				6E5402EA1A8E209200E17F25 /* MoriEnemy.swift in Sources */,
 				6EE42E971A94720000FE3809 /* TimeView.swift in Sources */,
 				6EDAD2281A26FFBD0037B1BD /* GameViewController.swift in Sources */,
 				6ECDD9191A4273F2007CF517 /* Enemy.swift in Sources */,
 				6E050C431A442F67008AE8D9 /* DaikiTestBullet.swift in Sources */,
+				6EACB1931A98BD39008AC2BD /* BulletItem.swift in Sources */,
 				6E5402E91A8E147800E17F25 /* EnemySpawner.swift in Sources */,
 				648EF7061A3AF332000DE1A8 /* AkihikoRefBullet.swift in Sources */,
 				6418455F1A4FE6370026DD91 /* AkihikoEnemyBullet1.swift in Sources */,
@@ -533,6 +574,9 @@
 				64C4ED7E1A7B98E90062432B /* SceneEscapeProtocol.swift in Sources */,
 				6E5916401A4BB0C5006DE56B /* Ship.swift in Sources */,
 				6ECDD91D1A427412007CF517 /* ObjectManager.swift in Sources */,
+				6EBAA6B01A981D2F00AE1DA2 /* DifficultyView.swift in Sources */,
+				6EBAA6AC1A9814EE00AE1DA2 /* LevelManager.swift in Sources */,
+				6EBAA6B41A98403700AE1DA2 /* AttackUpItem.swift in Sources */,
 				6EDAD2221A26FFBD0037B1BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

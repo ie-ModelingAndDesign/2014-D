@@ -42,6 +42,11 @@ class Ship{
             }
         }
     }
+    
+    func levelup(){
+        
+    }
+    
     func OnCollision(bullet : EnemyBullet){
         
     }

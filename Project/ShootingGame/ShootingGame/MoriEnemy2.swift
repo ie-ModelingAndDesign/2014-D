@@ -23,8 +23,8 @@ class MoriEnemy2 : Enemy{
 
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(10, 80))
         
-        square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMidY(obj.frame))
-        
+        square.position = CGPoint(x: ScreenManager.getInstance().getRandomX(), y: ScreenManager.getInstance().getTop())
+        square.alpha = 0    // 非表示
         
         
         obj.addChild(square)
@@ -47,9 +47,9 @@ class MoriEnemy2 : Enemy{
 
     override func update() {
         /* Called before each frame is rendered */
-        var a = Int(arc4random())%1400
-        var b = Int(arc4random())%1000
-        var c = Int(arc4random())%1200
+        var a = ScreenManager.getInstance().getRandomX()
+        var b = ScreenManager.getInstance().getRandomX()
+        var c = ScreenManager.getInstance().getRandomY()
         
         var action1 = SKAction.moveTo(CGPoint(x: a,y: c), duration: 1)
         var action2 = SKAction.moveTo(CGPoint(x: b,y: c), duration: 1)

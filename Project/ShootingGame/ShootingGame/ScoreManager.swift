@@ -17,7 +17,7 @@ class ScoreManager{
     }
     
     func addScore(points:Int){
-        score += points
+        score += points + points*LevelManager.getInstance().getLevel()
     }
     
     func getScore()->Int{

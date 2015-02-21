@@ -16,10 +16,12 @@ class ObjectManager{
     private var bulletArray : [Bullet] = []
     private var beamArray : [Beam] = []
     private var enemybulletArray : [EnemyBullet] = []
+    private var itemArray : [Item] = []
     private var removeEnemyArray : [Enemy] = []
     private var removeBulletArray : [Bullet] = []
     private var removeEnemyBulletArray : [EnemyBullet] = []
     private var removeBeamArray : [Beam] = []
+    private var removeItemArray : [Item] = []
     
     private init(){
         
@@ -31,10 +33,12 @@ class ObjectManager{
         checkCollision_Ship_Enemy()
         checkCollision_Ship_EnemyBullet()
         checkCollision_Enemy_Beam()
+        checkCollision_Ship_Item()
         checkRemoveEnemy()
         checkRemoveBullet()
         checkRemoveEnemyBullet()
         checkRemoveBeam()
+        checkRemoveItem()
     }
     
     class func getInstance() -> ObjectManager{
@@ -50,8 +54,13 @@ class ObjectManager{
         for(var i = 0; i<bulletArray.count;i++){
             bulletArray[i].update()
         }
+        // update enemy bullet
         for(var i = 0; i<enemybulletArray.count;i++){
             enemybulletArray[i].update()
+        }
+        // update item
+        for(var i = 0; i<itemArray.count;i++){
+            itemArray[i].update()
         }
     }
     func setPlayerShip(ship : Ship){
@@ -69,6 +78,9 @@ class ObjectManager{
     func setBeam(beam : Beam){
         beamArray.append(beam)
     }
+    func setItem(item : Item){
+         itemArray.append(item)
+    }
     
     func removePlayerShip(){
         playerShip = nil
@@ -84,6 +96,9 @@ class ObjectManager{
     }
     func removeBeam (beam : Beam){
         removeBeamArray.append(beam)
+    }
+    func removeItem (item : Item){
+        removeItemArray.append(item)
     }
     
     private func checkRemoveEnemy(){
@@ -130,6 +145,17 @@ class ObjectManager{
             }
         }
         removeBeamArray.removeAll()
+    }
+    private func checkRemoveItem(){
+        for(var i = 0; i<removeItemArray.count; i++){
+            for(var j = 0; j<itemArray.count; j++){
+                if(itemArray[j] === removeItemArray[i]){
+                    itemArray.removeAtIndex(j)
+                    break;
+                }
+            }
+        }
+        removeItemArray.removeAll()
     }
     
     func checkCollision_Enemy_Burret(){
@@ -186,6 +212,20 @@ class ObjectManager{
                     // collision
                     enemyArray[i].OnCollision(beamArray[j])
                     println("hit by beam");
+                }
+            }
+        }
+    }
+    func checkCollision_Ship_Item(){
+        for(var i = 0; i<itemArray.count;i++){
+            if(playerShip != nil){
+                var subx = itemArray[i].position.x - playerShip.position.x
+                var suby = itemArray[i].position.y - playerShip.position.y
+                var dist : CGFloat = sqrt(subx*subx+suby*suby)
+                if(dist < itemArray[i].colliderRadius + playerShip.colliderRadius){
+                    // collision
+                    println("get item!");
+                    itemArray[i].OnCollision(playerShip)
                 }
             }
         }

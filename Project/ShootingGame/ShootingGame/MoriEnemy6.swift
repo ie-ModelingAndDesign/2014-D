@@ -25,8 +25,8 @@ class MoriEnemy6 : Enemy{
         
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(50, 50))
         
-        square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMidY(obj.frame))
-        
+        square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: ScreenManager.getInstance().getTop())
+        square.alpha = 0    // 非表示
         
         
         obj.addChild(square)
@@ -38,30 +38,32 @@ class MoriEnemy6 : Enemy{
             
             
         )
-        println(centerPos)
         
         
     }
     
     
-    var rot = 0.0 //角度
+    var rot = 90.0 //角度
 
     
     override func update() {
         super.update()
-        var angle = 0.9
+        var angle = 5.0
             
             
         rot += angle;
             
         //角度
-        let rad =  rot * M_PI / 50
+        let rad =  M_PI * (rot/180.0)
         
             if(square != nil){
-                position = square.position
                 //円運動の計算
-                square.position.x = square.position.x + CGFloat(5*cos(rad)) * 2
-                square.position.y = square.position.y + CGFloat(5*sin(rad)) * 2
+                square.position.y -= 5.0
+                position.x = square.position.x + CGFloat(cos(rad)) * 100
+                position.y = square.position.y + CGFloat(sin(rad)) * 100
+                if(position.y < ScreenManager.getInstance().getBottom()-60){
+                    Destroy()
+                }
             }
         }
         

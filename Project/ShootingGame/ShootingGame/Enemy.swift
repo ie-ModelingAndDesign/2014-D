@@ -10,6 +10,7 @@ import SpriteKit
 
 class Enemy{
     var HP:Double = 3
+    var HP_mult = 1.2   // 難易度調整
     var attack_power:Double = 10.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var angle : CGFloat = 0.0
@@ -23,9 +24,15 @@ class Enemy{
     private var hp_bar_y = 50.0
     private var hp_bar_height = 5.0
     private var hp_bar_width = 10.0
+    private var vib_power_max : CGFloat = 10.0
+    private var vib_power : CGFloat = 0
+    private var vib_time : CGFloat = 0
+    private var vib_speed : CGFloat = 0.1
+    private var vib_position : CGPoint = CGPoint(x: 0,y: 0)
     init(obj : SKScene){
         ObjectManager.getInstance().setEnemy(self)
         myscene = obj
+        HP += HP * Double(LevelManager.getInstance().getLevel())*HP_mult
         HP_max = HP
         
         // hp bar
@@ -37,11 +44,22 @@ class Enemy{
     
     func update(){
         if(sprite != nil){
-            sprite.position = position
+            sprite.position = CGPoint(x: position.x+vib_position.x, y: position.y+vib_position.y)
             sprite.zRotation = CGFloat(M_PI)*(angle/180.0)
         }
         hp_bar.position = position
         hp_bar.position.y += CGFloat(hp_bar_y)
+        
+        // vibrate
+        vib_power *= 0.8
+        //vib_time += vib_speed
+        vib_position.x = CGFloat(random()%1000)/1000*vib_power
+        vib_position.y = CGFloat(random()%1000)/1000*vib_power
+    }
+    
+    func setHP(value : Double){
+        HP = value
+        HP += HP * Double(LevelManager.getInstance().getLevel())*HP_mult
     }
     
     func setTexture(name:String){
@@ -67,7 +85,9 @@ class Enemy{
     }
     
     func Damage(value:Double){
-        HP -= value
+        print(HP)
+        HP -= value * ItemManager.getInstance().getBulletAttack()
+        vib_power = vib_power_max
         hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
         if(HP <= 0){
             Destroy()
@@ -75,6 +95,7 @@ class Enemy{
     }
     
     func Destroy(){
+        ItemManager.getInstance().spawnItem(myscene, position: position)
         if(sprite != nil){
             myscene.removeChildrenInArray([sprite])
         }
