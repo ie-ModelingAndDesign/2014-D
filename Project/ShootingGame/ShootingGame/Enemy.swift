@@ -88,6 +88,7 @@ class Enemy{
     }
     
     func Destroy(){
+        ItemManager.getInstance().spawnItem(myscene, position: position)
         if(sprite != nil){
             myscene.removeChildrenInArray([sprite])
         }
