@@ -12,11 +12,13 @@ class DaikiRoot{
     var enemy_spawner : EnemySpawner!
     var time : TimeView!
     var score : ScoreView!
+    var difficulty : DifficultyView!
     var tile : Tile!
     init(obj : SKScene){
         /* Setup */
         time = TimeView(obj:obj)
         score = ScoreView(obj:obj)
+        difficulty = DifficultyView(obj: obj)
         enemy_spawner = EnemySpawner(obj: obj)
         tile = Tile(obj:obj)
         LevelManager.getInstance().resetLevel()
@@ -36,6 +38,7 @@ class DaikiRoot{
         /* Called every time */
         time.update();
         score.update();
+        difficulty.update()
         ObjectManager.getInstance().update()
         enemy_spawner.update();
         tile.update()
