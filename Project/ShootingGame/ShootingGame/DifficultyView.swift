@@ -21,7 +21,8 @@ class DifficultyView{
         mylabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
         mylabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Bottom
         mylabel.zPosition = 50.0
-        mylabel.alpha = 0.5
+        mylabel.fontColor = UIColor.purpleColor()
+        mylabel.alpha = 0.25
         myscene.addChild(mylabel);
     }
     

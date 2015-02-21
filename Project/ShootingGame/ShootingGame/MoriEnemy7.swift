@@ -26,7 +26,7 @@ class MoriEnemy7 : Enemy{
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(40, 80))
         
         square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: CGRectGetMidY(obj.frame))
-        
+        square.alpha = 0    // 非表示
         
         
         obj.addChild(square)

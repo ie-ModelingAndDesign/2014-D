@@ -26,7 +26,7 @@ class MoriEnemy3 : Enemy{
 
         randomY = ScreenManager.getInstance().getRandomY()
         square.position = CGPoint(x: CGRectGetMaxX(obj.frame), y: randomY)
-        
+        square.alpha = 0    // 非表示
         
         
         
