@@ -44,6 +44,7 @@ class GameViewController: UIViewController, SceneEscapeProtocol, StartGameProtoc
     func goGame() {
         let gameScene = GameScene(size: CGSizeMake(1024, 768))
         gameScene.delegate_game = self
+        gameScene.delegate_escape = self
         gameScene.scaleMode = SKSceneScaleMode.AspectFill
         self.skView!.presentScene(gameScene)
     }
@@ -70,6 +71,8 @@ class GameViewController: UIViewController, SceneEscapeProtocol, StartGameProtoc
             goScore()
         }else if scene.isKindOfClass(ScoreScene) {
             goTitle()
+        }else if scene.isKindOfClass(GameScene) {
+            goScore()
         }
     }
     

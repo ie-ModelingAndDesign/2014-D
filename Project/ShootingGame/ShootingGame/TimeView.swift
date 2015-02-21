@@ -13,7 +13,7 @@ class TimeView : NSObject{
     var myscene : SKScene!
     var time = 60
     var timeup = false;
-    
+    var delegate_escape: SceneEscapeProtocol?
     init(obj : SKScene){
         super.init()
         
@@ -38,11 +38,16 @@ class TimeView : NSObject{
         timeup = false
     }
     
+    func setDelegate(delegate :SceneEscapeProtocol){
+        delegate_escape = delegate
+    }
+    
     func onUpdateSec(){
         time--
         if(time <= 0 && !timeup){
             time = 0
             timeup = true
+            delegate_escape!.sceneEscape(myscene)
         }
         mylabel.text = String(time)
     }

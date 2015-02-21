@@ -9,6 +9,8 @@ import SpriteKit
 import Foundation
 
 class DaikiRoot{
+    var delegate_escape: SceneEscapeProtocol?
+    
     var time : TimeView!
     var score : ScoreView!
     var difficulty : DifficultyView!
@@ -28,12 +30,16 @@ class DaikiRoot{
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
     }
     
     func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch moves */
         
+    }
+    
+    func setDelegate(delegate : SceneEscapeProtocol){
+        delegate_escape = delegate
+        time.setDelegate(delegate)
     }
     
     func update(){
