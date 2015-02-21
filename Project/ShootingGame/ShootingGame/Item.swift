@@ -9,7 +9,7 @@ import Foundation
 import SpriteKit
 
 class Item{
-    var fall_speed : CGFloat = 3.0
+    var fall_speed : CGFloat = 5.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var angle : CGFloat = 0.0
     internal var colliderRadius:CGFloat = 60
