@@ -10,8 +10,8 @@ import Foundation
 
 private let singleton = LevelManager()
 class LevelManager{
-    var level_start = 1
-    var level = 1
+    var level_start = 0
+    var level = 0
     class func getInstance() -> LevelManager{
         return singleton
     }
@@ -19,7 +19,9 @@ class LevelManager{
     func levelUp(){
         level++
     }
-    
+    func getLevel() -> Int{
+        return level
+    }
     func resetLevel(){
         level = level_start
     }

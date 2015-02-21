@@ -26,6 +26,7 @@ class Enemy{
     init(obj : SKScene){
         ObjectManager.getInstance().setEnemy(self)
         myscene = obj
+        HP += HP * Double(LevelManager.getInstance().getLevel())*0.5    // 難易度調整
         HP_max = HP
         
         // hp bar
