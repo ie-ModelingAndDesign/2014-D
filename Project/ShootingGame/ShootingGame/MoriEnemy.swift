@@ -14,13 +14,15 @@ class MoriEnemy : Enemy{
     var startPos: CGPoint!
     var beganPos: CGPoint!
     
+    var height : CGFloat!
     var timer = NSTimer()
     override init (obj : SKScene) {
         super.init(obj: obj);
         myscene = obj
         
+        height = ScreenManager.getInstance().getRandomY()/2+ScreenManager.getInstance().getBottom()+250
         square = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(10, 80))        
-        square.position = CGPoint(x: CGRectGetMidX(obj.frame), y: ScreenManager.getInstance().getTop()+50)
+        square.position = CGPoint(x: ScreenManager.getInstance().getRandomX(), y: ScreenManager.getInstance().getTop()+50)
         square.alpha = 0    // 非表示
         
         
@@ -49,8 +51,8 @@ class MoriEnemy : Enemy{
        
         
         //var action1 = SKAction.rotateByAngle(CGFloat(90 * M_PI / 1000), duration: 2 )
-        var action2 = SKAction.moveTo(CGPoint(x: 700,y: 700), duration: 2)
-        var action3 = SKAction.moveTo(CGPoint(x: 150,y: 700), duration: 2)
+        var action2 = SKAction.moveTo(CGPoint(x: 700,y: height), duration: 2)
+        var action3 = SKAction.moveTo(CGPoint(x: 150,y: height), duration: 2)
         
         var actionX = SKAction.group([action2])
         var actionY = SKAction.group([action3])
