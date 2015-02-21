@@ -43,7 +43,9 @@ class TimeView : NSObject{
     }
     
     func onUpdateSec(){
-        time--
+        if(!ObjectManager.getInstance().isPlayerDead()){
+            time--
+        }
         if(time <= 0 && !timeup){
             time = 0
             timeup = true
