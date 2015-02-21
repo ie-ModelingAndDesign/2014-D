@@ -11,7 +11,7 @@ import Foundation
 class DifficultyItem : Item{
     override init(obj : SKScene){
         super.init(obj:obj)
-        setTexture("airplane_center")
+        setTexture("item_level")
     }
     override func OnCollision(ship : Ship){
         LevelManager.getInstance().levelUp()

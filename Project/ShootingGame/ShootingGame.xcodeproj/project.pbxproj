@@ -65,6 +65,9 @@
 		6EB8F2AD1A98436F00023189 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8F2AC1A98436F00023189 /* ItemManager.swift */; };
 		6EB8F2AF1A9846A500023189 /* DifficultyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8F2AE1A9846A500023189 /* DifficultyItem.swift */; };
 		6EB8F2B11A9847DD00023189 /* DifItemSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8F2B01A9847DD00023189 /* DifItemSpawner.swift */; };
+		6EB8F2BD1A98661900023189 /* Item_attack.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB8F2BC1A98661900023189 /* Item_attack.png */; };
+		6EB8F2BF1A98676500023189 /* Item_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB8F2BE1A98676500023189 /* Item_plus.png */; };
+		6EB8F2C31A986E5300023189 /* item_level.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EB8F2C21A986E5300023189 /* item_level.png */; };
 		6EBAA6AC1A9814EE00AE1DA2 /* LevelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAA6AB1A9814EE00AE1DA2 /* LevelManager.swift */; };
 		6EBAA6B01A981D2F00AE1DA2 /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAA6AF1A981D2F00AE1DA2 /* DifficultyView.swift */; };
 		6EBAA6B21A983D3500AE1DA2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBAA6B11A983D3500AE1DA2 /* Item.swift */; };
@@ -155,6 +158,9 @@
 		6EB8F2AC1A98436F00023189 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		6EB8F2AE1A9846A500023189 /* DifficultyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyItem.swift; sourceTree = "<group>"; };
 		6EB8F2B01A9847DD00023189 /* DifItemSpawner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifItemSpawner.swift; sourceTree = "<group>"; };
+		6EB8F2BC1A98661900023189 /* Item_attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Item_attack.png; sourceTree = "<group>"; };
+		6EB8F2BE1A98676500023189 /* Item_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Item_plus.png; sourceTree = "<group>"; };
+		6EB8F2C21A986E5300023189 /* item_level.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_level.png; sourceTree = "<group>"; };
 		6EBAA6AB1A9814EE00AE1DA2 /* LevelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelManager.swift; sourceTree = "<group>"; };
 		6EBAA6AF1A981D2F00AE1DA2 /* DifficultyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = "<group>"; };
 		6EBAA6B11A983D3500AE1DA2 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 		6E9F48EA1A95C361005A8C8E /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				6EB8F2C21A986E5300023189 /* item_level.png */,
+				6EB8F2BE1A98676500023189 /* Item_plus.png */,
+				6EB8F2BC1A98661900023189 /* Item_attack.png */,
 				6E9F49261A95DE10005A8C8E /* tile2.png */,
 				6D95BC321A960742009BC0E4 /* bakuhatsu.gif */,
 				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
@@ -460,11 +469,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E9F491A1A95C3EA005A8C8E /* koki_10.png in Resources */,
+				6EB8F2C31A986E5300023189 /* item_level.png in Resources */,
 				6E9F490F1A95C3EA005A8C8E /* daiki1.png in Resources */,
 				6E9F48F71A95C38A005A8C8E /* pen2_small.png in Resources */,
 				6E9F491C1A95C3EA005A8C8E /* moriyuki2.png in Resources */,
 				6E9F49231A95D3BB005A8C8E /* tile.png in Resources */,
 				6E9F49151A95C3EA005A8C8E /* koki_5.png in Resources */,
+				6EB8F2BF1A98676500023189 /* Item_plus.png in Resources */,
 				6E9F49141A95C3EA005A8C8E /* koki_4.png in Resources */,
 				6EDAD2301A26FFBD0037B1BD /* LaunchScreen.xib in Resources */,
 				6E9F49191A95C3EA005A8C8E /* koki_9.png in Resources */,
@@ -488,6 +499,7 @@
 				6E9F490B1A95C3EA005A8C8E /* akihiko1.png in Resources */,
 				6E9F48F41A95C38A005A8C8E /* airplane_right.png in Resources */,
 				6E6F9DA71A97576800E0076E /* ship_icon.png in Resources */,
+				6EB8F2BD1A98661900023189 /* Item_attack.png in Resources */,
 				6E9F491B1A95C3EA005A8C8E /* moriyuki1.png in Resources */,
 				6E9F49271A95DE10005A8C8E /* tile2.png in Resources */,
 				6EDAD22B1A26FFBD0037B1BD /* Main.storyboard in Resources */,
