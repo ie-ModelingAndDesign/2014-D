@@ -30,8 +30,12 @@ class LevelManager{
         level = level_start
     }
     func getLevelName(level_num : Int) -> String{
-        if(level_num >= level_name.count){
-            return level_name[level_name.count-1]
+        if(level_num > level_name.count-1){
+            var name = level_name[level_name.count-1]
+            for(var i=0; i<=level_num-level_name.count-1; i++){
+                name = name + "+"
+            }
+            return name
         }
         return level_name[level_num]
     }
