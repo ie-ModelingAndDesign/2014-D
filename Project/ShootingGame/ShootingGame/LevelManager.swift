@@ -13,8 +13,8 @@ class LevelManager{
     var level_start = 0
     var level = 0
     var level_name : [String] = [
-        "EASY","NOMAL","HARD","ADVANCED",
-        "IMPOSSIBLE","KILLER","APOCALYPSE","GOD","GOD+","GOD++","GOD+++","OS"
+        "EASY","NOMAL","HARD","ADVANCED","PRO",
+        "IMPOSSIBLE","KILLER","APOCALYPSE","HELL","GOD","OS"
     ]
     class func getInstance() -> LevelManager{
         return singleton

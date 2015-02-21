@@ -9,10 +9,11 @@ import SpriteKit
 import Foundation
 
 class DaikiRoot{
-    var enemy_spawner : EnemySpawner!
     var time : TimeView!
     var score : ScoreView!
     var difficulty : DifficultyView!
+    var enemy_spawner : EnemySpawner!
+    var diff_spawner : DiffItemSpawner!
     var tile : Tile!
     init(obj : SKScene){
         /* Setup */
@@ -20,6 +21,7 @@ class DaikiRoot{
         score = ScoreView(obj:obj)
         difficulty = DifficultyView(obj: obj)
         enemy_spawner = EnemySpawner(obj: obj)
+        diff_spawner = DiffItemSpawner(obj: obj)
         tile = Tile(obj:obj)
         LevelManager.getInstance().resetLevel()
     }
@@ -41,6 +43,7 @@ class DaikiRoot{
         difficulty.update()
         ObjectManager.getInstance().update()
         enemy_spawner.update();
+        diff_spawner.update()
         tile.update()
     }
     
