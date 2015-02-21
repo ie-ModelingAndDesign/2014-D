@@ -16,9 +16,9 @@ class AkihikoAirframe : Ship {
     private var weapon: Int = 1          // 現在の武器の値(これで武器チェンジ)
     private var BeforeWeapon: Int = 1       // Laser攻撃する前の武器を保存
     private var width: CGFloat = 20       // 複数発射時の弾同士の間隔
-    private var Laser: CGFloat = 30      // Laser攻撃のときの弾の幅
+    private var Laser: CGFloat = 120      // Laser攻撃のときの弾の幅
     private var RefOn: Int = 0           // Reflect攻撃をON/OFF
-    private var beam: Int = 10;
+    private var beam: Int = 1;
     private var texture_time = 0        // テクスチャの変更時間
     private var texture_right = false   // 飛行機の方向
     private var texture_scale = 0.2
@@ -63,9 +63,10 @@ class AkihikoAirframe : Ship {
         /* ダブルタップしたときの処理 */
         if(bframe - nframe < 15 && weapon != 2 && beam > 0 && HP > 0){
             BeforeWeapon = weapon
-            weapon = 2
+            //weapon = 2
+            beam -= 1
             laserbullet = AkihikoMyBullet(
-                    obj:sceneobj,Pos:square.position,weapon: weapon,Laser: Laser,width: width
+                    obj:sceneobj,Pos:square.position,weapon: 2,Laser: Laser,width: width
                 )
         }
         

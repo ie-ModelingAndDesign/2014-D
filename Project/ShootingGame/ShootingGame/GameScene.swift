@@ -28,6 +28,8 @@ class GameScene: SKScene {
         moriyukiRoot = MoriyukiRoot(obj: self)
         akihikoRoot = AkihikoRoot(obj: self)
         daikiRoot = DaikiRoot(obj: self)
+        
+        daikiRoot.setDelegate(delegate_escape!)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

@@ -230,4 +230,8 @@ class ObjectManager{
             }
         }
     }
+    
+    func isPlayerDead() -> Bool{
+        return playerShip == nil
+    }
 }

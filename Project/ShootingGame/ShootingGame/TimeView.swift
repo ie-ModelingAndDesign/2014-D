@@ -13,7 +13,7 @@ class TimeView : NSObject{
     var myscene : SKScene!
     var time = 60
     var timeup = false;
-    
+    var delegate_escape: SceneEscapeProtocol?
     init(obj : SKScene){
         super.init()
         
@@ -26,22 +26,38 @@ class TimeView : NSObject{
         mylabel.alpha = 0.3
         myscene.addChild(mylabel);
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("onUpdateSec"), userInfo: nil, repeats: true)
+        Reset()
     }
     
     func update(){
         
     }
     
+    func Reset(){
+        time = 60
+        timeup = false
+    }
+    
+    func setDelegate(delegate :SceneEscapeProtocol){
+        delegate_escape = delegate
+    }
+    
     func onUpdateSec(){
-        time--
-        if(time <= 0){
+        if(!ObjectManager.getInstance().isPlayerDead()){
+            time--
+        }
+        if(time <= 0 && !timeup){
             time = 0
             timeup = true
+            delegate_escape!.sceneEscape(myscene)
         }
         mylabel.text = String(time)
     }
     
     func isTimeup()->Bool{
         return timeup
+    }
+    func getTime() -> Int{
+        return time
     }
 }

@@ -90,6 +90,7 @@ class Enemy{
         vib_power = vib_power_max
         hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
         if(HP <= 0){
+            ScoreManager.getInstance().addScore(Point)
             Destroy()
         }
     }
@@ -100,7 +101,6 @@ class Enemy{
             myscene.removeChildrenInArray([sprite])
         }
         myscene.removeChildrenInArray([hp_bar])
-        ScoreManager.getInstance().addScore(Point)
         ObjectManager.getInstance().removeEnemy(self)
     }
 }
