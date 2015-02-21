@@ -10,10 +10,10 @@ import Foundation
 import SpriteKit
 
 class EnemySpawner{
-    var spawn_interval_min = 0
+    var spawn_interval_min = 5
     var spawn_interval_max = 15
-    var spawn_time_list : [Int] =   [15,15,15,15,15,15]
-    var spawn_value_list : [Int] =  [ 5, 5, 5, 5, 5, 5]
+    var spawn_time_list : [Int] =   [10, 5,15,15,15,15]
+    var spawn_value_list : [Int] =  [ 5, 4, 5, 3, 5, 5]
     internal var myscene : SKScene!
     
     private var spawn_time = 0
@@ -63,20 +63,20 @@ class EnemySpawner{
             enemy = DaikiEnemy(obj: myscene)
             enemy.colliderRadius = 40
             enemy.setTexture("daiki2")
-            enemy.HP = 3.0
+            enemy.setHP(3.0)
             break;
         case 1:
             // 左右に往復
             enemy = MoriEnemy(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("moriyuki1")
-            enemy.HP = 10.0
+            enemy.setHP(6.0)
         case 2:
             // ランダム移動
             enemy = MoriEnemy2(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("koki_1")
-            enemy.HP = 3.0
+            enemy.setHP(3.0)
         case 3:
             // 横から飛び出る
             enemy = MoriEnemy3(obj:myscene)
@@ -88,13 +88,13 @@ class EnemySpawner{
             enemy = MoriEnemy5(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("akihiko1")
-            enemy.HP = 2.0
+            enemy.setHP(2.0)
         case 5:
             // 回る
             enemy = MoriEnemy6(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("akihiko3")
-            enemy.HP = 3.0
+            enemy.setHP(3.0)
         /*case 6:
             // 楕円
             enemy = MoriEnemy7(obj:myscene)
@@ -105,7 +105,7 @@ class EnemySpawner{
             enemy = MoriEnemy9(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("akihiko4")
-            enemy.HP = 6.0
+            enemy.setHP(5.0)
         default :
             break;
         }

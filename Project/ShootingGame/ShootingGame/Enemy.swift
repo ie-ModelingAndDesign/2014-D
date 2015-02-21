@@ -10,6 +10,7 @@ import SpriteKit
 
 class Enemy{
     var HP:Double = 3
+    var HP_mult = 1.0   // 難易度調整
     var attack_power:Double = 10.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var angle : CGFloat = 0.0
@@ -31,7 +32,7 @@ class Enemy{
     init(obj : SKScene){
         ObjectManager.getInstance().setEnemy(self)
         myscene = obj
-        HP += HP * Double(LevelManager.getInstance().getLevel())*1.0    // 難易度調整
+        HP += HP * Double(LevelManager.getInstance().getLevel())*HP_mult
         HP_max = HP
         
         // hp bar
@@ -54,6 +55,11 @@ class Enemy{
         //vib_time += vib_speed
         vib_position.x = CGFloat(random()%1000)/1000*vib_power
         vib_position.y = CGFloat(random()%1000)/1000*vib_power
+    }
+    
+    func setHP(value : Double){
+        HP = value
+        HP += HP * Double(LevelManager.getInstance().getLevel())*HP_mult
     }
     
     func setTexture(name:String){
@@ -79,6 +85,7 @@ class Enemy{
     }
     
     func Damage(value:Double){
+        print(HP)
         HP -= value * ItemManager.getInstance().getBulletAttack()
         vib_power = vib_power_max
         hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
