@@ -13,4 +13,8 @@ class AttackUpItem : Item{
         super.init(obj:obj)
         setTexture("ship_icon")
     }
+    override func OnCollision(ship : Ship){
+        ItemManager.getInstance().upBulletAttack()
+        super.OnCollision(ship)
+    }
 }

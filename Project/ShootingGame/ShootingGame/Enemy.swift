@@ -79,7 +79,7 @@ class Enemy{
     }
     
     func Damage(value:Double){
-        HP -= value
+        HP -= value * ItemManager.getInstance().getBulletAttack()
         vib_power = vib_power_max
         hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
         if(HP <= 0){
