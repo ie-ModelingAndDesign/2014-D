@@ -234,4 +234,7 @@ class ObjectManager{
     func isPlayerDead() -> Bool{
         return playerShip == nil
     }
+    func getPlayer() -> Ship{
+        return playerShip
+    }
 }

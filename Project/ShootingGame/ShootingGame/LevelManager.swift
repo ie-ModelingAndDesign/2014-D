@@ -21,7 +21,9 @@ class LevelManager{
     }
     
     func levelUp(){
-        level++
+        if(!GameManager.getInstance().isTimeOver()){
+            level++
+        }
     }
     func getLevel() -> Int{
         return level

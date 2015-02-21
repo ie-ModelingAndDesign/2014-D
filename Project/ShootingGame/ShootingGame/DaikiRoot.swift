@@ -23,8 +23,10 @@ class DaikiRoot{
         score = ScoreView(obj:obj)
         difficulty = DifficultyView(obj: obj)
         enemy_spawner = EnemySpawner(obj: obj)
+        enemy_spawner.setTimer(time)
         diff_spawner = DiffItemSpawner(obj: obj)
         tile = Tile(obj:obj)
+        GameManager.getInstance().Reset()
         LevelManager.getInstance().resetLevel()
     }
     

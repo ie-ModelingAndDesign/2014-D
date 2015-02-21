@@ -34,6 +34,9 @@
 		6E6F9DA71A97576800E0076E /* ship_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F9DA61A97576800E0076E /* ship_icon.png */; };
 		6E6F9DA91A975C2C00E0076E /* LifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F9DA81A975C2C00E0076E /* LifeView.swift */; };
 		6E83C4691A674CB600EE8CD2 /* EnemyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */; };
+		6E9A3C181A98F5C9008C19EF /* SchoolBoss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3C171A98F5C9008C19EF /* SchoolBoss.swift */; };
+		6E9A3C1A1A98FD7C008C19EF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3C191A98FD7C008C19EF /* GameManager.swift */; };
+		6E9A3C1C1A9903C6008C19EF /* ThrowEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3C1B1A9903C6008C19EF /* ThrowEnemy.swift */; };
 		6E9F48F21A95C38A005A8C8E /* airplane_center.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48EB1A95C38A005A8C8E /* airplane_center.png */; };
 		6E9F48F31A95C38A005A8C8E /* airplane_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48EC1A95C38A005A8C8E /* airplane_left.png */; };
 		6E9F48F41A95C38A005A8C8E /* airplane_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9F48ED1A95C38A005A8C8E /* airplane_right.png */; };
@@ -128,6 +131,9 @@
 		6E6F9DA61A97576800E0076E /* ship_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_icon.png; sourceTree = "<group>"; };
 		6E6F9DA81A975C2C00E0076E /* LifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeView.swift; sourceTree = "<group>"; };
 		6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyBullet.swift; sourceTree = "<group>"; };
+		6E9A3C171A98F5C9008C19EF /* SchoolBoss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolBoss.swift; sourceTree = "<group>"; };
+		6E9A3C191A98FD7C008C19EF /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		6E9A3C1B1A9903C6008C19EF /* ThrowEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrowEnemy.swift; sourceTree = "<group>"; };
 		6E9F48EB1A95C38A005A8C8E /* airplane_center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane_center.png; sourceTree = "<group>"; };
 		6E9F48EC1A95C38A005A8C8E /* airplane_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane_left.png; sourceTree = "<group>"; };
 		6E9F48ED1A95C38A005A8C8E /* airplane_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane_right.png; sourceTree = "<group>"; };
@@ -339,8 +345,10 @@
 				6EB8F2B01A9847DD00023189 /* DifItemSpawner.swift */,
 				6E5402E81A8E147800E17F25 /* EnemySpawner.swift */,
 				6E9F491F1A95CB0C005A8C8E /* BackGround */,
-				6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */,
+				6E9A3C171A98F5C9008C19EF /* SchoolBoss.swift */,
+				6E9A3C1B1A9903C6008C19EF /* ThrowEnemy.swift */,
 				6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */,
+				6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */,
 				6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */,
 				6EE42E961A94720000FE3809 /* TimeView.swift */,
 				6E6F9DA81A975C2C00E0076E /* LifeView.swift */,
@@ -351,6 +359,7 @@
 				6EB8F2AC1A98436F00023189 /* ItemManager.swift */,
 				6EE42E9A1A94D87500FE3809 /* ScoreManager.swift */,
 				6E5916411A4BB23E006DE56B /* ScreenManager.swift */,
+				6E9A3C191A98FD7C008C19EF /* GameManager.swift */,
 			);
 			name = Daiki;
 			sourceTree = "<group>";
@@ -538,6 +547,7 @@
 				6E42BE831A68B0160010E8B7 /* Beam.swift in Sources */,
 				6E3140801A27052F00A77F6C /* DaikiEnemy.swift in Sources */,
 				6EDAD2501A27029E0037B1BD /* KoukiRoot.swift in Sources */,
+				6E9A3C1C1A9903C6008C19EF /* ThrowEnemy.swift in Sources */,
 				6E5916421A4BB23E006DE56B /* ScreenManager.swift in Sources */,
 				6E6F9DA91A975C2C00E0076E /* LifeView.swift in Sources */,
 				6EE42E991A94D85000FE3809 /* ScoreView.swift in Sources */,
@@ -563,7 +573,9 @@
 				6D95BC071A95B0DA009BC0E4 /* MoriEnemy9.swift in Sources */,
 				6E83C4691A674CB600EE8CD2 /* EnemyBullet.swift in Sources */,
 				6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */,
+				6E9A3C181A98F5C9008C19EF /* SchoolBoss.swift in Sources */,
 				64C4ED7E1A7B98E90062432B /* SceneEscapeProtocol.swift in Sources */,
+				6E9A3C1A1A98FD7C008C19EF /* GameManager.swift in Sources */,
 				6E5916401A4BB0C5006DE56B /* Ship.swift in Sources */,
 				6ECDD91D1A427412007CF517 /* ObjectManager.swift in Sources */,
 				6EBAA6B01A981D2F00AE1DA2 /* DifficultyView.swift in Sources */,
