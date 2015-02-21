@@ -71,7 +71,7 @@ class MoriEnemy3 : Enemy{
             }
             position = square.position
             if(position.x < ScreenManager.getInstance().getLeft()){
-                Destroy()
+                Destroy(false)
             }
 
             
@@ -79,12 +79,12 @@ class MoriEnemy3 : Enemy{
         }
     }
     
-    override func Destroy(){
+    override func Destroy(point : Bool){
         if(square != nil){
             myscene.removeChildrenInArray([square])
         }
         square = nil
-        super.Destroy()
+        super.Destroy(point)
     }
 
 }

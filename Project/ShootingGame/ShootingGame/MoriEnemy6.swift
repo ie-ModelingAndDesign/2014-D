@@ -62,18 +62,18 @@ class MoriEnemy6 : Enemy{
                 position.x = square.position.x + CGFloat(cos(rad)) * 100
                 position.y = square.position.y + CGFloat(sin(rad)) * 100
                 if(position.y < ScreenManager.getInstance().getBottom()-60){
-                    Destroy()
+                    Destroy(false)
                 }
             }
         }
         
     
-    override func Destroy(){
+    override func Destroy(point : Bool){
         if(square != nil){
             myscene.removeChildrenInArray([square])
         }
         square = nil
-        super.Destroy()
+        super.Destroy(point)
     }
 
 
