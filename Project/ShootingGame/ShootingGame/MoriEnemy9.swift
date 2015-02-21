@@ -81,12 +81,12 @@ class MoriEnemy9 : Enemy{
         }
     }
     
-    override func Destroy(point : Bool){
+    override func Destroy(){
         if(square != nil){
             myscene.removeChildrenInArray([square])
         }
         square = nil
-        super.Destroy(point)
+        super.Destroy()
     }
     
 

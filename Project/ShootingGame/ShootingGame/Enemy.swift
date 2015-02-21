@@ -81,7 +81,7 @@ class Enemy{
         Damage(beam.attack_power)
     }
     func OnCollision(player : Ship){
-        Destroy(false)
+        Destroy()
     }
     
     func Damage(value:Double){
@@ -90,14 +90,12 @@ class Enemy{
         vib_power = vib_power_max
         hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
         if(HP <= 0){
-            Destroy(true)
+            ScoreManager.getInstance().addScore(Point)
+            Destroy()
         }
     }
     
-    func Destroy(point : Bool){
-        if(point){
-            ScoreManager.getInstance().addScore(Point)
-        }
+    func Destroy(){
         ItemManager.getInstance().spawnItem(myscene, position: position)
         if(sprite != nil){
             myscene.removeChildrenInArray([sprite])
