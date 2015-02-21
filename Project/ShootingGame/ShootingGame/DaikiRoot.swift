@@ -18,8 +18,8 @@ class DaikiRoot{
         time = TimeView(obj:obj)
         score = ScoreView(obj:obj)
         enemy_spawner = EnemySpawner(obj: obj)
-        
         tile = Tile(obj:obj)
+        LevelManager.getInstance().resetLevel()
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
