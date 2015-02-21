@@ -37,8 +37,6 @@ class MoriEnemy9 : Enemy{
             
             
         )
-        println(centerPos)
-        
         
     }
     

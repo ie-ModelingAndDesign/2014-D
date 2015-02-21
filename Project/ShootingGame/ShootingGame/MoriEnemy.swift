@@ -35,7 +35,6 @@ class MoriEnemy : Enemy{
             
             
         )
-        println(startPos)
         
         
     }

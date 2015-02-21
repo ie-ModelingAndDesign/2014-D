@@ -39,7 +39,6 @@ class MoriEnemy3 : Enemy{
             
             
         )
-        println(startPos)
         
         
     }
