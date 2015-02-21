@@ -23,7 +23,7 @@ class EnemySpawner{
         timeA++;
         if(timeA >= 30){
             timeA = 0;
-            spawnEnemy(5);
+            spawnEnemy(6);
         }
         timeB++;
         if(timeB >= 120){
@@ -72,12 +72,12 @@ class EnemySpawner{
             enemy = MoriEnemy6(obj:myscene)
             enemy.colliderRadius = 60
             enemy.setTexture("akihiko2")
-        case 6:
+        /*case 6:
             // 楕円
             enemy = MoriEnemy7(obj:myscene)
             enemy.colliderRadius = 60
-            enemy.setTexture("akihiko3")
-        case 7:
+            enemy.setTexture("akihiko3")*/
+        case 6:
             // 不規則にカーブ
             enemy = MoriEnemy9(obj:myscene)
             enemy.colliderRadius = 60
