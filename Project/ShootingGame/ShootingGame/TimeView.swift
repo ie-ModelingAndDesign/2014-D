@@ -12,7 +12,8 @@ class TimeView : NSObject{
     private var mylabel : SKLabelNode!
     var myscene : SKScene!
     var time = 60
-    var timeup = false;
+    var timeup = false
+    var stop = false
     var delegate_escape: SceneEscapeProtocol?
     init(obj : SKScene){
         super.init()
@@ -43,8 +44,10 @@ class TimeView : NSObject{
     }
     
     func onUpdateSec(){
-        if(!ObjectManager.getInstance().isPlayerDead()){
+        if(!ObjectManager.getInstance().isPlayerDead() && !stop){
             time--
+        }else{
+            stop = true
         }
         if(time <= 0){
             time = 0
