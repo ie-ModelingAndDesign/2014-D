@@ -14,6 +14,7 @@ class DaikiRoot{
     var time : TimeView!
     var score : ScoreView!
     var difficulty : DifficultyView!
+    var info : InfoView!
     var enemy_spawner : EnemySpawner!
     var diff_spawner : DiffItemSpawner!
     var tile : Tile!
@@ -22,6 +23,7 @@ class DaikiRoot{
         time = TimeView(obj:obj)
         score = ScoreView(obj:obj)
         difficulty = DifficultyView(obj: obj)
+        info = InfoView(obj: obj)
         enemy_spawner = EnemySpawner(obj: obj)
         enemy_spawner.setTimer(time)
         diff_spawner = DiffItemSpawner(obj: obj)
@@ -49,6 +51,7 @@ class DaikiRoot{
         time.update();
         score.update();
         difficulty.update()
+        info.update()
         ObjectManager.getInstance().update()
         enemy_spawner.update();
         diff_spawner.update()
