@@ -11,7 +11,7 @@ import Foundation
 class ScoreView{
     private var mylabel : SKLabelNode!
     var myscene : SKScene!
-    
+    var save = false
     init(obj : SKScene){
         myscene = obj
         mylabel = SKLabelNode(fontNamed:"Chalkduster")
@@ -24,5 +24,18 @@ class ScoreView{
     
     func update(){
         mylabel.text = String(ScoreManager.getInstance().getScore());
+        
+        if(!save){
+            if(GameManager.getInstance().isPlayerDead()){
+                saveScore()
+            }else if(GameManager.getInstance().isTimeOver()){
+                saveScore()
+            }
+        }
+    }
+    
+    func saveScore(){
+        save = true
+        println("save score : " + String(ScoreManager.getInstance().getScore()))
     }
 }
