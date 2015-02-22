@@ -246,6 +246,7 @@
 				6D95BC321A960742009BC0E4 /* bakuhatsu.gif */,
 				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
 				6E9F48EC1A95C38A005A8C8E /* airplane_left.png */,
+				64E01AA11A99D654002768C4 /* soundOFF.jpg */,
 				64E019CA1A9994BB002768C4 /* 1minShooting_logo.png */,
 				6E9F48ED1A95C38A005A8C8E /* airplane_right.png */,
 				6EB69C6D1A99D65E00F9B79C /* soundOFF.jpg */,
