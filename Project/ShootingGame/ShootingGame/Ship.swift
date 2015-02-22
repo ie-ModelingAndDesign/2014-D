@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class Ship{
-    var HP:Int = 3
+    var HP:Int = 1
     var damage_time_max = 30
     internal var position:CGPoint = CGPointMake(0,0)
     internal var colliderRadius:CGFloat = 0
