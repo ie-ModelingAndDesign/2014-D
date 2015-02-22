@@ -18,6 +18,7 @@ class DaikiRoot{
     var enemy_spawner : EnemySpawner!
     var diff_spawner : DiffItemSpawner!
     var tile : Tile!
+    var bgm : BGMPlayer!
     init(obj : SKScene){
         /* Setup */
         ObjectManager.getInstance().Reset()
@@ -33,6 +34,7 @@ class DaikiRoot{
         GameManager.getInstance().Reset()
         LevelManager.getInstance().resetLevel()
         ScoreManager.getInstance().Reset()
+        bgm = BGMPlayer(obj:obj)
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -60,6 +62,8 @@ class DaikiRoot{
         enemy_spawner.update();
         diff_spawner.update()
         tile.update()
+        bgm.update()
+        
     }
     
     

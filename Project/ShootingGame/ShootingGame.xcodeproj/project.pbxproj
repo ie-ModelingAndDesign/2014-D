@@ -112,6 +112,7 @@
 		6EE90ABD1A99FF14001D3C1A /* missile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EE90AB61A99FF14001D3C1A /* missile.mp3 */; };
 		6EE90ABE1A99FF14001D3C1A /* heal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EE90AB71A99FF14001D3C1A /* heal.mp3 */; };
 		6EE90ABF1A99FF14001D3C1A /* myup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EE90AB81A99FF14001D3C1A /* myup.mp3 */; };
+		6EE90AC11A9A0398001D3C1A /* BgmPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE90AC01A9A0398001D3C1A /* BgmPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +236,7 @@
 		6EE90AB61A99FF14001D3C1A /* missile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = missile.mp3; sourceTree = "<group>"; };
 		6EE90AB71A99FF14001D3C1A /* heal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heal.mp3; sourceTree = "<group>"; };
 		6EE90AB81A99FF14001D3C1A /* myup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = myup.mp3; sourceTree = "<group>"; };
+		6EE90AC01A9A0398001D3C1A /* BgmPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BgmPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +414,7 @@
 				6E31407F1A27052F00A77F6C /* DaikiEnemy.swift */,
 				6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */,
 				6E050C421A442F67008AE8D9 /* DaikiTestBullet.swift */,
+				6EE90AC01A9A0398001D3C1A /* BgmPlayer.swift */,
 				6EB69C6B1A99A7A600F9B79C /* InfoView.swift */,
 				6EE42E961A94720000FE3809 /* TimeView.swift */,
 				6E6F9DA81A975C2C00E0076E /* LifeView.swift */,
@@ -658,6 +661,7 @@
 				6E5402E91A8E147800E17F25 /* EnemySpawner.swift in Sources */,
 				648EF7061A3AF332000DE1A8 /* AkihikoRefBullet.swift in Sources */,
 				6418455F1A4FE6370026DD91 /* AkihikoEnemyBullet1.swift in Sources */,
+				6EE90AC11A9A0398001D3C1A /* BgmPlayer.swift in Sources */,
 				6D95BC071A95B0DA009BC0E4 /* MoriEnemy9.swift in Sources */,
 				6E83C4691A674CB600EE8CD2 /* EnemyBullet.swift in Sources */,
 				6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */,

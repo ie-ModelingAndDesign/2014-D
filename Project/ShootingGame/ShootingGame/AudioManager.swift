@@ -18,6 +18,6 @@ class AudioManager{
     
     func playSE(scene : SKScene, filename : String){
         let mySoundAction: SKAction = SKAction.playSoundFileNamed(filename, waitForCompletion: true)
-        scene.runAction(SKAction.repeatActionForever(mySoundAction),withKey: "sound")
+        scene.runAction(mySoundAction,withKey: "sound")
     }
 }
