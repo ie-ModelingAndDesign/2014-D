@@ -10,17 +10,24 @@ class TitleScene: SKScene{
     let start = UIButton()
     let scoreB = UIButton()
     let musicB = UIButton()
+    
     let StartImage = UIImage(named: "Start.jpg") as UIImage!
     let ScoreImage = UIImage(named: "Score.jpg") as UIImage!
     var MusicImage = UIImage(named: "soundON.jpg") as UIImage!
-
+    /*
+    let enemy1 = UIImage(named:"title_enemy1.png") as UIImage!
+    let enemy2 = UIImage(named:"title_enemy2.png") as UIImage!
+    */
+    
     override func didMoveToView(view: SKView) {
         
         var Title = SKSpriteNode(imageNamed:"1minShooting_logo.png")
         Title.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMaxY(self.frame)-150)
         self.addChild(Title)
-        
-        
+        /*
+        enemy1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMaxY(self.frame)-400)
+        self.addChild(enemy1)
+        */
         start.frame = CGRectMake(0,0,170,45)
         start.layer.masksToBounds = true
         start.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
@@ -40,7 +47,6 @@ class TitleScene: SKScene{
         scoreB.setImage(ScoreImage, forState: .Normal)
         scoreB.addTarget(self, action: "ClickScore:", forControlEvents: .TouchUpInside)
         self.view!.addSubview(scoreB);
-
 
         
         /* スコアデータがなければスコアに0を挿入 */
@@ -116,5 +122,23 @@ class TitleScene: SKScene{
         musicB.addTarget(self, action: "ClickMusic:", forControlEvents: .TouchUpInside)
         self.view!.addSubview(musicB);
     }
-
+    /*
+    var count = 1
+    var change = true
+    override func update(currentTime: CFTimeInterval){
+        count += 1
+        println(count)
+        if(count % 180 == 0 && change == true){
+            enemy1.hidden = !enemy1.hidden
+            change = false
+            enemy2.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMaxY(self.frame)-400)
+            self.addChild(enemy2)
+        }else if(count % 180 == 0 && change == false){
+            enemy2.hidden = !enemy2.hidden
+            change = true
+            enemy1.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMaxY(self.frame)-400)
+            self.addChild(enemy1)
+        }
+    }
+    */
 }
