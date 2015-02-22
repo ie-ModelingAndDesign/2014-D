@@ -16,6 +16,10 @@ class ScoreManager{
         return singleton
     }
     
+    func Reset(){
+        score = 0
+    }
+    
     func addScore(points:Int){
         if(!GameManager.getInstance().isTimeOver()){
             score += points + points*LevelManager.getInstance().getLevel()

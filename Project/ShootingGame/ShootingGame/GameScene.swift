@@ -24,10 +24,10 @@ class GameScene: SKScene {
         
         
         // root
+        daikiRoot = DaikiRoot(obj: self)
         koukiRoot = KoukiRoot(obj: self)
         moriyukiRoot = MoriyukiRoot(obj: self)
         akihikoRoot = AkihikoRoot(obj: self)
-        daikiRoot = DaikiRoot(obj: self)
         
         daikiRoot.setDelegate(delegate_escape!)
     }

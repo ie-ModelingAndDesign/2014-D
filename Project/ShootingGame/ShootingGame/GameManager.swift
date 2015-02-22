@@ -28,8 +28,9 @@ class GameManager {
     }
     
     func Reset(){
-        var playerdead = false
-        var timeover = false
+        playerdead = false
+        timeover = false
+        bossdead = false
     }
     
     func setPlayerDead(){

@@ -20,7 +20,9 @@ class DaikiRoot{
     var tile : Tile!
     init(obj : SKScene){
         /* Setup */
+        ObjectManager.getInstance().Reset()
         time = TimeView(obj:obj)
+        time.Reset()
         score = ScoreView(obj:obj)
         difficulty = DifficultyView(obj: obj)
         info = InfoView(obj: obj)
@@ -30,6 +32,7 @@ class DaikiRoot{
         tile = Tile(obj:obj)
         GameManager.getInstance().Reset()
         LevelManager.getInstance().resetLevel()
+        ScoreManager.getInstance().Reset()
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
