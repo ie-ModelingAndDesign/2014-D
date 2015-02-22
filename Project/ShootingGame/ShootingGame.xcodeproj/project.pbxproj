@@ -114,6 +114,7 @@
 		6EE90ABF1A99FF14001D3C1A /* myup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EE90AB81A99FF14001D3C1A /* myup.mp3 */; };
 		6EE90AC11A9A0398001D3C1A /* BgmPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE90AC01A9A0398001D3C1A /* BgmPlayer.swift */; };
 		6EE90AC31A9A0BB5001D3C1A /* LifeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE90AC21A9A0BB5001D3C1A /* LifeManager.swift */; };
+		6EE90AC51A9A0E62001D3C1A /* dark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EE90AC41A9A0E62001D3C1A /* dark.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 		6EE90AB81A99FF14001D3C1A /* myup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = myup.mp3; sourceTree = "<group>"; };
 		6EE90AC01A9A0398001D3C1A /* BgmPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BgmPlayer.swift; sourceTree = "<group>"; };
 		6EE90AC21A9A0BB5001D3C1A /* LifeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeManager.swift; sourceTree = "<group>"; };
+		6EE90AC41A9A0E62001D3C1A /* dark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dark.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 		6E9F48EA1A95C361005A8C8E /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				6EE90AC41A9A0E62001D3C1A /* dark.jpg */,
 				6EB8F2C21A986E5300023189 /* item_level.png */,
 				6EB8F2BE1A98676500023189 /* Item_plus.png */,
 				6EB8F2BC1A98661900023189 /* Item_attack.png */,
@@ -591,6 +594,7 @@
 				6E9F49131A95C3EA005A8C8E /* koki_3.png in Resources */,
 				6EE90ABB1A99FF14001D3C1A /* button1.mp3 in Resources */,
 				64E019DC1A99C8FA002768C4 /* title_enemy1.png in Resources */,
+				6EE90AC51A9A0E62001D3C1A /* dark.jpg in Resources */,
 				6EDAD22D1A26FFBD0037B1BD /* Images.xcassets in Resources */,
 				6E9F49121A95C3EA005A8C8E /* koki_2.png in Resources */,
 				6EDAD2241A26FFBD0037B1BD /* GameScene.sks in Resources */,

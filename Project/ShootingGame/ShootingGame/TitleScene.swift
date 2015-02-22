@@ -13,7 +13,7 @@ class TitleScene: SKScene{
     
     let StartImage = UIImage(named: "Start.jpg") as UIImage!
     let ScoreImage = UIImage(named: "Score.jpg") as UIImage!
-    var MusicImage = UIImage(named: "soundON.jpg") as UIImage!
+    var MusicImage = UIImage(named: "dark.jpg") as UIImage!
     /*
     let enemy1 = UIImage(named:"title_enemy1.png") as UIImage!
     let enemy2 = UIImage(named:"title_enemy2.png") as UIImage!
@@ -97,14 +97,16 @@ class TitleScene: SKScene{
         
         let mySoundAction: SKAction = SKAction.playSoundFileNamed("music.mp3", waitForCompletion: true)
         if(Play == false){
+            LifeManager.getInstance().setLife(2)
             musicB.hidden = !musicB.hidden
-            MusicImage = UIImage(named: "soundOFF.jpg") as UIImage!
+            MusicImage = UIImage(named: "dark.jpg") as UIImage!
             SetMusicButton()
-            runAction(SKAction.repeatActionForever(mySoundAction),withKey: "sound")
+            //runAction(SKAction.repeatActionForever(mySoundAction),withKey: "sound")
             Play = true
         }else if(Play == true){
+            LifeManager.getInstance().setLife(3)
             musicB.hidden = !musicB.hidden
-            MusicImage = UIImage(named: "soundON.jpg") as UIImage!
+            MusicImage = UIImage(named: "dark.jpg") as UIImage!
             SetMusicButton()
             removeActionForKey("sound")
             Play = false

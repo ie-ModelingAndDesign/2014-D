@@ -22,4 +22,8 @@ class LifeManager{
     func resetLife(){
         life = 1
     }
+    
+    func getLife() -> Int{
+        return life
+    }
 }

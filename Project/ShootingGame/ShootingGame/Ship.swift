@@ -20,6 +20,7 @@ class Ship{
     init(obj : SKScene){
         ObjectManager.getInstance().setPlayerShip(self)
         myscene = obj
+        HP = LifeManager.getInstance().getLife()
     }
     
     func update(){
