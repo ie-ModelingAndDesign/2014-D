@@ -11,7 +11,7 @@ import Foundation
 class BulletItem : Item{
     override init(obj : SKScene){
         super.init(obj:obj)
-        setTexture("item_plus")
+        setTexture("item_attack")
     }
     override func OnCollision(ship : Ship){
         ship.levelup()

@@ -46,10 +46,14 @@ class TimeView : NSObject{
         if(!ObjectManager.getInstance().isPlayerDead()){
             time--
         }
-        if(time <= 0 && !timeup){
+        if(time <= 0){
             time = 0
-            timeup = true
-            delegate_escape!.sceneEscape(myscene)
+            if(!timeup){
+                timeup = true
+                GameManager.getInstance().setTimeOver()
+            }
+            
+            // delegate_escape!.sceneEscape(myscene)
         }
         mylabel.text = String(time)
     }

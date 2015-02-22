@@ -11,7 +11,7 @@ import Foundation
 class AttackUpItem : Item{
     override init(obj : SKScene){
         super.init(obj:obj)
-        setTexture("item_attack")
+        setTexture("item_plus")
     }
     override func OnCollision(ship : Ship){
         ItemManager.getInstance().upBulletAttack()

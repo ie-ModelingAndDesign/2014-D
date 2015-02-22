@@ -45,6 +45,15 @@ class ObjectManager{
         return singleton
     }
     
+    func Reset(){
+        playerShip = nil
+        enemyArray.removeAll()
+        bulletArray.removeAll()
+        beamArray.removeAll()
+        enemyArray.removeAll()
+        itemArray.removeAll()
+    }
+    
     func updateObjects(){
         // update enemy
         for(var i = 0; i<enemyArray.count;i++){
@@ -233,5 +242,8 @@ class ObjectManager{
     
     func isPlayerDead() -> Bool{
         return playerShip == nil
+    }
+    func getPlayer() -> Ship{
+        return playerShip
     }
 }

@@ -14,18 +14,25 @@ class DaikiRoot{
     var time : TimeView!
     var score : ScoreView!
     var difficulty : DifficultyView!
+    var info : InfoView!
     var enemy_spawner : EnemySpawner!
     var diff_spawner : DiffItemSpawner!
     var tile : Tile!
     init(obj : SKScene){
         /* Setup */
+        ObjectManager.getInstance().Reset()
         time = TimeView(obj:obj)
+        time.Reset()
         score = ScoreView(obj:obj)
         difficulty = DifficultyView(obj: obj)
+        info = InfoView(obj: obj)
         enemy_spawner = EnemySpawner(obj: obj)
+        enemy_spawner.setTimer(time)
         diff_spawner = DiffItemSpawner(obj: obj)
         tile = Tile(obj:obj)
+        GameManager.getInstance().Reset()
         LevelManager.getInstance().resetLevel()
+        ScoreManager.getInstance().Reset()
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -40,6 +47,7 @@ class DaikiRoot{
     func setDelegate(delegate : SceneEscapeProtocol){
         delegate_escape = delegate
         time.setDelegate(delegate)
+        info.setDelegate(delegate)
     }
     
     func update(){
@@ -47,6 +55,7 @@ class DaikiRoot{
         time.update();
         score.update();
         difficulty.update()
+        info.update()
         ObjectManager.getInstance().update()
         enemy_spawner.update();
         diff_spawner.update()

@@ -88,11 +88,12 @@ class Enemy{
         print(HP)
         HP -= value * ItemManager.getInstance().getBulletAttack()
         vib_power = vib_power_max
-        hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
         if(HP <= 0){
+            HP = 0.01
             ScoreManager.getInstance().addScore(Point)
             Destroy()
         }
+        hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
     }
     
     func Destroy(){

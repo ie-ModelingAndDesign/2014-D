@@ -52,6 +52,7 @@ class Ship{
     }
     
     func Destroy(){
+        GameManager.getInstance().setPlayerDead()
         ObjectManager.getInstance().removePlayerShip()
     }
 }

@@ -12,8 +12,9 @@ import SpriteKit
 class EnemySpawner{
     var spawn_interval_min = 5
     var spawn_interval_max = 15
-    var spawn_time_list : [Int] =   [10, 5,15,15,15,15]
-    var spawn_value_list : [Int] =  [ 5, 4, 5, 3, 5, 5]
+    var spawn_time_list : [Int] =   [10, 5,15,15,15,15,15]
+    var spawn_value_list : [Int] =  [ 5, 4, 5, 3, 5, 5, 5]
+    var spawn_boss_time = 11
     internal var myscene : SKScene!
     
     private var spawn_time = 0
@@ -21,13 +22,22 @@ class EnemySpawner{
     private var spawn_next = 0
     private var spawn_value = 0
     private var spawn = false
+    private var mytimer : TimeView!
+    private var spawn_boss = false
     init(obj:SKScene){
         myscene = obj;
         resetSpawnStatus()
     }
     
+    func setTimer(timer : TimeView){
+        mytimer = timer
+    }
+    
     func update(){
-        spawn_time++
+        // ZAKO spawn
+        if(!spawn_boss){
+            spawn_time++
+        }
         if(spawn){
             // spawn mode
             if(spawn_time > spawn_time_list[spawn_next]){
@@ -45,6 +55,17 @@ class EnemySpawner{
                 spawn_time = 0
                 spawn_next = Int(arc4random()) % (spawn_time_list.count)
                 spawn = true
+            }
+        }
+        
+        // BOSS spawn
+        if(mytimer != nil){
+            if(!spawn_boss && mytimer.getTime() <= spawn_boss_time){
+                spawn_boss = true
+                var enemy = SchoolBoss(obj: myscene)
+                enemy.colliderRadius = 120
+                enemy.setTexture("koki_3")
+                enemy.setHP(20)
             }
         }
     }
