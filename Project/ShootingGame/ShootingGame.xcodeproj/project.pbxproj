@@ -120,6 +120,7 @@
 		64E01A9E1A99D4A8002768C4 /* title_enemy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E01A3E1A99D4A8002768C4 /* title_enemy1.png */; };
 		64E01A9F1A99D4A8002768C4 /* title_enemy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E01A3F1A99D4A8002768C4 /* title_enemy2.png */; };
 		64E01AA01A99D4A8002768C4 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E01A401A99D4A8002768C4 /* TitleScene.swift */; };
+		64E01AA21A99D654002768C4 /* soundOFF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E01AA11A99D654002768C4 /* soundOFF.jpg */; };
 		6D95BC061A95B0D7009BC0E4 /* MoriEnemy6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BBFE1A95AE64009BC0E4 /* MoriEnemy6.swift */; };
 		6D95BC071A95B0DA009BC0E4 /* MoriEnemy9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BC041A95AF02009BC0E4 /* MoriEnemy9.swift */; };
 		6D95BC081A95B0DE009BC0E4 /* MoriEnemy7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BC011A95AEB4009BC0E4 /* MoriEnemy7.swift */; };
@@ -323,6 +324,7 @@
 		64E01A3E1A99D4A8002768C4 /* title_enemy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_enemy1.png; sourceTree = "<group>"; };
 		64E01A3F1A99D4A8002768C4 /* title_enemy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_enemy2.png; sourceTree = "<group>"; };
 		64E01A401A99D4A8002768C4 /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		64E01AA11A99D654002768C4 /* soundOFF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soundOFF.jpg; sourceTree = "<group>"; };
 		6D5003F51A8E1ABA00096AFE /* MoriEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy.swift; sourceTree = "<group>"; };
 		6D95BBFE1A95AE64009BC0E4 /* MoriEnemy6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy6.swift; sourceTree = "<group>"; };
 		6D95BC011A95AEB4009BC0E4 /* MoriEnemy7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy7.swift; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 				6D95BC321A960742009BC0E4 /* bakuhatsu.gif */,
 				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
 				6E9F48EC1A95C38A005A8C8E /* airplane_left.png */,
+				64E01AA11A99D654002768C4 /* soundOFF.jpg */,
 				64E019CA1A9994BB002768C4 /* 1minShooting_logo.png */,
 				6E9F48ED1A95C38A005A8C8E /* airplane_right.png */,
 				64E019DE1A99D4A8002768C4 /* ShootingGame */,
@@ -891,6 +894,7 @@
 				64E01A571A99D4A8002768C4 /* daiki2.png in Resources */,
 				64E01A761A99D4A8002768C4 /* koki_9.png in Resources */,
 				64E01A471A99D4A8002768C4 /* akihiko3.png in Resources */,
+				64E01AA21A99D654002768C4 /* soundOFF.jpg in Resources */,
 				64E01A8D1A99D4A8002768C4 /* score.png in Resources */,
 				6E9F48F51A95C38A005A8C8E /* pen_small.png in Resources */,
 				64E01A881A99D4A8002768C4 /* pen2_small.png in Resources */,
