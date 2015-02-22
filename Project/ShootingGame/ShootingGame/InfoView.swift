@@ -33,6 +33,7 @@ class InfoView : NSObject{
             }else{
                 if(GameManager.getInstance().isTimeOver()){
                     if(GameManager.getInstance().isBossDead()){
+                        AudioManager.getInstance().playSE(myscene, filename: "clear.mp3")
                         viewInfo(SKColor.redColor(), text: "YOU WIN")
                     }else{
                         viewInfo(SKColor.redColor(), text: "TIME OVER")
