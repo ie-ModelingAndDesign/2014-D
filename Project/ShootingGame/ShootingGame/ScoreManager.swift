@@ -21,7 +21,7 @@ class ScoreManager{
     }
     
     func addScore(points:Int){
-        if(!GameManager.getInstance().isTimeOver()){
+        if(!GameManager.getInstance().isTimeOver() && !GameManager.getInstance().isPlayerDead()){
             score += points + points*LevelManager.getInstance().getLevel()
         }
     }
