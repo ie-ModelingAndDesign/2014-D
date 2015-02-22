@@ -16,8 +16,13 @@
 		64C4ED801A7B98FA0062432B /* StartGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */; };
 		64C4ED821A7B991E0062432B /* ScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED811A7B991E0062432B /* ScoreScene.swift */; };
 		64C4ED841A7B99420062432B /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED831A7B99420062432B /* TitleScene.swift */; };
-		64E7FD401A98D25100B903CA /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E7FD3F1A98D25100B903CA /* score.png */; };
-		64E7FD421A98D25E00B903CA /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E7FD411A98D25E00B903CA /* start.png */; };
+		64E019C11A993F77002768C4 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E019C01A993F77002768C4 /* music.mp3 */; };
+		64E019C31A994223002768C4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E019C21A994223002768C4 /* AVFoundation.framework */; };
+		64E019CB1A9994BB002768C4 /* 1minShooting_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E019CA1A9994BB002768C4 /* 1minShooting_logo.png */; };
+		64E019CE1A9994C4002768C4 /* soundOFF.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E019CC1A9994C4002768C4 /* soundOFF.jpg */; };
+		64E019CF1A9994C4002768C4 /* soundON.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E019CD1A9994C4002768C4 /* soundON.jpg */; };
+		64E019D51A999D98002768C4 /* Start.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E019D41A999D98002768C4 /* Start.jpg */; };
+		64E019D71A999DA0002768C4 /* Score.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E019D61A999DA0002768C4 /* Score.jpg */; };
 		6D95BC061A95B0D7009BC0E4 /* MoriEnemy6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BBFE1A95AE64009BC0E4 /* MoriEnemy6.swift */; };
 		6D95BC071A95B0DA009BC0E4 /* MoriEnemy9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BC041A95AF02009BC0E4 /* MoriEnemy9.swift */; };
 		6D95BC081A95B0DE009BC0E4 /* MoriEnemy7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D95BC011A95AEB4009BC0E4 /* MoriEnemy7.swift */; };
@@ -113,8 +118,13 @@
 		64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameProtocol.swift; sourceTree = "<group>"; };
 		64C4ED811A7B991E0062432B /* ScoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreScene.swift; sourceTree = "<group>"; };
 		64C4ED831A7B99420062432B /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
-		64E7FD3F1A98D25100B903CA /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
-		64E7FD411A98D25E00B903CA /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		64E019C01A993F77002768C4 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		64E019C21A994223002768C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		64E019CA1A9994BB002768C4 /* 1minShooting_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1minShooting_logo.png; sourceTree = "<group>"; };
+		64E019CC1A9994C4002768C4 /* soundOFF.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soundOFF.jpg; sourceTree = "<group>"; };
+		64E019CD1A9994C4002768C4 /* soundON.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soundON.jpg; sourceTree = "<group>"; };
+		64E019D41A999D98002768C4 /* Start.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Start.jpg; sourceTree = "<group>"; };
+		64E019D61A999DA0002768C4 /* Score.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Score.jpg; sourceTree = "<group>"; };
 		6D5003F51A8E1ABA00096AFE /* MoriEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy.swift; sourceTree = "<group>"; };
 		6D95BBFE1A95AE64009BC0E4 /* MoriEnemy6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy6.swift; sourceTree = "<group>"; };
 		6D95BC011A95AEB4009BC0E4 /* MoriEnemy7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoriEnemy7.swift; sourceTree = "<group>"; };
@@ -200,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E019C31A994223002768C4 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,13 +234,18 @@
 				6D95BC321A960742009BC0E4 /* bakuhatsu.gif */,
 				6E9F48EB1A95C38A005A8C8E /* airplane_center.png */,
 				6E9F48EC1A95C38A005A8C8E /* airplane_left.png */,
+				64E019CA1A9994BB002768C4 /* 1minShooting_logo.png */,
 				6E9F48ED1A95C38A005A8C8E /* airplane_right.png */,
+				64E019CC1A9994C4002768C4 /* soundOFF.jpg */,
+				64E019CD1A9994C4002768C4 /* soundON.jpg */,
 				6E6F9DA61A97576800E0076E /* ship_icon.png */,
+				64E019D61A999DA0002768C4 /* Score.jpg */,
 				6E9F48EE1A95C38A005A8C8E /* pen_small.png */,
 				6E9F48EF1A95C38A005A8C8E /* pen.png */,
 				6E9F48F01A95C38A005A8C8E /* pen2_small.png */,
 				6E9F49221A95D3BB005A8C8E /* tile.png */,
 				6E9F48F11A95C38A005A8C8E /* pen2.png */,
+				64E019D41A999D98002768C4 /* Start.jpg */,
 				6E9F48F91A95C3EA005A8C8E /* akihiko1.png */,
 				6E9F48FA1A95C3EA005A8C8E /* akihiko2.png */,
 				6E9F48FB1A95C3EA005A8C8E /* akihiko3.png */,
@@ -263,6 +279,7 @@
 		6EDAD2131A26FFBC0037B1BD = {
 			isa = PBXGroup;
 			children = (
+				64E019C21A994223002768C4 /* AVFoundation.framework */,
 				6EDAD21E1A26FFBC0037B1BD /* ShootingGame */,
 				6EDAD2381A26FFBD0037B1BD /* ShootingGameTests */,
 				6EDAD21D1A26FFBC0037B1BD /* Products */,
@@ -363,11 +380,10 @@
 				6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */,
 				648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */,
 				64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */,
-				64E7FD3F1A98D25100B903CA /* score.png */,
 				64C4ED811A7B991E0062432B /* ScoreScene.swift */,
 				64C4ED831A7B99420062432B /* TitleScene.swift */,
-				64E7FD411A98D25E00B903CA /* start.png */,
 				64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */,
+				64E019C01A993F77002768C4 /* music.mp3 */,
 				6418455E1A4FE6370026DD91 /* AkihikoEnemyBullet1.swift */,
 			);
 			name = Akihiko;
@@ -477,10 +493,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E019C11A993F77002768C4 /* music.mp3 in Resources */,
 				6E9F491A1A95C3EA005A8C8E /* koki_10.png in Resources */,
+				64E019D51A999D98002768C4 /* Start.jpg in Resources */,
 				6EB8F2C31A986E5300023189 /* item_level.png in Resources */,
 				6E9F490F1A95C3EA005A8C8E /* daiki1.png in Resources */,
 				6E9F48F71A95C38A005A8C8E /* pen2_small.png in Resources */,
+				64E019D71A999DA0002768C4 /* Score.jpg in Resources */,
 				6E9F491C1A95C3EA005A8C8E /* moriyuki2.png in Resources */,
 				6E9F49231A95D3BB005A8C8E /* tile.png in Resources */,
 				6E9F49151A95C3EA005A8C8E /* koki_5.png in Resources */,
@@ -489,12 +508,12 @@
 				6EDAD2301A26FFBD0037B1BD /* LaunchScreen.xib in Resources */,
 				6E9F49191A95C3EA005A8C8E /* koki_9.png in Resources */,
 				6E9F490D1A95C3EA005A8C8E /* akihiko3.png in Resources */,
-				64E7FD421A98D25E00B903CA /* start.png in Resources */,
 				6E9F490E1A95C3EA005A8C8E /* akihiko4.png in Resources */,
 				6E9F48F61A95C38A005A8C8E /* pen.png in Resources */,
 				6D95BC331A960742009BC0E4 /* bakuhatsu.gif in Resources */,
 				6E9F49161A95C3EA005A8C8E /* koki_6.png in Resources */,
 				641845611A4FE84F0026DD91 /* ball.png in Resources */,
+				64E019CF1A9994C4002768C4 /* soundON.jpg in Resources */,
 				6E9F49101A95C3EA005A8C8E /* daiki2.png in Resources */,
 				6E9F48F31A95C38A005A8C8E /* airplane_left.png in Resources */,
 				6E9F49171A95C3EA005A8C8E /* koki_7.png in Resources */,
@@ -507,13 +526,14 @@
 				6E9F48F81A95C38A005A8C8E /* pen2.png in Resources */,
 				6E9F490C1A95C3EA005A8C8E /* akihiko2.png in Resources */,
 				6E9F490B1A95C3EA005A8C8E /* akihiko1.png in Resources */,
+				64E019CB1A9994BB002768C4 /* 1minShooting_logo.png in Resources */,
+				64E019CE1A9994C4002768C4 /* soundOFF.jpg in Resources */,
 				6E9F48F41A95C38A005A8C8E /* airplane_right.png in Resources */,
 				6E6F9DA71A97576800E0076E /* ship_icon.png in Resources */,
 				6EB8F2BD1A98661900023189 /* Item_attack.png in Resources */,
 				6E9F491B1A95C3EA005A8C8E /* moriyuki1.png in Resources */,
 				6E9F49271A95DE10005A8C8E /* tile2.png in Resources */,
 				6EDAD22B1A26FFBD0037B1BD /* Main.storyboard in Resources */,
-				64E7FD401A98D25100B903CA /* score.png in Resources */,
 				6E9F49181A95C3EA005A8C8E /* koki_8.png in Resources */,
 				6E9F48F51A95C38A005A8C8E /* pen_small.png in Resources */,
 			);
