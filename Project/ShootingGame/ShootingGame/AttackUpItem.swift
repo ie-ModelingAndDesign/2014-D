@@ -15,6 +15,7 @@ class AttackUpItem : Item{
     }
     override func OnCollision(ship : Ship){
         ItemManager.getInstance().upBulletAttack()
+        AudioManager.getInstance().playSE(myscene, filename: "button1.mp3")
         super.OnCollision(ship)
     }
 }
