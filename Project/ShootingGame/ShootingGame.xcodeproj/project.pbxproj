@@ -11,12 +11,12 @@
 		641845611A4FE84F0026DD91 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 641845601A4FE84F0026DD91 /* ball.png */; };
 		6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */; };
 		646F2EC81A2719A100D465F9 /* AkihikoAirframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */; };
+		6472FF071A9A1B8A00D31426 /* YourScore.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6472FF061A9A1B8A00D31426 /* YourScore.jpg */; };
 		648EF7061A3AF332000DE1A8 /* AkihikoRefBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */; };
 		64C4ED7E1A7B98E90062432B /* SceneEscapeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */; };
 		64C4ED801A7B98FA0062432B /* StartGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */; };
 		64C4ED821A7B991E0062432B /* ScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED811A7B991E0062432B /* ScoreScene.swift */; };
 		64C4ED841A7B99420062432B /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C4ED831A7B99420062432B /* TitleScene.swift */; };
-		64E019C11A993F77002768C4 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E019C01A993F77002768C4 /* music.mp3 */; };
 		64E019C31A994223002768C4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E019C21A994223002768C4 /* AVFoundation.framework */; };
 		64E019CB1A9994BB002768C4 /* 1minShooting_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 64E019CA1A9994BB002768C4 /* 1minShooting_logo.png */; };
 		64E019CF1A9994C4002768C4 /* soundON.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 64E019CD1A9994C4002768C4 /* soundON.jpg */; };
@@ -132,12 +132,12 @@
 		641845601A4FE84F0026DD91 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = Images.xcassets/Spaceship.imageset/ball.png; sourceTree = "<group>"; };
 		6445DA4A1A389FA800F67740 /* AkihikoMyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoMyBullet.swift; sourceTree = "<group>"; };
 		646F2EC71A2719A100D465F9 /* AkihikoAirframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoAirframe.swift; sourceTree = "<group>"; };
+		6472FF061A9A1B8A00D31426 /* YourScore.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = YourScore.jpg; sourceTree = "<group>"; };
 		648EF7051A3AF332000DE1A8 /* AkihikoRefBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkihikoRefBullet.swift; sourceTree = "<group>"; };
 		64C4ED7D1A7B98E90062432B /* SceneEscapeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneEscapeProtocol.swift; sourceTree = "<group>"; };
 		64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameProtocol.swift; sourceTree = "<group>"; };
 		64C4ED811A7B991E0062432B /* ScoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreScene.swift; sourceTree = "<group>"; };
 		64C4ED831A7B99420062432B /* TitleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
-		64E019C01A993F77002768C4 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		64E019C21A994223002768C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		64E019CA1A9994BB002768C4 /* 1minShooting_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1minShooting_logo.png; sourceTree = "<group>"; };
 		64E019CD1A9994C4002768C4 /* soundON.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soundON.jpg; sourceTree = "<group>"; };
@@ -267,6 +267,7 @@
 			children = (
 				6EE90AC41A9A0E62001D3C1A /* dark.jpg */,
 				6EB8F2C21A986E5300023189 /* item_level.png */,
+				6472FF061A9A1B8A00D31426 /* YourScore.jpg */,
 				6EB8F2BE1A98676500023189 /* Item_plus.png */,
 				6EB8F2BC1A98661900023189 /* Item_attack.png */,
 				6E9F49261A95DE10005A8C8E /* tile2.png */,
@@ -448,7 +449,6 @@
 				64C4ED811A7B991E0062432B /* ScoreScene.swift */,
 				64C4ED831A7B99420062432B /* TitleScene.swift */,
 				64C4ED7F1A7B98FA0062432B /* StartGameProtocol.swift */,
-				64E019C01A993F77002768C4 /* music.mp3 */,
 				6418455E1A4FE6370026DD91 /* AkihikoEnemyBullet1.swift */,
 			);
 			name = Akihiko;
@@ -558,7 +558,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64E019C11A993F77002768C4 /* music.mp3 in Resources */,
 				6EE90AB91A99FF14001D3C1A /* beam.mp3 in Resources */,
 				6E9F491A1A95C3EA005A8C8E /* koki_10.png in Resources */,
 				6EE90ABA1A99FF14001D3C1A /* come_boss.mp3 in Resources */,
@@ -591,6 +590,7 @@
 				6EE90ABE1A99FF14001D3C1A /* heal.mp3 in Resources */,
 				6E9F49111A95C3EA005A8C8E /* koki_1.png in Resources */,
 				6E9F48F21A95C38A005A8C8E /* airplane_center.png in Resources */,
+				6472FF071A9A1B8A00D31426 /* YourScore.jpg in Resources */,
 				6E9F49131A95C3EA005A8C8E /* koki_3.png in Resources */,
 				6EE90ABB1A99FF14001D3C1A /* button1.mp3 in Resources */,
 				64E019DC1A99C8FA002768C4 /* title_enemy1.png in Resources */,

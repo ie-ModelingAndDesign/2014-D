@@ -6,6 +6,11 @@ class ScoreScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
+        var yourScore = SKSpriteNode(imageNamed:"YourScore.jpg")
+        yourScore.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMaxY(self.frame)-90)
+        self.addChild(yourScore)
+        
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         var score: [Int] = []
         
@@ -20,7 +25,7 @@ class ScoreScene: SKScene {
         
         var c : Int = score.count
         var rank:[Int] = Array(count: 10, repeatedValue: 0)
-
+        
         for(var i=0;i<10;i++){
             rank[i] = score[0]
             for(var j=1;j<c;j++){
@@ -33,7 +38,7 @@ class ScoreScene: SKScene {
                     score[k] = 0
                 }
             }
-
+            
         }
         
         var pos:CGFloat = 0;
@@ -42,7 +47,7 @@ class ScoreScene: SKScene {
             myLabel[i].text = rank[i].description;
             myLabel[i].fontColor = UIColor.whiteColor()
             myLabel[i].fontSize = 45;
-            myLabel[i].position = CGPoint(x:CGRectGetMidX(self.frame), y: 540 - pos * 50);
+            myLabel[i].position = CGPoint(x:CGRectGetMidX(self.frame), y: 560 - pos * 50);
             self.addChild(myLabel[i])
             pos++
         }
@@ -51,15 +56,15 @@ class ScoreScene: SKScene {
     }
     
     
-
+    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         
         delegate_escape!.sceneEscape(self)
         
     }
-
+    
     func update() {
-
+        
     }
-
+    
 }
