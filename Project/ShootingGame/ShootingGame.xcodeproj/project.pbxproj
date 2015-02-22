@@ -41,6 +41,8 @@
 		6E5916421A4BB23E006DE56B /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5916411A4BB23E006DE56B /* ScreenManager.swift */; };
 		6E6F9DA71A97576800E0076E /* ship_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F9DA61A97576800E0076E /* ship_icon.png */; };
 		6E6F9DA91A975C2C00E0076E /* LifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F9DA81A975C2C00E0076E /* LifeView.swift */; };
+		6E75D3101A9A22A000EB6890 /* enemy_damage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E75D30F1A9A22A000EB6890 /* enemy_damage.mp3 */; };
+		6E75D3121A9A22AE00EB6890 /* levelup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E75D3111A9A22AE00EB6890 /* levelup.mp3 */; };
 		6E83C4691A674CB600EE8CD2 /* EnemyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */; };
 		6E9A3C181A98F5C9008C19EF /* SchoolBoss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3C171A98F5C9008C19EF /* SchoolBoss.swift */; };
 		6E9A3C1A1A98FD7C008C19EF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A3C191A98FD7C008C19EF /* GameManager.swift */; };
@@ -161,6 +163,8 @@
 		6E5916411A4BB23E006DE56B /* ScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
 		6E6F9DA61A97576800E0076E /* ship_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship_icon.png; sourceTree = "<group>"; };
 		6E6F9DA81A975C2C00E0076E /* LifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeView.swift; sourceTree = "<group>"; };
+		6E75D30F1A9A22A000EB6890 /* enemy_damage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enemy_damage.mp3; sourceTree = "<group>"; };
+		6E75D3111A9A22AE00EB6890 /* levelup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = levelup.mp3; sourceTree = "<group>"; };
 		6E83C4681A674CB600EE8CD2 /* EnemyBullet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyBullet.swift; sourceTree = "<group>"; };
 		6E9A3C171A98F5C9008C19EF /* SchoolBoss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolBoss.swift; sourceTree = "<group>"; };
 		6E9A3C191A98FD7C008C19EF /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 				6EE90AB71A99FF14001D3C1A /* heal.mp3 */,
 				6EE90AB81A99FF14001D3C1A /* myup.mp3 */,
 				6EB69C7E1A99FB6600F9B79C /* zako.mp3 */,
+				6E75D30F1A9A22A000EB6890 /* enemy_damage.mp3 */,
+				6E75D3111A9A22AE00EB6890 /* levelup.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 				64E019D51A999D98002768C4 /* Start.jpg in Resources */,
 				6EE90ABC1A99FF14001D3C1A /* button2.mp3 in Resources */,
 				6EB8F2C31A986E5300023189 /* item_level.png in Resources */,
+				6E75D3121A9A22AE00EB6890 /* levelup.mp3 in Resources */,
 				6E9F490F1A95C3EA005A8C8E /* daiki1.png in Resources */,
 				6E9F48F71A95C38A005A8C8E /* pen2_small.png in Resources */,
 				64E019D71A999DA0002768C4 /* Score.jpg in Resources */,
@@ -601,6 +608,7 @@
 				6EB69C7F1A99FB6600F9B79C /* zako.mp3 in Resources */,
 				6E9F48F81A95C38A005A8C8E /* pen2.png in Resources */,
 				6E9F490C1A95C3EA005A8C8E /* akihiko2.png in Resources */,
+				6E75D3101A9A22A000EB6890 /* enemy_damage.mp3 in Resources */,
 				6E9F490B1A95C3EA005A8C8E /* akihiko1.png in Resources */,
 				64E019DD1A99C8FA002768C4 /* title_enemy2.png in Resources */,
 				64E019CB1A9994BB002768C4 /* 1minShooting_logo.png in Resources */,
