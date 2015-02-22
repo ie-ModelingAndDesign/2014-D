@@ -113,6 +113,7 @@
 		6EE90ABE1A99FF14001D3C1A /* heal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EE90AB71A99FF14001D3C1A /* heal.mp3 */; };
 		6EE90ABF1A99FF14001D3C1A /* myup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6EE90AB81A99FF14001D3C1A /* myup.mp3 */; };
 		6EE90AC11A9A0398001D3C1A /* BgmPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE90AC01A9A0398001D3C1A /* BgmPlayer.swift */; };
+		6EE90AC31A9A0BB5001D3C1A /* LifeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE90AC21A9A0BB5001D3C1A /* LifeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,7 @@
 		6EE90AB71A99FF14001D3C1A /* heal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heal.mp3; sourceTree = "<group>"; };
 		6EE90AB81A99FF14001D3C1A /* myup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = myup.mp3; sourceTree = "<group>"; };
 		6EE90AC01A9A0398001D3C1A /* BgmPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BgmPlayer.swift; sourceTree = "<group>"; };
+		6EE90AC21A9A0BB5001D3C1A /* LifeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +428,7 @@
 				6EE42E9A1A94D87500FE3809 /* ScoreManager.swift */,
 				6E5916411A4BB23E006DE56B /* ScreenManager.swift */,
 				6EB69C7C1A99F8D200F9B79C /* AudioManager.swift */,
+				6EE90AC21A9A0BB5001D3C1A /* LifeManager.swift */,
 				6E9A3C191A98FD7C008C19EF /* GameManager.swift */,
 			);
 			name = Daiki;
@@ -666,6 +669,7 @@
 				6E83C4691A674CB600EE8CD2 /* EnemyBullet.swift in Sources */,
 				6445DA4B1A389FA800F67740 /* AkihikoMyBullet.swift in Sources */,
 				6E9A3C181A98F5C9008C19EF /* SchoolBoss.swift in Sources */,
+				6EE90AC31A9A0BB5001D3C1A /* LifeManager.swift in Sources */,
 				64C4ED7E1A7B98E90062432B /* SceneEscapeProtocol.swift in Sources */,
 				6E9A3C1A1A98FD7C008C19EF /* GameManager.swift in Sources */,
 				6E5916401A4BB0C5006DE56B /* Ship.swift in Sources */,

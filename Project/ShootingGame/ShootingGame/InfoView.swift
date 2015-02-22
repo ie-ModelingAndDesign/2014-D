@@ -42,6 +42,7 @@ class InfoView : NSObject{
             end_time++
             if(end_time > end_time_max){
                 // end
+                LifeManager.getInstance().resetLife()
                 delegate_escape!.sceneEscape(myscene)
             }
         }
