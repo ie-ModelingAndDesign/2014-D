@@ -91,6 +91,7 @@ class Enemy{
         if(HP <= 0){
             HP = 0.01
             ScoreManager.getInstance().addScore(Point)
+            AudioManager.getInstance().playSE(myscene,filename: "zako.mp3")
             Destroy()
         }
         hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)

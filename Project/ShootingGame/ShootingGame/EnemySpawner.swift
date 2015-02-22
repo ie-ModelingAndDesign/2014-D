@@ -66,6 +66,8 @@ class EnemySpawner{
                 enemy.colliderRadius = 120
                 enemy.setTexture("koki_3")
                 enemy.setHP(20)
+                // se
+                AudioManager.getInstance().playSE(myscene, filename: "come_boss.mp3")
             }
         }
     }

@@ -20,6 +20,7 @@ class Bullet{
     init(obj : SKScene){
         ObjectManager.getInstance().setBullet(self)
         myscene = obj
+        AudioManager.getInstance().playSE(myscene,filename: "missile.mp3")
     }
     
     func update(){
