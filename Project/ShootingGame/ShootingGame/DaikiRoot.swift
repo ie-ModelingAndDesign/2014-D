@@ -38,6 +38,7 @@ class DaikiRoot{
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        info.touchesBegan()
         /* Called when a touch begins */
     }
     
