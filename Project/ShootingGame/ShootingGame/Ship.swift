@@ -53,6 +53,7 @@ class Ship{
     }
     
     func Destroy(){
+        AudioManager.getInstance().playSE(myscene, filename: "bomb.mp3")
         GameManager.getInstance().setPlayerDead()
         ObjectManager.getInstance().removePlayerShip()
     }
