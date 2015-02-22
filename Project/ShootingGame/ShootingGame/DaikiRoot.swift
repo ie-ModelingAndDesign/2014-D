@@ -44,6 +44,7 @@ class DaikiRoot{
     func setDelegate(delegate : SceneEscapeProtocol){
         delegate_escape = delegate
         time.setDelegate(delegate)
+        info.setDelegate(delegate)
     }
     
     func update(){
