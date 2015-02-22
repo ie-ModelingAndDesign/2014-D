@@ -37,5 +37,23 @@ class ScoreView{
     func saveScore(){
         save = true
         println("save score : " + String(ScoreManager.getInstance().getScore()))
+        
+        /* スコアデータがなければスコアに0を挿入 */
+        var score: [Int] = []
+        let defaults = NSUserDefaults.standardUserDefaults()
+        //defaults.removeObjectForKey("NAME")
+        if((defaults.objectForKey("NAME")) != nil){
+            
+            let objects = defaults.objectForKey("NAME") as? NSArray
+            var scoreInt:Int
+            for scoreInt in objects!{
+                score.append(scoreInt as Int)
+            }
+        }
+        
+        score.append(ScoreManager.getInstance().getScore())
+        
+        defaults.setObject(score, forKey:"NAME")
+        defaults.synchronize()
     }
 }
