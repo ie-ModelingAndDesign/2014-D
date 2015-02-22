@@ -14,6 +14,7 @@ class SchoolBoss : Enemy{
     private var attack_interval = 10
     private var attack_value_max = 2
     private var attack_position = CGPointMake(50, 50)
+    private var texture_names : [String] = ["koki_4","koki_5","koki_6","koki_7","koki_8","akihiko2"]
     private var mode = "begin"
     private var move_y : CGFloat = ScreenManager.getInstance().getTop()-150.0
     private var move_right : CGFloat = ScreenManager.getInstance().getRight()-100
@@ -81,7 +82,8 @@ class SchoolBoss : Enemy{
             var enemy = ThrowEnemy(obj:myscene)
             enemy.position = CGPointMake(position.x + attack_position.x, position.y + attack_position.y)
             enemy.setHP(5.0)
-            enemy.setTexture("koki_4")
+            var ran = Int(arc4random()) % (texture_names.count)
+            enemy.setTexture(texture_names[ran])
             attack_time = 0
             attack_value++
             if(attack_value >= attack_value_max){
