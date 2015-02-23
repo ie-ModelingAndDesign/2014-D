@@ -15,6 +15,7 @@ class GameManager {
     private var playerdead = false
     private var timeover = false
     private var bossdead = false
+    private var comeboss = false
     private init(){
         
     }
@@ -31,6 +32,7 @@ class GameManager {
         playerdead = false
         timeover = false
         bossdead = false
+        comeboss = false
     }
     
     func setPlayerDead(){
@@ -50,5 +52,11 @@ class GameManager {
     }
     func isBossDead() -> Bool{
         return bossdead
+    }
+    func setBossCome(){
+        comeboss = true
+    }
+    func isBossCome() ->Bool{
+        return comeboss
     }
 }

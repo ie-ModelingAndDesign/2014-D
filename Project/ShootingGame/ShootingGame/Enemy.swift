@@ -10,7 +10,7 @@ import SpriteKit
 
 class Enemy{
     var HP:Double = 3
-    var HP_mult = 1.2   // 難易度調整
+    var HP_mult = 1.5   // 難易度調整
     var attack_power:Double = 10.0
     internal var position:CGPoint = CGPointMake(0,0)
     internal var angle : CGFloat = 0.0
@@ -93,6 +93,8 @@ class Enemy{
             ScoreManager.getInstance().addScore(Point)
             AudioManager.getInstance().playSE(myscene,filename: "zako.mp3")
             Destroy()
+        }else{
+            AudioManager.getInstance().playSE(myscene, filename: "enemy_damage.mp3")
         }
         hp_bar.size = CGSize(width: hp_bar_width*HP, height: hp_bar_height)
     }

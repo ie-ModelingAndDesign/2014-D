@@ -15,6 +15,7 @@ class DifficultyItem : Item{
     }
     override func OnCollision(ship : Ship){
         LevelManager.getInstance().levelUp()
+        AudioManager.getInstance().playSE(myscene, filename: "levelup.mp3")
         super.OnCollision(ship)
     }
 }

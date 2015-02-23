@@ -11,12 +11,14 @@ import Foundation
 class InfoView : NSObject{
     private var scale_start : CGFloat = 1.5
     private var scale_speed : CGFloat = 0.25
-    private var end_time_max = 90
+    private var end_time_max = 30
     
     var delegate_escape: SceneEscapeProtocol?
     var myscene : SKScene!
     private var end_time = 0
     private var end = false
+    private var touchrady = false
+    private var touch = false
     private var infos : [SKLabelNode] = []
     init(obj : SKScene){
         super.init()
@@ -31,6 +33,7 @@ class InfoView : NSObject{
             }else{
                 if(GameManager.getInstance().isTimeOver()){
                     if(GameManager.getInstance().isBossDead()){
+                        AudioManager.getInstance().playSE(myscene, filename: "clear.mp3")
                         viewInfo(SKColor.redColor(), text: "YOU WIN")
                     }else{
                         viewInfo(SKColor.redColor(), text: "TIME OVER")
@@ -41,13 +44,21 @@ class InfoView : NSObject{
         }else{
             end_time++
             if(end_time > end_time_max){
-                // end
-                LifeManager.getInstance().resetLife()
-                delegate_escape!.sceneEscape(myscene)
+                touchrady = true
             }
         }
         updateInfo()
     }
+    
+    // end
+    func touchesBegan(){
+        if(!touch && touchrady){
+            touch = true
+            LifeManager.getInstance().resetLife()
+            delegate_escape!.sceneEscape(myscene)
+        }
+    }
+    
     func updateInfo(){
         for (var i=0; i<infos.count; i++){
             var scale = infos[i].xScale

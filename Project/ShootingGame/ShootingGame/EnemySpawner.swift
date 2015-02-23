@@ -13,7 +13,7 @@ class EnemySpawner{
     var spawn_interval_min = 5
     var spawn_interval_max = 15
     var spawn_time_list : [Int] =   [10, 5,15,15,15,15,15]
-    var spawn_value_list : [Int] =  [ 5, 4, 5, 3, 5, 5, 5]
+    var spawn_value_list : [Int] =  [ 5, 3, 5, 3, 5, 5, 5]
     var spawn_boss_time = 11
     internal var myscene : SKScene!
     
@@ -66,6 +66,7 @@ class EnemySpawner{
                 enemy.colliderRadius = 120
                 enemy.setTexture("koki_3")
                 enemy.setHP(20)
+                GameManager.getInstance().setBossCome()
                 // se
                 AudioManager.getInstance().playSE(myscene, filename: "come_boss.mp3")
             }

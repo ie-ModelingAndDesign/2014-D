@@ -34,10 +34,12 @@ class DaikiRoot{
         GameManager.getInstance().Reset()
         LevelManager.getInstance().resetLevel()
         ScoreManager.getInstance().Reset()
+        ItemManager.getInstance().Reset()
         bgm = BGMPlayer(obj:obj)
     }
     
     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        info.touchesBegan()
         /* Called when a touch begins */
     }
     

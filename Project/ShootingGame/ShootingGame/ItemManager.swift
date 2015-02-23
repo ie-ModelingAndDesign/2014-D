@@ -17,6 +17,10 @@ class ItemManager{
         return singleton
     }
     
+    func Reset(){
+        bullet_attack_mult = 1.0
+    }
+    
     func spawnItem(obj:SKScene, position : CGPoint){
         var total = 0
         for(var i=0; i<bullet_rand.count; i++){

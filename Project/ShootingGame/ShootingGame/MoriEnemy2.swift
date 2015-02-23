@@ -14,6 +14,8 @@ class MoriEnemy2 : Enemy{
     var startPos: CGPoint!
     var beganPos: CGPoint!
     
+    var life_time_max = 150
+    var life_time = 0
     
     var timer = NSTimer()
     override init (obj : SKScene) {
@@ -73,6 +75,12 @@ class MoriEnemy2 : Enemy{
         position = square.position
         
         }
+        
+        life_time++
+        if(life_time > life_time_max){
+            Destroy()
+        }
+        
         super.update()
     }
     
